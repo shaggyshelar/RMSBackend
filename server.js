@@ -20,4 +20,6 @@ app.get('/', function (req, res) {
     res.send('App Loaded...');
 });
 
-server.listen(process.env.PORT || 3000);//publish to heroku
+server.listen(process.env.PORT || 3000, function () {
+    console.log('RMS APP listening on port 3000!');
+});
