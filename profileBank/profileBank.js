@@ -4,36 +4,46 @@ var profileBank = require('./../profileBank/profileBankData');
 var _ = require('lodash');
 
 var getOpenProfiles = function (req, res) {
-    res.json(profileBank.profile);
+    res.json(profileBank.candidateProfile);
 };
 
 var addCandidateProfile = function (req, res) {
     var profile = req.body.profile;
-    profile.CandidateID = profileBank.profile.length + 1;
-    profile.ResumeID = profileBank.profile.length + 1;
+    profile.CandidateID = profileBank.candidateProfile.length + 1;
+    profile.ResumeID = profileBank.candidateProfile.length + 1;
     profile.Candidate = profile.FirstName + profile.LastName;
-    profileBank.profile.push(profile);
+    profile.Status="PendingScreening";
+    profileBank.candidateProfile.push(profile);
     res.json(profile);
 };
 
 var getCandidateProfile = function (req, res) {
     var profileID = parseInt(req.body.profile.ProfileId);
-    var index = _.findIndex(profileBank.profile, { CandidateID: profileID });
-    res.json(profileBank.profile[index]);
+    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: profileID });
+    res.json(profileBank.candidateProfile[index]);
 };
 
 
 var editCandidateProfile = function (req, res) {
     var profile = req.body.profile;
-    var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
-    profileBank.profile[index] = profile;
+    profile.Candidate = profile.FirstName + profile.LastName;
+    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: profile.CandidateID });
+    profileBank.candidateProfile[index] = profile;
     res.json(profile);
 };
 
-module.exports = function (app) {
-    app.get('/api/getOpenProfiles', utils.EnsureAuthenticated, getOpenProfiles);
-    app.post('/api/addCandidateProfile', utils.EnsureAuthenticated, addCandidateProfile);
-    app.post('/api/getCandidateProfile', utils.EnsureAuthenticated, getCandidateProfile);
-    app.post('/api/editCandidateProfile', utils.EnsureAuthenticated, editCandidateProfile);
+var getBlacklistedCandidates=function (req, res){
+    res.json(profileBank.candidateProfile);
+}
 
+var getRecentProfiles=function (req, res){
+    res.json(profileBank.candidateProfile);
+}
+module.exports = function (app) {
+    app.get('/api/ProfileBank/getOpenProfiles', utils.EnsureAuthenticated, getOpenProfiles);
+    app.post('/api/ProfileBank/addCandidateProfile', utils.EnsureAuthenticated, addCandidateProfile);
+    app.post('/api/ProfileBank/getCandidateProfile', utils.EnsureAuthenticated, getCandidateProfile);
+    app.post('/api/ProfileBank/editCandidateProfile', utils.EnsureAuthenticated, editCandidateProfile);
+    app.get('/api/ProfileBank/getBlacklistedCandidates', utils.EnsureAuthenticated, getBlacklistedCandidates);
+    app.get('/api/ProfileBank/getRecentProfiles', utils.EnsureAuthenticated, getRecentProfiles);
 };
