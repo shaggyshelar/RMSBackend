@@ -15,10 +15,15 @@ var getAllRaisedRRF =function (req, res) {
     res.json(RRFList.getAllRaisedRRF); 
 };
 
+var getAllRRF=function (req, res) {
+    res.json(RRFList.GetAllRRF); 
+};
+
 module.exports = function( app ) {
     app.post( '/api/RRF/GetRaisedRRF', utils.EnsureAuthenticated, getRaisedRRF );
     app.post('/api/RRF/ViewRRF', utils.EnsureAuthenticated, viewRRF );
-     app.post('/api/RRF/GetAllRaisedRRF', utils.EnsureAuthenticated, getAllRaisedRRF);
+    app.post('/api/RRF/GetAllRaisedRRF', utils.EnsureAuthenticated, getAllRaisedRRF);
+    app.get('/api/RRF/GetAllRRF', utils.EnsureAuthenticated, getAllRRF);
 };
 
 
