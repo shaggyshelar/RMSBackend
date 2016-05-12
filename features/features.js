@@ -3,7 +3,37 @@ var features = require('./../features/featuresData');
 var _ = require('lodash');
 
 var getFeatures = function (req, res) {
-    res.json(features.featuresList);
+    var startPosition, endPosition;
+    var gridOptions = req.body.gridOptions;
+    var result = { list: {}, gridOptions: {} }
+    var featuresList = [];
+    if (gridOptions.searchString == "") {
+        if (gridOptions.orderBy != "") {
+            if (gridOptions.orderBy != "ASC") {
+                featuresList = _.sortBy(features.featuresList, function (o) { return o.featureName; });
+            }
+            else {
+                featuresList = _.sortBy(features.featuresList, function (o) { return o.featureName; }).reverse();
+            }
+        }
+        else {
+            featuresList = features.featuresList
+        }
+    }
+    else {
+        var searchedFeatures = [];
+        for (var i = 0; i < features.featuresList.length; i++) {
+            if (features.featuresList[i].featureName.indexOf(gridOptions.searchString) > -1) {
+                searchedFeatures.push(features.featuresList[i]);
+            }
+        }
+        featuresList = searchedFeatures
+    }
+    gridOptions.totalItems = featuresList.length
+    startPosition = (gridOptions.currentPage - 1) * gridOptions.itemPerPage
+    endPosition = startPosition + gridOptions.itemPerPage
+    result = { list: featuresList.slice(startPosition, endPosition), gridOptions: gridOptions }
+    res.json(result);
 };
 
 var addFeature = function (req, res) {
@@ -34,7 +64,7 @@ var editFeature = function (req, res) {
 };
 
 module.exports = function (app) {
-    app.get('/api/Feature/GetFeatures', utils.EnsureAuthenticated, getFeatures);
+    app.post('/api/Feature/GetFeatures', utils.EnsureAuthenticated, getFeatures);
     app.post('/api/Feature/GetFeatureById', utils.EnsureAuthenticated, getFeatureById);
     app.post('/api/Feature/Add', utils.EnsureAuthenticated, addFeature);
     app.post('/api/Feature/Delete', utils.EnsureAuthenticated, deleteFeature);
