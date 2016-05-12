@@ -107,4 +107,36 @@ RRFList.RRFDetails = {
 
 }
 
+
+RRFList.getAllRaisedRRF =[
+{   
+        "RRFID":"1",
+        "practice" : "EBS",
+        "technology" : "Microsoft",
+        "positionTitle" : "Developer",
+        "description" : "Multi line text",
+        "noOfOpenings" : 3,
+        "skillsRequired" : "Multi line text",
+        "designation" : "SSE",
+        "minExp" : "3",
+        "priority" : 1,
+        "raisedBy": 'abc xyz',
+        "expDateOfJoining" : "30 May 2016",
+},
+{   
+        "RRFID" : "2",
+        "practice" : "EBS",
+        "technology" : "Microsoft",
+        "positionTitle" : "Developer",
+        "description" : "Multi line text",
+        "noOfOpenings" : 3,
+        "skillsRequired" : "Multi line text",
+        "designation" : "SSE",
+        "minExp" : "3",
+        "priority" : 1,
+        "raisedBy": 'abc xyz',
+        "expDateOfJoining" : "30 May 2016",
+},
+]
+
 module.exports = RRFList;

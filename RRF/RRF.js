@@ -11,8 +11,14 @@ var viewRRF = function (req, res) {
     res.json(RRFList.RRFDetails); 
 };
 
-module.exports = function( app ) {
-    app.get( '/api/RRF/GetRaisedRRF', utils.EnsureAuthenticated, getRaisedRRF );
-    app.post('/api/RRF/ViewRRF', utils.EnsureAuthenticated, viewRRF );
+var getAllRaisedRRF =function (req, res) {
+    res.json(RRFList.getAllRaisedRRF); 
 };
+
+module.exports = function( app ) {
+    app.post( '/api/RRF/GetRaisedRRF', utils.EnsureAuthenticated, getRaisedRRF );
+    app.post('/api/RRF/ViewRRF', utils.EnsureAuthenticated, viewRRF );
+     app.post('/api/RRF/GetAllRaisedRRF', utils.EnsureAuthenticated, getAllRaisedRRF);
+};
+
 
