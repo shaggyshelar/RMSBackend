@@ -1,6 +1,6 @@
 // List of hardcoded Masters along with their details.
 var master = {
-    practices: ["EBS", "ECS"],
+   // practices: ["EBS", "ECS"],
     technology: ["Microsoft", "Salesforce", "Angular"],
     skills: ["C#", "CRM", "SharePoint", "Angular JS"],
     qualifications: ["XII", "Graduate", "Post Graduate", "Training if Any"],

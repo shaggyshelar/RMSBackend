@@ -15,6 +15,7 @@ require('./roles/roles')(app);
 require('./RRF/RRF')(app);
 require('./profileBank/profileBank')(app);
 require('./users/users')(app);
+require('./practice/practices')(app);
 
 app.get('/', function (req, res) {
     res.send('App Loaded...');
