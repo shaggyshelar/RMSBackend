@@ -19,6 +19,7 @@ require('./practice/practices')(app);
 require('./skills/skills')(app);
 require('./technology/technology')(app);
 require('./qualifications/qualifications')(app);
+require('./interviewRound/interviewRound')(app);
 
 app.get('/', function (req, res) {
     res.send('App Loaded...');

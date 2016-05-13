@@ -71,7 +71,7 @@ module.exports = function (app) {
     app.get('/api/Masters/GetCountries', utils.EnsureAuthenticated, getCountries);
     app.get('/api/Masters/GetStates', utils.EnsureAuthenticated, getStates);
     app.get('/api/Masters/GetDistricts', utils.EnsureAuthenticated, getDistricts);
-    app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getRounds);
+    //app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getRounds);
     app.get('/api/Masters/GetInterviewStatus', utils.EnsureAuthenticated, getInterviewStatus);
     app.get('/api/Masters/GetRatings', utils.EnsureAuthenticated, getRatings);
     app.get('/api/Masters/GetOwnerTypes', utils.EnsureAuthenticated, getOwnerTypes);

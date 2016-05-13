@@ -9,7 +9,7 @@ var master = {
     country: ["India", "US", "UK", "Australia"],
     state: ["Maharashtra", "Goa", "Delhi"],
     district: ["Pune", "Mumbai", "Nagpur"],
-    interviewRounds: ["Technical 1", "Technical 2"],
+    //interviewRounds: ["Technical 1", "Technical 2"],
     interviewStatus: ["Selected", "Rejected", "On Hold"],
     ratings: [1, 2, 3, 4, 5],
     interviewMode: ["telephonic", "Face to Face", "Skype"],
