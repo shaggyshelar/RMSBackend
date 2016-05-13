@@ -65,7 +65,7 @@ module.exports = function (app) {
     //app.get('/api/Masters/GetPractices', utils.EnsureAuthenticated, getPractices);
     //app.get('/api/Masters/GetTechnologies', utils.EnsureAuthenticated, getTechnologies);
    // app.get('/api/Masters/GetSkills', utils.EnsureAuthenticated, getSkills);
-    app.get('/api/Masters/GetQualifications', utils.EnsureAuthenticated, getQualifications);
+    //app.get('/api/Masters/GetQualifications', utils.EnsureAuthenticated, getQualifications);
     app.get('/api/Masters/GetYears', utils.EnsureAuthenticated, getYears);
     app.get('/api/Masters/GetDesignations', utils.EnsureAuthenticated, getDesignations);
     app.get('/api/Masters/GetCountries', utils.EnsureAuthenticated, getCountries);

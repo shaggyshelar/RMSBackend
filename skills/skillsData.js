@@ -3,16 +3,16 @@ var skills = {
     skillsList: [
         {
             id: 1,
-            skillName: 'SharePoint'
+            Skill: 'SharePoint'
         }, {
             id: 2,
-            skillName: 'AngularJs'
+            Skill: 'AngularJs'
         }, {
             id: 3,
-            skillName: 'C#'
+            Skill: 'C#'
         }, {
             id: 4,
-            skillName: 'CRM'
+            Skill: 'CRM'
         }       
     ],
     ids: 4
