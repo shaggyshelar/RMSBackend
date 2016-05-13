@@ -2,7 +2,7 @@
 var master = {
    // practices: ["EBS", "ECS"],
     technology: ["Microsoft", "Salesforce", "Angular"],
-    skills: ["C#", "CRM", "SharePoint", "Angular JS"],
+   // skills: ["C#", "CRM", "SharePoint", "Angular JS"],
     qualifications: ["XII", "Graduate", "Post Graduate", "Training if Any"],
     year: ["2010", "2011", "2012", "2013"],
     designation: ["Trainee", "System Executive", "Senior System Executive"],
