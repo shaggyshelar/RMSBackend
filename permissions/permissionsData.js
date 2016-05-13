@@ -45,16 +45,16 @@ var permissions = {
             'ADMIN.MANAGE',
             'ADMIN.ROLE.READ',
             'ADMIN.FEATURE.READ',
-            'ADMIN.PERMISSION.READ',
-            'ADMIN.THEMEPANEL.READ',
-            'ADMIN.Practice.READ',
-            'ADMIN.USER.READ',
-            'ADMIN.Technology.READ',
-            'ADMIN.Skills.READ',
-            'ADMIN.Qualifications.READ',
-            'ADMIN.Designation.READ',
-            'ADMIN.InterviewRounds.READ',
-            'ADMIN.OwnerType.READ'
+            'ADMIN.PERMISSION.MANAGE',
+            'ADMIN.THEMEPANEL.MANAGE',
+            'ADMIN.PRACTICE.MANAGE',
+            'ADMIN.USER.MANAGE',
+            'ADMIN.TECHNOLOGY.MANAGE',
+            'ADMIN.SKILLS.MANAGE',
+            'ADMIN.QUALIFICATIONS.MANAGE',
+            'ADMIN.DESIGNATION.MANAGE',
+            'ADMIN.INTERVIEWROUNDS.MANAGE',
+            'ADMIN.OWNERTYPE.MANAGE'
         ]
     }, {
             userId: 11,
