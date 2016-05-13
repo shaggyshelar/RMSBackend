@@ -19,6 +19,80 @@ var features = {
         }, {
             id: 6,
             featureName: 'Feature'
+        },
+         {
+            id: 1,
+            featureName: 'Dashboard'
+        }, {
+            id: 2,
+            featureName: 'Profile'
+        }, {
+            id: 3,
+            featureName: 'RRF'
+        }, {
+            id: 4,
+            featureName: 'Role'
+        }, {
+            id: 5,
+            featureName: 'Permission'
+        }, {
+            id: 6,
+            featureName: 'Feature'
+        },
+         {
+            id: 1,
+            featureName: 'Dashboard'
+        }, {
+            id: 2,
+            featureName: 'Profile'
+        }, {
+            id: 3,
+            featureName: 'RRF'
+        }, {
+            id: 4,
+            featureName: 'Role'
+        }, {
+            id: 5,
+            featureName: 'Permission'
+        }, {
+            id: 6,
+            featureName: 'Feature'
+        }, {
+            id: 1,
+            featureName: 'Dashboard'
+        }, {
+            id: 2,
+            featureName: 'Profile'
+        }, {
+            id: 3,
+            featureName: 'RRF'
+        }, {
+            id: 4,
+            featureName: 'Role'
+        }, {
+            id: 5,
+            featureName: 'Permission'
+        }, {
+            id: 6,
+            featureName: 'Feature'
+        }, {
+            id: 1,
+            featureName: 'Dashboard'
+        }, {
+            id: 2,
+            featureName: 'Profile'
+        }, {
+            id: 3,
+            featureName: 'RRF'
+        }, {
+            id: 4,
+            featureName: 'Role'
+        }, {
+            id: 5,
+            featureName: 'Permission'
+        }, {
+            id: 6,
+            featureName: 'Feature'
         }
     ],
     ids: 6
