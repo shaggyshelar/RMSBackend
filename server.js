@@ -17,6 +17,8 @@ require('./profileBank/profileBank')(app);
 require('./users/users')(app);
 require('./practice/practices')(app);
 require('./skills/skills')(app);
+require('./technology/technology')(app);
+
 
 app.get('/', function (req, res) {
     res.send('App Loaded...');
