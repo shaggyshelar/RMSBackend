@@ -67,14 +67,14 @@ module.exports = function (app) {
    // app.get('/api/Masters/GetSkills', utils.EnsureAuthenticated, getSkills);
     //app.get('/api/Masters/GetQualifications', utils.EnsureAuthenticated, getQualifications);
     app.get('/api/Masters/GetYears', utils.EnsureAuthenticated, getYears);
-    app.get('/api/Masters/GetDesignations', utils.EnsureAuthenticated, getDesignations);
+    //app.get('/api/Masters/GetDesignations', utils.EnsureAuthenticated, getDesignations);
     app.get('/api/Masters/GetCountries', utils.EnsureAuthenticated, getCountries);
     app.get('/api/Masters/GetStates', utils.EnsureAuthenticated, getStates);
     app.get('/api/Masters/GetDistricts', utils.EnsureAuthenticated, getDistricts);
     //app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getRounds);
     app.get('/api/Masters/GetInterviewStatus', utils.EnsureAuthenticated, getInterviewStatus);
     app.get('/api/Masters/GetRatings', utils.EnsureAuthenticated, getRatings);
-    app.get('/api/Masters/GetOwnerTypes', utils.EnsureAuthenticated, getOwnerTypes);
+    //app.get('/api/Masters/GetOwnerTypes', utils.EnsureAuthenticated, getOwnerTypes);
     app.get('/api/Masters/GetInterviewMode', utils.EnsureAuthenticated, getInterviewMode);
     app.get('/api/Masters/GetVisaTypes', utils.EnsureAuthenticated, getVisaTypes);
     app.get('/api/Masters/GetCandidateStatus', utils.EnsureAuthenticated, getCandidateStatus);

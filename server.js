@@ -20,6 +20,8 @@ require('./skills/skills')(app);
 require('./technology/technology')(app);
 require('./qualifications/qualifications')(app);
 require('./interviewRound/interviewRound')(app);
+require('./designations/designations')(app);
+require('./ownerTypes/ownerTypes')(app);
 
 app.get('/', function (req, res) {
     res.send('App Loaded...');
