@@ -33,10 +33,10 @@ var editOwnerType = function (req, res) {
     res.json(ownerType);
 };
 
-module.exports = function (app) {
-    app.get('/api/Masters/GetOwnerTypes', utils.EnsureAuthenticated, getOwnerTypes);
-    app.post('/api/Masters/OwnerType/GetOwnerTypeById', utils.EnsureAuthenticated, getOwnerTypeById);
-    app.post('/api/Master/OwnerType/Add', utils.EnsureAuthenticated, addOwnerType);
-    app.post('/api/Master/OwnerType/Delete', utils.EnsureAuthenticated, deleteOwnerType);
-    app.post('/api/Master/OwnerType/Edit', utils.EnsureAuthenticated, editOwnerType);
+module.exports = function(app) {
+    app.get('/api/Masters/GetOwnerTypes', utils.EnsureAuthenticated,utils.CheckServerType, getOwnerTypes)
+    app.post('/api/Masters/OwnerType/GetOwnerTypeById', utils.EnsureAuthenticated, utils.CheckServerType, getOwnerTypeById);
+    app.post('/api/Master/OwnerType/Add', utils.EnsureAuthenticated, utils.CheckServerType, addOwnerType);
+    app.post('/api/Master/OwnerType/Delete', utils.EnsureAuthenticated, utils.CheckServerType, deleteOwnerType);
+    app.post('/api/Master/OwnerType/Edit', utils.EnsureAuthenticated, utils.CheckServerType, editOwnerType);
 };

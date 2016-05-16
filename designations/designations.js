@@ -33,10 +33,10 @@ var editDesignation = function (req, res) {
     res.json(designation);
 };
 
-module.exports = function (app) {
-    app.get('/api/Masters/GetDesignations', utils.EnsureAuthenticated, getDesignations);
-    app.post('/api/Masters/Designation/GetDesignationById', utils.EnsureAuthenticated, getDesignationById);
-    app.post('/api/Master/Designation/Add', utils.EnsureAuthenticated, addDesignation);
-    app.post('/api/Master/Designation/Delete', utils.EnsureAuthenticated, deleteDesignation);
-    app.post('/api/Master/Designation/Edit', utils.EnsureAuthenticated, editDesignation);
+module.exports = function(app) {
+    app.get('/api/Masters/GetDesignations', utils.EnsureAuthenticated, utils.CheckServerType, getDesignations);
+    app.post('/api/Masters/Designation/GetDesignationById', utils.EnsureAuthenticated, utils.CheckServerType, getDesignationById);
+    app.post('/api/Master/Designation/Add', utils.EnsureAuthenticated, utils.CheckServerType, addDesignation);
+    app.post('/api/Master/Designation/Delete', utils.EnsureAuthenticated, utils.CheckServerType, deleteDesignation);
+    app.post('/api/Master/Designation/Edit', utils.EnsureAuthenticated, utils.CheckServerType, editDesignation);
 };

@@ -33,10 +33,10 @@ var editSkill = function (req, res) {
     res.json(skill);
 };
 
-module.exports = function (app) {
-    app.get('/api/Masters/GetSkills', utils.EnsureAuthenticated, getSkills);
-    app.post('/api/Masters/Skill/GetSkillById', utils.EnsureAuthenticated, getSkillById);
-    app.post('/api/Master/Skill/Add', utils.EnsureAuthenticated, addSkill);
-    app.post('/api/Master/Skill/Delete', utils.EnsureAuthenticated, deleteSkill);
-    app.post('/api/Master/Skill/Edit', utils.EnsureAuthenticated, editSkill);
+module.exports = function(app) {
+    app.get('/api/Masters/GetSkills', utils.EnsureAuthenticated, utils.CheckServerType, getSkills);
+    app.post('/api/Masters/Skill/GetSkillById', utils.EnsureAuthenticated, utils.CheckServerType, getSkillById);
+    app.post('/api/Master/Skill/Add', utils.EnsureAuthenticated, utils.CheckServerType, addSkill);
+    app.post('/api/Master/Skill/Delete', utils.EnsureAuthenticated, utils.CheckServerType, deleteSkill);
+    app.post('/api/Master/Skill/Edit', utils.EnsureAuthenticated, utils.CheckServerType, editSkill);
 };

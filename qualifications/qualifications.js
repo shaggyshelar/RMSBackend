@@ -33,10 +33,10 @@ var editQualification = function (req, res) {
     res.json(qualification);
 };
 
-module.exports = function (app) {
-    app.get('/api/Masters/GetQualifications', utils.EnsureAuthenticated, getQualifications);
-    app.post('/api/Masters/Qualification/GetqualificationById', utils.EnsureAuthenticated, getQualificationById);
-    app.post('/api/Master/Qualification/Add', utils.EnsureAuthenticated, addQualification);
-    app.post('/api/Master/Qualification/Delete', utils.EnsureAuthenticated, deleteQualification);
-    app.post('/api/Master/Qualification/Edit', utils.EnsureAuthenticated, editQualification);
+module.exports = function(app) {
+    app.get('/api/Masters/GetQualifications', utils.EnsureAuthenticated, utils.CheckServerType, getQualifications);
+    app.post('/api/Masters/Qualification/GetqualificationById', utils.EnsureAuthenticated, utils.CheckServerType, getQualificationById);
+    app.post('/api/Master/Qualification/Add', utils.EnsureAuthenticated, utils.CheckServerType, addQualification);
+    app.post('/api/Master/Qualification/Delete', utils.EnsureAuthenticated, utils.CheckServerType, deleteQualification);
+    app.post('/api/Master/Qualification/Edit', utils.EnsureAuthenticated, utils.CheckServerType, editQualification);
 };
