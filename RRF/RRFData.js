@@ -153,7 +153,7 @@ RRFList.GetAllRRF = [{
     "priority": 1,
     "expDateOfJoining": "30 May 2016",
     "raisedBy": "abc",
-     "status": "closed",
+    "status": "closed",
     "panel":
     [{
         "roundNumber": "1",
@@ -178,11 +178,11 @@ RRFList.GetAllRRF = [{
 },
     {
         "RRFID": 2,
-        "practice": "EBS",
-        "technology": "Microsoft",
+        "practice": "ECS",
+        "technology": "SAlesForce",
         "positionTitle": "Developer",
         "description": "Multi line text",
-        "noOfOpenings": 3,
+        "noOfOpenings": 1,
         "skillsRequired": "Multi line text",
         "designation": "SSE",
         "minExp": "3",
@@ -190,7 +190,7 @@ RRFList.GetAllRRF = [{
         "priority": 1,
         "expDateOfJoining": "30 May 2016",
         "raisedBy": "abc",
-          "status": "Open",
+        "status": "Open",
         "panel":
         [{
             "roundNumber": "1",
@@ -213,43 +213,8 @@ RRFList.GetAllRRF = [{
             }]
 
     },
-    {
-        "RRFID": 3,
-        "practice": "EBS",
-        "technology": "Microsoft",
-        "positionTitle": "Developer",
-        "description": "Multi line text",
-        "noOfOpenings": 3,
-        "skillsRequired": "Multi line text",
-        "designation": "SSE",
-        "minExp": "3",
-        "maxExp": "5",
-        "priority": 1,
-        "expDateOfJoining": "30 May 2016",
-        "raisedBy": "abc",
-         "status": "Rejected",
-        "panel":
-        [{
-            "roundNumber": "1",
-            "interviewers":
-            [
-                "abc", "xyz", "user"
-            ],
-            "status": "Selected",
-            "comments": "Multi line text"
-        },
-            {
-                "roundNumber": "2",
-                "interviewers":
-                [
-                    "abc", "xyz", "user"
-                ],
 
-                "status": "Selected",
-                "comments": "Multi line text"
-            }]
-
-    },
 ]
+RRFList.id = 2;
 
 module.exports = RRFList;
