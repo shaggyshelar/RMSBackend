@@ -29,8 +29,8 @@ var revokeRole = function (req, res) {
 
 
 module.exports = function (app) {
-    app.post('/api/User/GetRoles', utils.EnsureAuthenticated, getUserRole);
+    app.post('/api/User/GetRoles', utils.EnsureAuthenticated,utils.CheckServerType, getUserRole);
     app.get('/api/User/GetUsers', utils.EnsureAuthenticated,utils.CheckServerType, getUsers);
-    app.post('/api/User/AddRole', utils.EnsureAuthenticated, addRole);
-    app.post('/api/User/RevokeRole', utils.EnsureAuthenticated, revokeRole);
+    app.post('/api/User/AddRole', utils.EnsureAuthenticated,utils.CheckServerType, addRole);
+    app.post('/api/User/RevokeRole', utils.EnsureAuthenticated,utils.CheckServerType, revokeRole);
 };

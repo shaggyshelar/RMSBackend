@@ -54,11 +54,11 @@ var revokePermissionFromRole = function (req, res) {
 };
 module.exports = function (app) {
     app.get('/api/Role/GetRoles', utils.EnsureAuthenticated,utils.CheckServerType, getRoles);
-    app.post('/api/Role/GetRoleById', utils.EnsureAuthenticated, getRoleById);
-    app.post('/api/Role/Add', utils.EnsureAuthenticated, addRole);
-    app.post('/api/Role/Delete', utils.EnsureAuthenticated, deleteRole);
-    app.post('/api/Role/Edit', utils.EnsureAuthenticated, editRole);
-    app.post('/api/Role/GetPermissionsByRole', utils.EnsureAuthenticated, getPermissionsByRole);
-    app.post('/api/Role/AddPermissionToRole', utils.EnsureAuthenticated, addPermissionToRole);
-    app.post('/api/Role/RevokePermissionFromRole', utils.EnsureAuthenticated, revokePermissionFromRole);
+    app.post('/api/Role/GetRoleById', utils.EnsureAuthenticated,utils.CheckServerType, getRoleById);
+    app.post('/api/Role/Add', utils.EnsureAuthenticated,utils.CheckServerType, addRole);
+    app.post('/api/Role/Delete', utils.EnsureAuthenticated,utils.CheckServerType, deleteRole);
+    app.post('/api/Role/Edit', utils.EnsureAuthenticated,utils.CheckServerType, editRole);
+    app.post('/api/Role/GetPermissionsByRole', utils.EnsureAuthenticated,utils.CheckServerType, getPermissionsByRole);
+    app.post('/api/Role/AddPermissionToRole', utils.EnsureAuthenticated,utils.CheckServerType, addPermissionToRole);
+    app.post('/api/Role/RevokePermissionFromRole', utils.EnsureAuthenticated,utils.CheckServerType, revokePermissionFromRole);
 };

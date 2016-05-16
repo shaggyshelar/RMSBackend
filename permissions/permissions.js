@@ -14,6 +14,6 @@ var getAllPermissions = function (req, res) {
 
 
 module.exports = function (app) {
-    app.get('/api/user/GetLoggedInUserPermission', utils.EnsureAuthenticated, getLoggedInUserPermission);
-    app.get('/api/permission/GetAllPermissions', utils.EnsureAuthenticated, getAllPermissions);
+    app.get('/api/user/GetLoggedInUserPermission', utils.EnsureAuthenticated,utils.CheckServerType, getLoggedInUserPermission);
+    app.get('/api/permission/GetAllPermissions', utils.EnsureAuthenticated,utils.CheckServerType, getAllPermissions);
 };
