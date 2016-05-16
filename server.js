@@ -22,7 +22,7 @@ require('./qualifications/qualifications')(app);
 require('./interviewRound/interviewRound')(app);
 require('./designations/designations')(app);
 require('./ownerTypes/ownerTypes')(app);
-
+require('./masters/master')(app);
 app.get('/', function (req, res) {
     res.send('App Loaded...');
 });

@@ -1,14 +1,56 @@
 // List of hardcoded Masters along with their details.
 var master = {
-   // practices: ["EBS", "ECS"],
-   // technology: ["Microsoft", "Salesforce", "Angular"],
-   // skills: ["C#", "CRM", "SharePoint", "Angular JS"],
+    // practices: ["EBS", "ECS"],
+    // technology: ["Microsoft", "Salesforce", "Angular"],
+    // skills: ["C#", "CRM", "SharePoint", "Angular JS"],
     //qualifications: ["XII", "Graduate", "Post Graduate", "Training if Any"],
     year: ["2010", "2011", "2012", "2013"],
     //designation: ["Trainee", "System Executive", "Senior System Executive"],
-    country: ["India", "US", "UK", "Australia"],
-    state: ["Maharashtra", "Goa", "Delhi"],
-    district: ["Pune", "Mumbai", "Nagpur"],
+
+    country: [{
+        "Id": 1,
+        "Country": "India"
+    },
+        {
+            "Id": 2,
+            "Country": "US"
+        }, {
+            "Id": 3,
+            "Country": "UK"
+        },
+        {
+            "Id": 4,
+            "Country": "Australia"
+        }],
+
+    States: [{
+        "Id": 1,
+        "State": "Maharashtra"
+    },
+        {
+            "Id": 2,
+            "State": "Goa"
+        }, {
+            "Id": 3,
+            "State": "Delhi"
+        }
+    ],
+
+    district: [{
+        "Id": 1,
+        "District": "Pune"
+    },
+        {
+            "Id": 2,
+            "District": "Mumbai"
+        }, {
+            "Id": 3,
+            "District": "Nagpur"
+        }
+    ],
+
+    //state: ["Maharashtra", "Goa", "Delhi"],
+    //district: ["Pune", "Mumbai", "Nagpur"],
     //interviewRounds: ["Technical 1", "Technical 2"],
     interviewStatus: ["Selected", "Rejected", "On Hold"],
     ratings: [1, 2, 3, 4, 5],

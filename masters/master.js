@@ -28,10 +28,10 @@ var getCountries = function (req, res) {
     res.json(master.country);
 };
 var getStates = function (req, res) {
-    res.json(master.state);
+    res.json(master.States);
 };
 var getDistricts = function (req, res) {
-    res.json(master.state);
+    res.json(master.district);
 };
 var getRounds = function (req, res) {
     res.json(master.interviewRounds);
