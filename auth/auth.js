@@ -18,5 +18,5 @@ var authenticate = function (req, res) {
 }
 
 module.exports = function (app) {
-    app.post('/api/Authenticate', authenticate);
+    app.post('/api/Authentication/GetToken', authenticate);
 }
