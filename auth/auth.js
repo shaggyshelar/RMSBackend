@@ -6,8 +6,8 @@ var utils = require('./../utils/utils');
 var _ = require('lodash');
 
 var authenticate = function (req, res) {
-    var userName = req.body.credentials.userName;
-    var password = req.body.credentials.password;
+    var userName = req.body.UserName;
+    var password = req.body.Password;
     var userIndex = _.findIndex(users, { name: userName, password: password });
     if (userIndex != '-1') {
         var token = utils.CreateJWT(users[userIndex]);
