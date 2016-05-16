@@ -10,10 +10,10 @@ var getFeatures = function (req, res) {
     if (gridOptions.searchString == "") {
         if (gridOptions.orderBy != "") {
             if (gridOptions.orderBy != "ASC") {
-                featuresList = _.sortBy(features.featuresList, function (o) { return o.featureName; });
+                featuresList = _.sortBy(features.featuresList, function (o) { return o.FeatureName; });
             }
             else {
-                featuresList = _.sortBy(features.featuresList, function (o) { return o.featureName; }).reverse();
+                featuresList = _.sortBy(features.featuresList, function (o) { return o.FeatureName; }).reverse();
             }
         }
         else {
@@ -23,7 +23,7 @@ var getFeatures = function (req, res) {
     else {
         var searchedFeatures = [];
         for (var i = 0; i < features.featuresList.length; i++) {
-            if (features.featuresList[i].featureName.indexOf(gridOptions.searchString) > -1) {
+            if (features.featuresList[i].FeatureName.indexOf(gridOptions.searchString) > -1) {
                 searchedFeatures.push(features.featuresList[i]);
             }
         }
@@ -51,14 +51,14 @@ var deleteFeature = function (req, res) {
 };
 
 var getFeatureById = function (req, res) {
-    var featureID = parseInt(req.body.feature.id);
-    var index = _.findIndex(features.featuresList, { id: featureID });
+    var featureID = parseInt(req.body.feature.Id);
+    var index = _.findIndex(features.featuresList, { Id: featureID });
     res.json(features.featuresList[index]);
 };
 
 var editFeature = function (req, res) {
     var feature = req.body.feature;
-    var index = _.findIndex(features.featuresList, { id: feature.id });
+    var index = _.findIndex(features.featuresList, { Id: feature.Id });
     features.featuresList[index] = feature
     res.json(feature);
 };

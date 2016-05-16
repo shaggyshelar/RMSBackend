@@ -1,43 +1,43 @@
 // List of hardcoded users along with their details.
 var users = [
     {
-        id: 10,
-        name: 'admin',
-        password: 'admin',
-        roles: [{
-            id: 1,
-            roleName: 'SuperAdmin'
+        Id: 10,
+        UserName: 'admin',
+        Password: 'admin',
+        Roles: [{
+            Id: 1,
+            RoleName: 'SuperAdmin'
         },
             {
-                id: 2,
-                roleName: 'Management Team'
+                Id: 2,
+                RoleName: 'Management Team'
             }]
     },
     {
-        id: 11,
-        name: 'user1',
-        password: 'password',
-        roles: [{
-            id: 2,
-            roleName: 'Management Team'
+        Id: 11,
+        UserName: 'user1',
+        Password: 'Password',
+        Roles: [{
+            Id: 2,
+            RoleName: 'Management Team'
         }]
     },
     {
-        id: 12,
-        name: 'user2',
-        password: 'password',
-        roles: [{
-            id: 2,
-            roleName: 'Management Team'
+        Id: 12,
+        UserName: 'user2',
+        Password: 'Password',
+        Roles: [{
+            Id: 2,
+            RoleName: 'Management Team'
         }]
     },
     {
-        id: 13,
-        name: 'user3',
-        password: 'password',
-        roles: [{
-            id: 2,
-            roleName: 'Management Team'
+        Id: 13,
+        UserName: 'user3',
+        Password: 'Password',
+        Roles: [{
+            Id: 2,
+            RoleName: 'Management Team'
         }]
     }];
 module.exports = users;

@@ -122,54 +122,54 @@ var permissions = {
 
 permissions.permissionsList = [
     {
-        id: 1,
-        key: 'DASHBOARD.READ',
-        text: 'Can read Dasboard'
+        Id: 1,
+        Key: 'DASHBOARD.READ',
+        Text: 'Can read Dasboard'
     },
     {
-        id: 2,
-        key: 'PROFILE.MANAGE',
-        text: 'Can manage Profile'
+        Id: 2,
+        Key: 'PROFILE.MANAGE',
+        Text: 'Can manage Profile'
     },
     {
-        id: 3,
-        key: 'PROFILE.ALLPROFILES.READ',
-        text: 'Can read ALL Profile'
+        Id: 3,
+        Key: 'PROFILE.ALLPROFILES.READ',
+        Text: 'Can read ALL Profile'
     },
     {
-        id: 4,
-        key: 'PROFILE.BALCKLISTEDPROFILES.READ',
-        text: 'Can read Blacklisted Profile'
+        Id: 4,
+        Key: 'PROFILE.BALCKLISTEDPROFILES.READ',
+        Text: 'Can read Blacklisted Profile'
     },
     {
-        id: 5,
-        key: 'PROFILE.RECENTPROFILES.READ',
-        text: 'Can read Recent Profile'
+        Id: 5,
+        Key: 'PROFILE.RECENTPROFILES.READ',
+        Text: 'Can read Recent Profile'
     },
     {
-        id: 6,
-        key: 'PROFILE.MYPROFILES.READ',
-        text: 'Can read My Profile'
+        Id: 6,
+        Key: 'PROFILE.MYPROFILES.READ',
+        Text: 'Can read My Profile'
     },
     {
-        id: 7,
-        key: 'RRF.MANAGE',
-        text: 'Can manage RRF'
+        Id: 7,
+        Key: 'RRF.MANAGE',
+        Text: 'Can manage RRF'
     },
     {
-        id: 8,
-        key: 'RRF.MYRRF.READ',
-        text: 'Can read MY RRF '
+        Id: 8,
+        Key: 'RRF.MYRRF.READ',
+        Text: 'Can read MY RRF '
     },
     {
-        id: 9,
-        key: 'RRF.RRFAPPROVAL.READ',
-        text: 'Can read RRF Approval'
+        Id: 9,
+        Key: 'RRF.RRFAPPROVAL.READ',
+        Text: 'Can read RRF Approval'
     },
     {
-        id: 10,
-        key: 'RRF.RRFDASHBOARD.READ',
-        text: 'Can read RRF Dasboard'
+        Id: 10,
+        Key: 'RRF.RRFDASHBOARD.READ',
+        Text: 'Can read RRF Dasboard'
     },
 ]
 module.exports = permissions;

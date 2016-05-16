@@ -1,163 +1,163 @@
 // List of hardcoded users along with their details.
 var roles = {
     roleList: [{
-        id: 1,
-        roleName: 'SuperAdmin',
-        permissions: [
+        Id: 1,
+        RoleName: 'SuperAdmin',
+        Permissions: [
             {
-                id: 1,
-                key: 'DASHBOARD.READ',
-                text: 'Can read Dasboard'
+                Id: 1,
+                Key: 'DASHBOARD.READ',
+                Text: 'Can read Dasboard'
             },
             {
-                id: 2,
-                key: 'PROFILE.MANAGE',
-                text: 'Can manage Profile'
+                Id: 2,
+                Key: 'PROFILE.MANAGE',
+                Text: 'Can manage Profile'
             },
             {
-                id: 3,
-                key: 'PROFILE.ALLPROFILES.READ',
-                text: 'Can read ALL Profile'
+                Id: 3,
+                Key: 'PROFILE.ALLPROFILES.READ',
+                Text: 'Can read ALL Profile'
             }]
     },
         {
-            id: 2,
-            roleName: 'Management Team',
-            permissions: [
+            Id: 2,
+            RoleName: 'Management Team',
+            Permissions: [
                 {
-                    id: 5,
-                    key: 'PROFILE.RECENTPROFILES.READ',
-                    text: 'Can read Recent Profile'
+                    Id: 5,
+                    Key: 'PROFILE.RECENTPROFILES.READ',
+                    Text: 'Can read Recent Profile'
                 },
                 {
-                    id: 6,
-                    key: 'PROFILE.MYPROFILES.READ',
-                    text: 'Can read My Profile'
+                    Id: 6,
+                    Key: 'PROFILE.MYPROFILES.READ',
+                    Text: 'Can read My Profile'
                 },
                 {
-                    id: 7,
-                    key: 'RRF.MANAGE',
-                    text: 'Can manage RRF'
+                    Id: 7,
+                    Key: 'RRF.MANAGE',
+                    Text: 'Can manage RRF'
                 }]
         },
         {
-            id: 3,
-            roleName: 'Recruitment Head',
-            permissions: [
+            Id: 3,
+            RoleName: 'Recruitment Head',
+            Permissions: [
                 {
-                    id: 7,
-                    key: 'RRF.MANAGE',
-                    text: 'Can manage RRF'
+                    Id: 7,
+                    Key: 'RRF.MANAGE',
+                    Text: 'Can manage RRF'
                 },
                 {
-                    id: 8,
-                    key: 'RRF.MYRRF.READ',
-                    text: 'Can read MY RRF '
+                    Id: 8,
+                    Key: 'RRF.MYRRF.READ',
+                    Text: 'Can read MY RRF '
                 },
                 {
-                    id: 9,
-                    key: 'RRF.RRFAPPROVAL.READ',
-                    text: 'Can read RRF Approval'
+                    Id: 9,
+                    Key: 'RRF.RRFAPPROVAL.READ',
+                    Text: 'Can read RRF Approval'
                 }]
         },
         {
-            id: 4,
-            roleName: 'Delivery Manager',
-            permissions: [
+            Id: 4,
+            RoleName: 'Delivery Manager',
+            Permissions: [
                 {
-                    id: 5,
-                    key: 'PROFILE.RECENTPROFILES.READ',
-                    text: 'Can read Recent Profile'
+                    Id: 5,
+                    Key: 'PROFILE.RECENTPROFILES.READ',
+                    Text: 'Can read Recent Profile'
                 },
                 {
-                    id: 6,
-                    key: 'PROFILE.MYPROFILES.READ',
-                    text: 'Can read My Profile'
+                    Id: 6,
+                    Key: 'PROFILE.MYPROFILES.READ',
+                    Text: 'Can read My Profile'
                 },
                 {
-                    id: 7,
-                    key: 'RRF.MANAGE',
-                    text: 'Can manage RRF'
+                    Id: 7,
+                    Key: 'RRF.MANAGE',
+                    Text: 'Can manage RRF'
                 }]
         },
         {
-            id: 5,
-            roleName: 'Project Manager',
-            permissions: [
+            Id: 5,
+            RoleName: 'Project Manager',
+            Permissions: [
                 {
-                    id: 5,
-                    key: 'PROFILE.RECENTPROFILES.READ',
-                    text: 'Can read Recent Profile'
+                    Id: 5,
+                    Key: 'PROFILE.RECENTPROFILES.READ',
+                    Text: 'Can read Recent Profile'
                 },
                 {
-                    id: 6,
-                    key: 'PROFILE.MYPROFILES.READ',
-                    text: 'Can read My Profile'
+                    Id: 6,
+                    Key: 'PROFILE.MYPROFILES.READ',
+                    Text: 'Can read My Profile'
                 },
                 {
-                    id: 7,
-                    key: 'RRF.MANAGE',
-                    text: 'Can manage RRF'
+                    Id: 7,
+                    Key: 'RRF.MANAGE',
+                    Text: 'Can manage RRF'
                 }]
         },
         {
-            id: 6,
-            roleName: 'HR Team',
-            permissions: [
+            Id: 6,
+            RoleName: 'HR Team',
+            Permissions: [
                 {
-                    id: 5,
-                    key: 'PROFILE.RECENTPROFILES.READ',
-                    text: 'Can read Recent Profile'
+                    Id: 5,
+                    Key: 'PROFILE.RECENTPROFILES.READ',
+                    Text: 'Can read Recent Profile'
                 },
                 {
-                    id: 6,
-                    key: 'PROFILE.MYPROFILES.READ',
-                    text: 'Can read My Profile'
+                    Id: 6,
+                    Key: 'PROFILE.MYPROFILES.READ',
+                    Text: 'Can read My Profile'
                 },
                 {
-                    id: 7,
-                    key: 'RRF.MANAGE',
-                    text: 'Can manage RRF'
+                    Id: 7,
+                    Key: 'RRF.MANAGE',
+                    Text: 'Can manage RRF'
                 }]
         },
         {
-            id: 7,
-            roleName: 'HR Head',
-            permissions: [
+            Id: 7,
+            RoleName: 'HR Head',
+            Permissions: [
                 {
-                    id: 5,
-                    key: 'PROFILE.RECENTPROFILES.READ',
-                    text: 'Can read Recent Profile'
+                    Id: 5,
+                    Key: 'PROFILE.RECENTPROFILES.READ',
+                    Text: 'Can read Recent Profile'
                 },
                 {
-                    id: 6,
-                    key: 'PROFILE.MYPROFILES.READ',
-                    text: 'Can read My Profile'
+                    Id: 6,
+                    Key: 'PROFILE.MYPROFILES.READ',
+                    Text: 'Can read My Profile'
                 },
                 {
-                    id: 7,
-                    key: 'RRF.MANAGE',
-                    text: 'Can manage RRF'
+                    Id: 7,
+                    Key: 'RRF.MANAGE',
+                    Text: 'Can manage RRF'
                 }]
         },
         {
-            id: 8,
-            roleName: 'ESPL Employees',
-            permissions: [
+            Id: 8,
+            RoleName: 'ESPL Employees',
+            Permissions: [
                 {
-                    id: 5,
-                    key: 'PROFILE.RECENTPROFILES.READ',
-                    text: 'Can read Recent Profile'
+                    Id: 5,
+                    Key: 'PROFILE.RECENTPROFILES.READ',
+                    Text: 'Can read Recent Profile'
                 },
                 {
-                    id: 6,
-                    key: 'PROFILE.MYPROFILES.READ',
-                    text: 'Can read My Profile'
+                    Id: 6,
+                    Key: 'PROFILE.MYPROFILES.READ',
+                    Text: 'Can read My Profile'
                 },
                 {
-                    id: 7,
-                    key: 'RRF.MANAGE',
-                    text: 'Can manage RRF'
+                    Id: 7,
+                    Key: 'RRF.MANAGE',
+                    Text: 'Can manage RRF'
                 }]
         }],
     ids: 8

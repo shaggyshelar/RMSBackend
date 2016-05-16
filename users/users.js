@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 var getUserRole = function (req, res) {
     var userId = parseInt(req.body.userId);
-    var index = _.findIndex(users, { id: userId });
+    var index = _.findIndex(users, { Id: userId });
     res.json(users[index]);
 };
 
@@ -14,16 +14,16 @@ var getUsers = function (req, res) {
 
 var addRole = function (req, res) {
     var role = req.body.role;
-    var index = _.findIndex(users, { id: parseInt(role.userId) });
-    users[index].roles.push(req.body.role);
+    var index = _.findIndex(users, { Id: parseInt(role.UserId) });
+    users[index].Roles.push(req.body.role);
     res.json(role);
 };
 
 var revokeRole = function (req, res) {
     var role = req.body.role;
-    var userIndex = _.findIndex(users, { id: parseInt(role.userId) });
-    var roleIndex= _.findIndex(users[userIndex].roles, { id: parseInt(role.id) });
-    users[userIndex].roles.splice(roleIndex,1);
+    var userIndex = _.findIndex(users, { Id: parseInt(role.userId) });
+    var roleIndex= _.findIndex(users[userIndex].roles, {Id: parseInt(role.id) });
+    users[userIndex].Roles.splice(roleIndex,1);
     res.json(role);
 };
 

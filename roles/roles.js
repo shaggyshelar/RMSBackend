@@ -8,8 +8,8 @@ var getRoles = function (req, res) {
 
 var addRole = function (req, res) {
     var role = req.body.role;
-    role.id = ++roles.ids;
-    role.permissions = [];
+    role.Id = ++roles.ids;
+    role.Permissions = [];
     roles.roleList.push(role);
     res.json(role);
 };
@@ -22,34 +22,34 @@ var deleteRole = function (req, res) {
 };
 
 var getRoleById = function (req, res) {
-    var roleID = parseInt(req.body.role.id);
-    var index = _.findIndex(roles.roleList, { id: roleID });
+    var roleID = parseInt(req.body.role.Id);
+    var index = _.findIndex(roles.roleList, { Id: roleID });
     res.json(roles.roleList[index]);
 };
 
 var editRole = function (req, res) {
     var role = req.body.role;
-    var index = _.findIndex(roles.roleList, { id: role.id });
+    var index = _.findIndex(roles.roleList, { Id: role.Id });
     roles.roleList[index] = role
     res.json(role);
 };
 
 var getPermissionsByRole = function (req, res) {
     var roleId = parseInt(req.body.roleId);
-    var index = _.findIndex(roles.roleList, { id: roleId });
-    res.json(roles.roleList[index].permissions);
+    var index = _.findIndex(roles.roleList, { Id: roleId });
+    res.json(roles.roleList[index].Permissions);
 };
 var addPermissionToRole = function (req, res) {
     var permission = req.body.permission;
-    var index = _.findIndex(roles.roleList, { id: parseInt(permission.roleId) });
-    roles.roleList[index].permissions.push(permission);
+    var index = _.findIndex(roles.roleList, { Id: parseInt(permission.RoleId) });
+    roles.roleList[index].Permissions.push(permission);
     res.json(permission);
 };
 var revokePermissionFromRole = function (req, res) {
     var permission = req.body.permission;
-    var roleindex = _.findIndex(roles.roleList, { id: parseInt(permission.roleId) });
-    var permissionindex = _.findIndex(roles.roleList[roleindex].permissions, { text: permission.text });
-    roles.roleList[roleindex].permissions.splice(permissionindex, 1);
+    var roleindex = _.findIndex(roles.roleList, { Id: parseInt(permission.RoleId) });
+    var permissionindex = _.findIndex(roles.roleList[roleindex].Permissions, { Text: permission.text });
+    roles.roleList[roleindex].Permissions.splice(permissionindex, 1);
     res.json(permission);
 };
 module.exports = function (app) {

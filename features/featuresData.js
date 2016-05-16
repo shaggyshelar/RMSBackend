@@ -2,97 +2,97 @@
 var features = {
     featuresList: [
         {
-            id: 1,
-            featureName: 'Dashboard'
+            Id: 1,
+            FeatureName: 'Dashboard'
         }, {
-            id: 2,
-            featureName: 'Profile'
+            Id: 2,
+            FeatureName: 'Profile'
         }, {
-            id: 3,
-            featureName: 'RRF'
+            Id: 3,
+            FeatureName: 'RRF'
         }, {
-            id: 4,
-            featureName: 'Role'
+            Id: 4,
+            FeatureName: 'Role'
         }, {
-            id: 5,
-            featureName: 'Permission'
+            Id: 5,
+            FeatureName: 'Permission'
         }, {
-            id: 6,
-            featureName: 'Feature'
+            Id: 6,
+            FeatureName: 'Feature'
         },
          {
-            id: 1,
-            featureName: 'Dashboard'
+            Id: 1,
+            FeatureName: 'Dashboard'
         }, {
-            id: 2,
-            featureName: 'Profile'
+            Id: 2,
+            FeatureName: 'Profile'
         }, {
-            id: 3,
-            featureName: 'RRF'
+            Id: 3,
+            FeatureName: 'RRF'
         }, {
-            id: 4,
-            featureName: 'Role'
+            Id: 4,
+            FeatureName: 'Role'
         }, {
-            id: 5,
-            featureName: 'Permission'
+            Id: 5,
+            FeatureName: 'Permission'
         }, {
-            id: 6,
-            featureName: 'Feature'
+            Id: 6,
+            FeatureName: 'Feature'
         },
          {
-            id: 1,
-            featureName: 'Dashboard'
+            Id: 1,
+            FeatureName: 'Dashboard'
         }, {
-            id: 2,
-            featureName: 'Profile'
+            Id: 2,
+            FeatureName: 'Profile'
         }, {
-            id: 3,
-            featureName: 'RRF'
+            Id: 3,
+            FeatureName: 'RRF'
         }, {
-            id: 4,
-            featureName: 'Role'
+            Id: 4,
+            FeatureName: 'Role'
         }, {
-            id: 5,
-            featureName: 'Permission'
+            Id: 5,
+            FeatureName: 'Permission'
         }, {
-            id: 6,
-            featureName: 'Feature'
+            Id: 6,
+            FeatureName: 'Feature'
         }, {
-            id: 1,
-            featureName: 'Dashboard'
+            Id: 1,
+            FeatureName: 'Dashboard'
         }, {
-            id: 2,
-            featureName: 'Profile'
+            Id: 2,
+            FeatureName: 'Profile'
         }, {
-            id: 3,
-            featureName: 'RRF'
+            Id: 3,
+            FeatureName: 'RRF'
         }, {
-            id: 4,
-            featureName: 'Role'
+            Id: 4,
+            FeatureName: 'Role'
         }, {
-            id: 5,
-            featureName: 'Permission'
+            Id: 5,
+            FeatureName: 'Permission'
         }, {
-            id: 6,
-            featureName: 'Feature'
+            Id: 6,
+            FeatureName: 'Feature'
         }, {
-            id: 1,
-            featureName: 'Dashboard'
+            Id: 1,
+            FeatureName: 'Dashboard'
         }, {
-            id: 2,
-            featureName: 'Profile'
+            Id: 2,
+            FeatureName: 'Profile'
         }, {
-            id: 3,
-            featureName: 'RRF'
+            Id: 3,
+            FeatureName: 'RRF'
         }, {
-            id: 4,
-            featureName: 'Role'
+            Id: 4,
+            FeatureName: 'Role'
         }, {
-            id: 5,
-            featureName: 'Permission'
+            Id: 5,
+            FeatureName: 'Permission'
         }, {
-            id: 6,
-            featureName: 'Feature'
+            Id: 6,
+            FeatureName: 'Feature'
         }
     ],
     ids: 6
