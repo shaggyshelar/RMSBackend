@@ -2,6 +2,7 @@ var jwt = require('jwt-simple');
 var moment = require('moment');
 var bcrypt = require('bcrypt-node');
 var config = require('./../config/config');
+var request = require('request');
 
 module.exports = {
     CreateJWT: function (user) {
@@ -52,7 +53,20 @@ module.exports = {
     CheckServerType: function (req, res, next) {
         var serverType = req.headers.server_type;
         if (serverType === 'TestServer') {
-            next();
+            req.headers.host='powerful-lowlands-67740.herokuapp.com';
+            request({
+                url: 'https://powerful-lowlands-67740.herokuapp.com'+req.url,
+                headers: req.headers,
+                method:req.method,
+                body:JSON.stringify(req.body)
+            }, function (err, response) {
+                if (response.statusCode === 200) {
+                    res.send(response.body);
+                } else {
+                    res.status(400)
+                    res.send(response.statusMessage);
+                }
+            });
         }
         else {
             next();

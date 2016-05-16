@@ -64,9 +64,9 @@ var editFeature = function (req, res) {
 };
 
 module.exports = function (app) {
-    app.post('/api/Feature/GetFeatures', utils.EnsureAuthenticated, getFeatures);
-    app.post('/api/Feature/GetFeatureById', utils.EnsureAuthenticated, getFeatureById);
-    app.post('/api/Feature/Add', utils.EnsureAuthenticated, addFeature);
-    app.post('/api/Feature/Delete', utils.EnsureAuthenticated, deleteFeature);
-    app.post('/api/Feature/Edit', utils.EnsureAuthenticated, editFeature);
+    app.post('/api/Feature/GetFeatures', utils.EnsureAuthenticated,utils.CheckServerType, getFeatures);
+    app.post('/api/Feature/GetFeatureById', utils.EnsureAuthenticated,utils.CheckServerType,  getFeatureById);
+    app.post('/api/Feature/Add', utils.EnsureAuthenticated,utils.CheckServerType, addFeature);
+    app.post('/api/Feature/Delete', utils.EnsureAuthenticated,utils.CheckServerType, deleteFeature);
+    app.post('/api/Feature/Edit', utils.EnsureAuthenticated,utils.CheckServerType, editFeature);
 };
