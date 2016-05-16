@@ -33,10 +33,10 @@ var editPractice = function (req, res) {
     res.json(practice);
 };
 
-module.exports = function (app) {
-    app.get('/api/Masters/GetPractices', utils.EnsureAuthenticated, getPractices);
-    app.post('/api/Masters/Practice/GetPracticeById', utils.EnsureAuthenticated, getPracticeById);
-    app.post('/api/Masters/Practice/Add', utils.EnsureAuthenticated, addPractice);
-    app.post('/api/Masters/Practice/Delete', utils.EnsureAuthenticated, deletePractice);
-    app.post('/api/Masters/Practice/Edit', utils.EnsureAuthenticated, editPractice);
+module.exports = function(app) {
+    app.get('/api/Masters/GetPractices', utils.EnsureAuthenticated, utils.CheckServerType, getPractices);
+    app.post('/api/Masters/Practice/GetPracticeById', utils.EnsureAuthenticated, utils.CheckServerType, getPracticeById);
+    app.post('/api/Masters/Practice/Add', utils.EnsureAuthenticated, utils.CheckServerType, addPractice);
+    app.post('/api/Masters/Practice/Delete', utils.EnsureAuthenticated, utils.CheckServerType, deletePractice);
+    app.post('/api/Masters/Practice/Edit', utils.EnsureAuthenticated, utils.CheckServerType, editPractice);
 };

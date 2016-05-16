@@ -36,9 +36,9 @@ var editTechnology = function(req, res) {
 
 
 module.exports = function(app) {
-    app.get('/api/Masters/GetTechnologies', utils.EnsureAuthenticated, getTechnologies);
-    app.post('/api/Masters/Technology/GetTechnologyById', utils.EnsureAuthenticated, getTechnologyById);
-    app.post('/api/Masters/Technology/Add', utils.EnsureAuthenticated, addTechnology);
-    app.post('/api/Masters/Technology/Delete', utils.EnsureAuthenticated, deleteTechnology);
-    app.post('/api/Masters/Technology/Edit', utils.EnsureAuthenticated, editTechnology);
+    app.get('/api/Masters/GetTechnologies', utils.EnsureAuthenticated, utils.CheckServerType, getTechnologies);
+    app.post('/api/Masters/Technology/GetTechnologyById', utils.EnsureAuthenticated, utils.CheckServerType, getTechnologyById);
+    app.post('/api/Masters/Technology/Add', utils.EnsureAuthenticated, utils.CheckServerType, addTechnology);
+    app.post('/api/Masters/Technology/Delete', utils.EnsureAuthenticated, utils.CheckServerType, deleteTechnology);
+    app.post('/api/Masters/Technology/Edit', utils.EnsureAuthenticated, utils.CheckServerType, editTechnology);
 };

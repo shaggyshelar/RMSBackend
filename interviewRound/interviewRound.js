@@ -36,9 +36,9 @@ var editInterviewRounds = function(req, res) {
 
 
 module.exports = function(app) {
-    app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getInterviewRounds);
-    app.post('/api/Masters/InterviewRound/GetRoundsById', utils.EnsureAuthenticated, getInterviewRoundsById);
-    app.post('/api/Masters/InterviewRound/Add', utils.EnsureAuthenticated, addInterviewRounds);
-    app.post('/api/Masters/InterviewRound/Delete', utils.EnsureAuthenticated, deleteInterviewRounds);
-    app.post('/api/Masters/InterviewRound/Edit', utils.EnsureAuthenticated, editInterviewRounds);
+    app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, utils.CheckServerType, getInterviewRounds);
+    app.post('/api/Masters/InterviewRound/GetRoundsById', utils.EnsureAuthenticated, utils.CheckServerType, getInterviewRoundsById);
+    app.post('/api/Masters/InterviewRound/Add', utils.EnsureAuthenticated, utils.CheckServerType, addInterviewRounds);
+    app.post('/api/Masters/InterviewRound/Delete', utils.EnsureAuthenticated, utils.CheckServerType, deleteInterviewRounds);
+    app.post('/api/Masters/InterviewRound/Edit', utils.EnsureAuthenticated, utils.CheckServerType, editInterviewRounds);
 };
