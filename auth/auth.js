@@ -8,7 +8,7 @@ var _ = require('lodash');
 var authenticate = function (req, res) {
     var userName = req.body.UserName;
     var password = req.body.Password;
-    var userIndex = _.findIndex(users, { name: userName, password: password });
+    var userIndex = _.findIndex(users, { UserName: userName, Password: password });
     if (userIndex != '-1') {
         var token = utils.CreateJWT(users[userIndex]);
         res.send({ token: token });
