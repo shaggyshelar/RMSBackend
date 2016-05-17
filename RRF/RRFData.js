@@ -1,108 +1,37 @@
 var RRFList = {};
-RRFList.GetRaisedRRF =
-    [{
-        "RRFID": 1,
-        "practice": "EBS",
-        "technology": "Microsoft",
-        "position_Title": "Developer",
-        "description": "Multi line text",
-        "no_Of_Openings": 3,
-        "skills_Required": "Multi line text",
-        "designation": "SSE",
-        "min_Exp": "3",
-        "priority": 1,
-        "exp_Date_Of_Joining": "30 May 2016",
-        "status": "Pending Approval"
-    },
-        {
-            "RRFID": 2,
-            "practice": "EBS",
-            "technology": "Microsoft",
-            "position_Title": "Developer",
-            "description": "Multi line text",
-            "no_Of_Openings": 3,
-            "skills_Required": "Multi line text",
-            "designation": "SSE",
-            "min_Exp": "3",
-            "priority": 1,
-            "exp_Date_Of_Joining": "30 May 2016",
-            "status": "Pending Approval"
-        },
-        {
-            "RRFID": 3,
-            "practice": "EBS",
-            "technology": "Microsoft",
-            "position_Title": "Developer",
-            "description": "Multi line text",
-            "no_Of_Openings": 3,
-            "skills_Required": "Multi line text",
-            "designation": "SSE",
-            "min_Exp": "3",
-            "priority": 1,
-            "exp_Date_Of_Joining": "30 May 2016",
-            "status": "Pending Approval"
-        },
-        {
-            "RRFID": 4,
-            "practice": "EBS",
-            "technology": "Microsoft",
-            "position_Title": "Developer",
-            "description": "Multi line text",
-            "no_Of_Openings": 3,
-            "skills_Required": "Multi line text",
-            "designation": "SSE",
-            "min_Exp": "3",
-            "priority": 1,
-            "exp_Date_Of_Joining": "30 May 2016",
-            "status": "Pending Approval"
-        },
-        {
-            "RRFID": 5,
-            "practice": "EBS",
-            "technology": "Microsoft",
-            "position_Title": "Developer",
-            "description": "Multi line text",
-            "no_Of_Openings": 3,
-            "skills_Required": "Multi line text",
-            "designation": "SSE",
-            "min_Exp": "3",
-            "priority": 1,
-            "exp_Date_Of_Joining": "30 May 2016",
-            "status": "Pending Approval"
-        }]
 
 RRFList.RRFDetails = {
-    "practice": "EBS",
-    "technology": "Microsoft",
-    "positionTitle": "Developer",
-    "description": "Multi line text",
-    "noOfOpenings": 3,
-    "skillsRequired": "Multi line text",
-    "designation": "SSE",
-    "minExp": "3",
-    "maxExp": "5",
-    "priority": 1,
-    "expDateOfJoining": "30 May 2016",
-    "raisedBy": "abc",
-    "panel":
+    "Practice": "EBS",
+    "Technology": "Microsoft",
+    "PositionTitle": "Developer",
+    "Description": "Multi line text",
+    "NoOfOpenings": 3,
+    "SkillsRequired": "Multi line text",
+    "Designation": "SSE",
+    "MinExp": "3",
+    "MaxExp": "5",
+    "Priority": 1,
+    "ExpDateOfJoining": "30 May 2016",
+    "RaisedBy": "abc",
+    "Panel":
     [{
-        "roundNumber": "1",
-        "interviewers":
+        "RoundNumber": "1",
+        "Interviewers":
         [
             "abc", "xyz", "user"
         ],
-        "status": "Selected",
-        "comments": "Multi line text"
+        "Status": "Selected",
+        "Comments": "Multi line text"
     },
         {
-            "roundNumber": "2",
-            "interviewers":
+            "RoundNumber": "2",
+            "Interviewers":
             [
                 "abc", "xyz", "user"
             ],
 
-            "status": "Selected",
-            "comments": "Multi line text"
+            "Status": "Selected",
+            "Comments": "Multi line text"
         }]
 
 }
@@ -111,105 +40,105 @@ RRFList.RRFDetails = {
 RRFList.getAllRaisedRRF = [
     {
         "RRFID": "1",
-        "practice": "EBS",
-        "technology": "Microsoft",
-        "positionTitle": "Developer",
-        "description": "Multi line text",
-        "noOfOpenings": 3,
-        "skillsRequired": "Multi line text",
-        "designation": "SSE",
-        "minExp": "3",
-        "priority": 1,
-        "raisedBy": 'abc xyz',
-        "expDateOfJoining": "30 May 2016",
+        "Practice": "EBS",
+        "Technology": "Microsoft",
+        "PositionTitle": "Developer",
+        "Description": "Multi line text",
+        "NoOfOpenings": 3,
+        "SkillsRequired": "Multi line text",
+        "Designation": "SSE",
+        "MinExp": "3",
+        "Priority": 1,
+        "RaisedBy": 'abc xyz',
+        "ExpDateOfJoining": "30 May 2016",
     },
     {
         "RRFID": "2",
-        "practice": "EBS",
-        "technology": "Microsoft",
-        "positionTitle": "Developer",
-        "description": "Multi line text",
-        "noOfOpenings": 3,
-        "skillsRequired": "Multi line text",
-        "designation": "SSE",
-        "minExp": "3",
-        "priority": 1,
-        "raisedBy": 'abc xyz',
-        "expDateOfJoining": "30 May 2016",
+        "Practice": "EBS",
+        "Technology": "Microsoft",
+        "PositionTitle": "Developer",
+        "Description": "Multi line text",
+        "NoOfOpenings": 3,
+        "SkillsRequired": "Multi line text",
+        "Designation": "SSE",
+        "MinExp": "3",
+        "Priority": 1,
+        "RaisedBy": 'abc xyz',
+        "ExpDateOfJoining": "30 May 2016",
     },
 ]
 
 RRFList.GetAllRRF = [{
     "RRFID": 1,
-    "practice": "EBS",
-    "technology": "Microsoft",
-    "positionTitle": "Developer",
-    "description": "Multi line text",
-    "noOfOpenings": 3,
-    "skillsRequired": "Multi line text",
-    "designation": "SSE",
-    "minExp": "3",
-    "maxExp": "5",
-    "priority": 1,
-    "expDateOfJoining": "30 May 2016",
-    "raisedBy": "abc",
-    "status": "closed",
-    "panel":
+    "Practice": "EBS",
+    "Technology": "Microsoft",
+    "PositionTitle": "Developer",
+    "Description": "Multi line text",
+    "NoOfOpenings": 3,
+    "SkillsRequired": "Multi line text",
+    "Designation": "SSE",
+    "MinExp": "3",
+    "MaxExp": "5",
+    "Priority": 1,
+    "ExpDateOfJoining": "30 May 2016",
+    "RaisedBy": "abc",
+    "Status": "closed",
+    "Panel":
     [{
-        "roundNumber": "1",
-        "interviewers":
+        "RoundNumber": "1",
+        "Interviewers":
         [
             "abc", "xyz", "user"
         ],
-        "status": "Selected",
-        "comments": "Multi line text"
+        "Status": "Selected",
+        "Comments": "Multi line text"
     },
         {
-            "roundNumber": "2",
-            "interviewers":
+            "RoundNumber": "2",
+            "Interviewers":
             [
                 "abc", "xyz", "user"
             ],
 
-            "status": "Selected",
-            "comments": "Multi line text"
+            "Status": "Selected",
+            "Comments": "Multi line text"
         }]
 
 },
     {
         "RRFID": 2,
-        "practice": "ECS",
-        "technology": "SAlesForce",
-        "positionTitle": "Developer",
-        "description": "Multi line text",
-        "noOfOpenings": 1,
-        "skillsRequired": "Multi line text",
-        "designation": "SSE",
-        "minExp": "3",
-        "maxExp": "5",
-        "priority": 1,
-        "expDateOfJoining": "30 May 2016",
-        "raisedBy": "abc",
-        "status": "Open",
-        "panel":
+        "Practice": "ECS",
+        "Technology": "SAlesForce",
+        "PositionTitle": "Developer",
+        "Description": "Multi line text",
+        "NoOfOpenings": 1,
+        "SkillsRequired": "Multi line text",
+        "Designation": "SSE",
+        "MinExp": "3",
+        "MaxExp": "5",
+        "Priority": 1,
+        "ExpDateOfJoining": "30 May 2016",
+        "RaisedBy": "abc",
+        "Status": "Open",
+        "Panel":
         [{
-            "roundNumber": "1",
-            "interviewers":
+            "RoundNumber": "1",
+            "Interviewers":
             [
                 "abc", "xyz", "user"
             ],
-            "status": "Selected",
-            "comments": "Multi line text"
+            "Status": "Selected",
+            "Comments": "Multi line text"
         },
             {
-                "roundNumber": "2",
-                "interviewers":
+                "RoundNumber": "2",
+                "Interviewers":
                 [
                     "abc", "xyz", "user"
                 ],
 
-                "status": "Selected",
-                "comments": "Multi line text"
+                "Status": "Selected",
+                "Comments": "Multi line text"
             }]
 
     },
