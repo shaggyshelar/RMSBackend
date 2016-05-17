@@ -12,7 +12,7 @@ var addCandidateProfile = function (req, res) {
     profile.CandidateID = profileBank.candidateProfile.length + 1;
     profile.ResumeID = profileBank.candidateProfile.length + 1;
     profile.Candidate = profile.FirstName + profile.LastName;
-    profile.Status="PendingScreening";
+    profile.Status = "PendingScreening";
     profileBank.candidateProfile.push(profile);
     res.json(profile);
 };
@@ -32,13 +32,29 @@ var editCandidateProfile = function (req, res) {
     res.json(profile);
 };
 
-var getBlacklistedCandidates=function (req, res){
+var getBlacklistedCandidates = function (req, res) {
     res.json(profileBank.candidateProfile);
 }
 
-var getRecentProfiles=function (req, res){
+var getRecentProfiles = function (req, res) {
     res.json(profileBank.candidateProfile);
 }
+
+var AddQualificationDetails = function (req, res) {
+    var Qualification = req.body.qualification;
+
+    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: Qualification.CandidateID });
+    Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
+    profileBank.candidateProfile[index].Qualifications.push(Qualification);
+    res.json(Qualification);
+};
+
+var getQualificationDetails = function (req, res) {
+    var profileID = parseInt(req.body.profile.ProfileId);
+    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: profileID });
+    res.json(profileBank.candidateProfile[index].Qualifications);
+};
+
 module.exports = function (app) {
     app.get('/api/ProfileBank/getOpenProfiles', utils.EnsureAuthenticated, getOpenProfiles);
     app.post('/api/ProfileBank/addCandidateProfile', utils.EnsureAuthenticated, addCandidateProfile);
@@ -46,4 +62,17 @@ module.exports = function (app) {
     app.post('/api/ProfileBank/editCandidateProfile', utils.EnsureAuthenticated, editCandidateProfile);
     app.get('/api/ProfileBank/getBlacklistedCandidates', utils.EnsureAuthenticated, getBlacklistedCandidates);
     app.get('/api/ProfileBank/getRecentProfiles', utils.EnsureAuthenticated, getRecentProfiles);
+    app.post('/api/ProfileBank/AddPersonalDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddCandidateOtherDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddPersonalDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddCandidateOtherDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddCareerProfileDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddCandidateSkillsDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddCandidateSalaryDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddCandidateTeamManagementDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/UpdateStatus', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/AddQualificationDetails', utils.EnsureAuthenticated, AddQualificationDetails);
+    app.post('/api/ProfileBank/getQualificationDetails', utils.EnsureAuthenticated, getQualificationDetails);
+
+
 };
