@@ -82,6 +82,7 @@ RRFList.GetAllRRF = [{
     "Priority": 1,
     "ExpDateOfJoining": "30 May 2016",
     "RaisedBy": "abc",
+    "ApprovedBy": "",
     "Status": "closed",
     "Panel":
     [{
@@ -119,6 +120,7 @@ RRFList.GetAllRRF = [{
         "Priority": 1,
         "ExpDateOfJoining": "30 May 2016",
         "RaisedBy": "abc",
+        "ApprovedBy": "",
         "Status": "Open",
         "Panel":
         [{
@@ -145,5 +147,18 @@ RRFList.GetAllRRF = [{
 
 ]
 RRFList.id = 2;
+
+RRFList.StatuswiseRRFCount = {
+        "PendingApproval": 5,
+        "Rejected": 2,
+        "Open": 15,
+        "Assigned": 13,
+        "InProgress": 13,
+        "ClosureApproval": 2,
+        "Closed": 50
+}
+
+
+
 
 module.exports = RRFList;

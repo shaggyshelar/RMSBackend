@@ -100,7 +100,24 @@ var master = {
     visa: ["B1", "H1", "Other"],
     candidateStatus: ["Open", "Selected", "In Process"],
     RRFStatus: ["Pending Approval", "Open", "Assigned"],
-    interviewers: ["abc", "xyz", "abc"]
+    interviewers: ["abc", "xyz", "abc"],
+    InterviewRound: [{
+        "Id": "1",
+        "InterviewRounds": "Technical 1"
+    },
+        {
+            "Id": "2",
+            "InterviewRounds": "Technical 2"
+        }],
+    Interviewers: [{
+        "Id": "1",
+        "Interviewers": "abc"
+    },
+        {
+            "Id": "2",
+            "Interviewers": "xyz"
+        }]
+
 };
 
 module.exports = master;

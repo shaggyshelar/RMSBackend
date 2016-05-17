@@ -65,6 +65,10 @@ var getGrades = function (req, res) {
     res.json(master.grades);
 };
 
+var getRounds = function(req, res) {
+    res.json(master.InterviewRound);
+};
+
 module.exports = function (app) {
     //app.get('/api/Masters/GetPractices', utils.EnsureAuthenticated, getPractices);
     //app.get('/api/Masters/GetTechnologies', utils.EnsureAuthenticated, getTechnologies);
@@ -85,4 +89,5 @@ module.exports = function (app) {
     app.get('/api/Masters/GetRRFStatus', utils.EnsureAuthenticated, getRRFStatus);
     app.get('/api/Masters/GetInterviewers', utils.EnsureAuthenticated, getInterviewers);
     app.get('/api/Masters/GetGrades', utils.EnsureAuthenticated, getGrades);
+     app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getRounds);
 };
