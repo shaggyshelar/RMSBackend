@@ -98,7 +98,7 @@ var master = {
     interviewMode: ["telephonic", "Face to Face", "Skype"],
     //ownerType: ["Recruiter", "Company", "Employee"],
     visa: ["B1", "H1", "Other"],
-    candidateStatus: ["Open", "Selected", "In Process"],
+   // candidateStatus: ["Open", "Selected", "In Process"],
     RRFStatus: ["Pending Approval", "Open", "Assigned"],
     interviewers: ["abc", "xyz", "abc"],
     InterviewRound: [{
@@ -116,8 +116,28 @@ var master = {
         {
             "Id": "2",
             "Interviewers": "xyz"
-        }]
-
+        }],
+        CandidateStatus : [{
+            "Id":1,
+            "CandidateStatus" : "Open"
+            },
+            {
+            "Id":2,
+            "CandidateStatus" : "PendingScreening"
+            },
+            {
+            "Id":3,
+            "CandidateStatus" : "Offered"
+            },
+            {
+            "Id":4,
+            "CandidateStatus" : "Selected"
+            },
+            {
+            "Id":5,
+            "CandidateStatus" : "Blacklisted"
+            }]
+        
 };
 
 module.exports = master;

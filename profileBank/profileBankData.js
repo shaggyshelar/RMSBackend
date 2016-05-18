@@ -346,7 +346,11 @@ profileBank.candidateProfile = [
         "SecondaryReasonToQuitLastJob": "Multi line text",
         "PrimaryReasonToQuitCurrentJob": "Multi line text",
         "SecondaryReasonToQuitCurrentJob": "Multi line text",
-        "Status": "Selected"
+        "Status":[{
+            "Id":1,
+            "CandidateStatus" : "Open"
+            }],
+        "Comments" : "OPen"            
     },
     {
         "CandidateID": 2,
@@ -455,6 +459,10 @@ profileBank.candidateProfile = [
         "SecondaryReasonToQuitLastJob": "Multi line text",
         "PrimaryReasonToQuitCurrentJob": "Multi line text",
         "SecondaryReasonToQuitCurrentJob": "Multi line text",
-        "Status": "PendingScreening"
+        "Status": [{
+            "Id":2,
+            "CandidateStatus" : "PendingScreening"
+        }],
+        "Comments" : "PendingScreening"           
     }]
 module.exports = profileBank;
