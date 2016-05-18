@@ -149,13 +149,13 @@ RRFList.GetAllRRF = [{
 RRFList.id = 2;
 
 RRFList.StatuswiseRRFCount = {
-        "PendingApproval": 5,
-        "Rejected": 2,
-        "Open": 15,
-        "Assigned": 13,
-        "InProgress": 13,
-        "ClosureApproval": 2,
-        "Closed": 50
+    "PendingApproval": 5,
+    "Rejected": 2,
+    "Open": 15,
+    "Assigned": 13,
+    "InProgress": 13,
+    "ClosureApproval": 2,
+    "Closed": 50
 }
 
 

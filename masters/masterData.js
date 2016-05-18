@@ -3,10 +3,10 @@ var master = {
     // practices: ["EBS", "ECS"],
     // technology: ["Microsoft", "Salesforce", "Angular"],
     // skills: ["C#", "CRM", "SharePoint", "Angular JS"],
-    qualifications:[{
-            "Id": 1,
-            "Qualification": "XII"
-        },
+    qualifications: [{
+        "Id": 1,
+        "Qualification": "XII"
+    },
         {
             "Id": 2,
             "Qualification": "Graduate"
@@ -20,27 +20,27 @@ var master = {
             "Qualification": "Training if Any"
         }],
     year: [{
-        "Id":1,
-        "Year" : "2010"
+        "Id": 1,
+        "Year": "2010"
+    },
+        {
+            "Id": 2,
+            "Year": "2011"
         },
         {
-        "Id":2,
-        "Year" : "2011"
+            "Id": 3,
+            "Year": "2012"
         },
         {
-        "Id":3,
-        "Year" : "2012"
-        },
-        {
-        "Id":4,
-        "Year" : "2013"
+            "Id": 4,
+            "Year": "2013"
         }],
     //designation: ["Trainee", "System Executive", "Senior System Executive"],
 
     country: [{
         "Id": 1,
         "Country": "India"
-         },
+    },
         {
             "Id": 2,
             "Country": "US"
@@ -56,7 +56,7 @@ var master = {
     States: [{
         "Id": 1,
         "State": "Maharashtra"
-         },
+    },
         {
             "Id": 2,
             "State": "Goa"
@@ -69,7 +69,7 @@ var master = {
     district: [{
         "Id": 1,
         "District": "Pune"
-        },
+    },
         {
             "Id": 2,
             "District": "Mumbai"
@@ -78,18 +78,18 @@ var master = {
             "District": "Nagpur"
         }
     ],
-    grades :[{
-            "Id":1,
-            "Grade" : "A"
-            },
-            {
-            "Id":2,
-            "Grade" : "B"
-            },
-            {
-            "Id":3,
-            "Grade" : "C"
-            }],
+    grades: [{
+        "Id": 1,
+        "Grade": "A"
+    },
+        {
+            "Id": 2,
+            "Grade": "B"
+        },
+        {
+            "Id": 3,
+            "Grade": "C"
+        }],
     //state: ["Maharashtra", "Goa", "Delhi"],
     //district: ["Pune", "Mumbai", "Nagpur"],
     //interviewRounds: ["Technical 1", "Technical 2"],
@@ -100,7 +100,7 @@ var master = {
     visa: ["B1", "H1", "Other"],
     candidateStatus: ["Open", "Selected", "In Process"],
     RRFStatus: ["Pending Approval", "Open", "Assigned"],
-    interviewers: ["abc", "xyz", "abc"],
+    //interviewers: ["abc", "xyz", "abc"],
     InterviewRound: [{
         "Id": "1",
         "InterviewRounds": "Technical 1"
@@ -109,7 +109,7 @@ var master = {
             "Id": "2",
             "InterviewRounds": "Technical 2"
         }],
-    Interviewers: [{
+    interviewers: [{
         "Id": "1",
         "Interviewers": "abc"
     },
