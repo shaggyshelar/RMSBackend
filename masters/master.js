@@ -69,7 +69,11 @@ var getRounds = function(req, res) {
     res.json(master.InterviewRound);
 };
 
-module.exports = function(app) {
+var getCandidateStatuses = function(req, res) {
+    res.json(master.CandidateStatus);
+};
+ 
+module.exports = function (app) {
     //app.get('/api/Masters/GetPractices', utils.EnsureAuthenticated, getPractices);
     //app.get('/api/Masters/GetTechnologies', utils.EnsureAuthenticated, getTechnologies);
     // app.get('/api/Masters/GetSkills', utils.EnsureAuthenticated, getSkills);
@@ -85,9 +89,10 @@ module.exports = function(app) {
     //app.get('/api/Masters/GetOwnerTypes', utils.EnsureAuthenticated, getOwnerTypes);
     app.get('/api/Masters/GetInterviewMode', utils.EnsureAuthenticated, getInterviewMode);
     app.get('/api/Masters/GetVisaTypes', utils.EnsureAuthenticated, getVisaTypes);
-    app.get('/api/Masters/GetCandidateStatus', utils.EnsureAuthenticated, getCandidateStatus);
+    //app.get('/api/Masters/GetCandidateStatus', utils.EnsureAuthenticated, getCandidateStatus);
     app.get('/api/Masters/GetRRFStatus', utils.EnsureAuthenticated, getRRFStatus);
     app.get('/api/Masters/GetInterviewers', utils.EnsureAuthenticated, getInterviewers);
     app.get('/api/Masters/GetGrades', utils.EnsureAuthenticated, getGrades);
     app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getRounds);
+    app.get('/api/Masters/GetCandidateStatuses', utils.EnsureAuthenticated, getCandidateStatuses);
 };
