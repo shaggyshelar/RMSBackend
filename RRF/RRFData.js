@@ -158,7 +158,15 @@ RRFList.StatuswiseRRFCount = {
     "Closed": 50
 }
 
+RRFList.SaveResult={
+      "StatusCode": 1,
+     "Message": "Details Saved Successfully"
+}
 
+RRFList.Approved = {
+    "StatusCode": 1,
+    "Message":"Added successfully"
+}
 
 
 module.exports = RRFList;

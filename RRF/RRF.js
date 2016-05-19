@@ -25,7 +25,7 @@ var raiseRRF = function( req, res ) {
     var rrfDetails = req.body.rrfDetails;
     rrfDetails.RRFID = ++RRFList.id;
     RRFList.GetAllRRF.push( rrfDetails );
-    res.json( RFList );
+    res.json( RRFList.SaveResult );
 };
 var actionOnRaisedRRF = function( req, res ) {
     var RRFID = req.body.RRFID;
@@ -35,7 +35,7 @@ var actionOnRaisedRRF = function( req, res ) {
     var index = _.findIndex( RRFList.GetAllRRF, { RRFID: RRFID } );
     RRFList.GetAllRRF[ index ].RaisedBy = Approver;
     RRFList.GetAllRRF[ index ].Status = Status;
-    res.json( RRFList.GetAllRRF[ index ] );
+    res.json( RRFList.Approved );
 };
 
 var getStatuswiseRRFCount = function( req, res ) {
