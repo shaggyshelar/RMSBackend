@@ -103,8 +103,26 @@ RRFList.GetAllRRF = [{
 
             "Status": "Selected",
             "Comments": "Multi line text"
-        }]
+        }],
+    "AssignedData":
+    [{
+        "RRFID": "1",
+        "AssignedTo": { Id: 1, Value: "ABC" },
 
+        "AssignedComments": "Multiline Text",
+        "AssignedDate": "11/05/2016",
+        "UnassigningComment": "Multiline Text",
+        "AssigneeLastDate": "11/05/2016"
+    },
+        {
+            "RRFID": "1",
+            "AssignedTo": { Id: 2, Value: "XYZ" },
+            "ExpClosureDate": "11/05/2016",
+            "AssignedComments": "Multiline Text",
+            "AssignedDate": "11/05/2016",
+            "UnassigningComment": "Multiline Text",
+            "AssigneeLastDate": ""
+        }]
 },
     {
         "RRFID": 2,
@@ -122,6 +140,8 @@ RRFList.GetAllRRF = [{
         "RaisedBy": "abc",
         "ApprovedBy": "",
         "Status": "Open",
+        // "AssignedData":[], //TODO check when API integration will do
+
         "Panel":
         [{
             "RoundNumber": "1",
@@ -141,7 +161,17 @@ RRFList.GetAllRRF = [{
 
                 "Status": "Selected",
                 "Comments": "Multi line text"
-            }]
+            }],
+        "AssignedData":
+        [{
+            "RRFID": "1",
+            "AssignedTo": { Id: 1, Value: "ABC" },
+
+            "AssignedComments": "Multiline Text",
+            "AssignedDate": "11/05/2016",
+            "UnassigningComment": "Multiline Text",
+            "AssigneeLastDate": "11/05/2016"
+        }],
 
     },
 
@@ -156,17 +186,17 @@ RRFList.StatuswiseRRFCount = {
     "InProgress": 13,
     "ClosureApproval": 2,
     "Closed": 50
-}
+};
 
-RRFList.SaveResult={
-      "StatusCode": 1,
-     "Message": "Details Saved Successfully"
-}
+RRFList.SaveResult = {
+    "StatusCode": 1,
+    "Message": "Details Saved Successfully"
+};
 
 RRFList.Approved = {
     "StatusCode": 1,
-    "Message":"Added successfully"
-}
+    "Message": "Added successfully"
+};
 
 
 module.exports = RRFList;

@@ -136,8 +136,24 @@ var master = {
             {
             "Id":5,
             "CandidateStatus" : "Blacklisted"
-            }]
+            }],
 
+ recruiter : [{
+            "Id":1,
+            "Recruiter" : "ABC"
+            },
+            {
+            "Id":2,
+            "Recruiter" : "XYZ"
+            },
+            {
+            "Id":3,
+            "Recruiter" : "PQR"
+            },
+            {
+            "Id":4,
+            "Recruiter" : "MNK"
+            }]
 };
 
 module.exports = master;
