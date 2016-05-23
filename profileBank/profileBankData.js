@@ -2,30 +2,32 @@ var profileBank = {};
 
 
 profileBank.profile = [{
-    "CandidateID": 1,
-    "Candidate": "abc xyz",
-    "FirstName": "abc",
-    "MiddleName": "xyz",
-    "LastName": "abc",
-    "Contact": 9898989898,
-    "Email": "abc@gmail.com",
-    "Tag": "SharePoint",
-    "Skills": ["C#", "ASP.Net", "Javascript"],
-    "ResumeID": "1"
-
-},
-    {
-        "CandidateID": 2,
-        "Candidate": "abc xyz",
-        "FirstName": "abc",
-        "MiddleName": "xyz",
-        "LastName": "abc",
-        "Contact": 9898989898,
-        "Email": "abc@gmail.com",
+        "CandidateOtherDetails": { "NoticePeriod": "30" },
+        "CandidateSalaryDetails": { "CurrentSalary": "5.3", "ExpectedSalary": "6.3" },
+        "CandidateID": "C001",
+        "Candidate": "Shrikant Mane",
+        "Email": "mane.shrik@123.com",
         "Tag": "SharePoint",
-        "Skills": ["C#", "ASP.Net", "Javascript"],
-        "ResumeID": "1"
-
+        "ResumeID": "",
+        "Status":{
+            "Id":1,
+            "CandidateStatus" : "Open"
+            },
+        "Comments" : "Open",
+    },
+    {
+        "CandidateOtherDetails": { "NoticePeriod": "12" },
+        "CandidateSalaryDetails": { "CurrentSalary": "23", "ExpectedSalary": "120" },
+        "CandidateID": "C002",
+        "Candidate": "Rohit Sevramanai",
+        "Email": "rohit@123.com",
+        "Tag": "SalseForce",
+        "ResumeID": "",
+        "Status":{
+            "Id":2,
+            "CandidateStatus" : "PendingScreening"
+            },
+        "Comments" : "Pending Screening",
     }]
 
 
@@ -54,7 +56,7 @@ profileBank.candidates = [{
 
 
 profileBank.candidatesPersonalDetail = [{
-    "CandidateID": "1",
+    "CandidateID": "C001",
     "FirstName": "abc",
     "MiddleName": "abc",
     "LastName": "abc",
@@ -81,14 +83,14 @@ profileBank.candidatesPersonalDetail = [{
 
 
 profileBank.qualification = [{
-    "CandidateID": "1",
+    "CandidateID": "C001",
     "Qualification": "XII",
     "YearofPassing": 2010,
     "Marks": "60",
     "Grade": "A"
 },
     {
-        "CandidateID": "2",
+        "CandidateID": "C002",
         "Qualification": "Graduate",
         "YearofPassing": 2010,
         "Marks": "60",
@@ -97,14 +99,14 @@ profileBank.qualification = [{
 
 
 profileBank.careerProfile = [{
-    "CandidateID": "1",
+    "CandidateID": "C001",
     "TotalExperience": "3.2",
     "RelevantExperience": "3.2",
     "CurrentCompany": "Eternus",
     "CurrentDesignationRole": "SSE",
     "TimespentinCurrentCompany": "3.2"
 }, {
-        "CandidateID": "2",
+        "CandidateID": "C002",
         "TotalExperience": "3.2",
         "RelevantExperience": "3.2",
         "CurrentCompany": "Eternus",
@@ -114,7 +116,7 @@ profileBank.careerProfile = [{
 
 
 profileBank.candidateSkill = [{
-    "CandidateID": "1",
+    "CandidateID": "C001",
     "ExpinSkill": "3.2",
     "AnyFunctionalExp": "Multi line of text",
     "PrimarySkills": "Multi line of text",
@@ -128,7 +130,7 @@ profileBank.candidateSkill = [{
     "Awareabouttesting": "Multi line of text",
     "StrongTechnicalskills": "Multi line of text"
 }, {
-        "CandidateID": "2",
+        "CandidateID": "C002",
         "ExpinSkill": "3.2",
         "AnyFunctionalExp": "Multi line of text",
         "PrimarySkills": "Multi line of text",
@@ -145,7 +147,7 @@ profileBank.candidateSkill = [{
 
 
 profileBank.candidateSalaryStructure = [{
-    "CandidateID": "1",
+    "CandidateID": "C001",
     "CurrentSalary": "5.0",
     "ExpectedSalary": "7.0",
     "CurrentTakehome": "5.0",
@@ -153,7 +155,7 @@ profileBank.candidateSalaryStructure = [{
     "CTCincludevariable": "Yes",
     "Howmuchvariable": "1.0"
 }, {
-        "CandidateID": "2",
+        "CandidateID": "C002",
         "CurrentSalary": "5.0",
         "ExpectedSalary": "7.0",
         "CurrentTakehome": "5.0",
@@ -164,7 +166,7 @@ profileBank.candidateSalaryStructure = [{
 
 
 profileBank.teamManagement = [{
-    "Candidate ID": "1",
+   "CandidateID": "C001",
     "TeamMgmt": "Yes",
     "Handlingteam": "Multi line text",
     "NoofTeammembers": 5,
@@ -181,7 +183,7 @@ profileBank.teamManagement = [{
 
 
 profileBank.OtherDetails = [{
-    "CandidateID": "1",
+    "CandidateID": "C001",
     "AppliedEarlier": "Yes",
     "AppraisalBondContract Details": "Multiline",
     "Visa": "abc",
@@ -202,7 +204,7 @@ profileBank.OtherDetails = [{
     "PrimaryReasontoquitcurrentjob": "Multi line text",
     "SecondaryReasontoquitcurrentjob": "Multi line text",
 }, {
-        "CandidateID": "2",
+        "CandidateID": "C002",
         "AppliedEarlier": "Yes",
         "AppraisalBondContract Details": "Multiline",
         "Visa": "abc",
@@ -240,7 +242,7 @@ profileBank.candidateAnalytics = {
 }
 profileBank.candidateProfile = [
     {
-        "CandidateID": 1,
+        "CandidateID": "C001",
         "Candidate": "abc abc",
         "FirstName": "abc",
         "MiddleName": "abc",
@@ -255,9 +257,9 @@ profileBank.candidateProfile = [
         "District": 1,
         "State": 2,
         "Country": 3,
-        "IsCurrentSameAsPermanent": true,
-        "OutstationedCandidate": true,
-        "ReadyToRelocate": false,
+        "IsCurrentSameAsPermanent": "Yes",
+        "OutstationedCandidate": "Yes",
+        "ReadyToRelocate": "No",
         "ReasonToRelocate": "abc",
         "FriendsRelatives": "abc",
         "CommunicationScale": "abc",
@@ -265,38 +267,38 @@ profileBank.candidateProfile = [
         "ResumeSource": "abc",
         "Tag": "abc",
         "Qualifications": [{
-            "CandidateID": 1,
+            "CandidateID": "C001",
             "QualificationID": 1,
-            "Qualification": [{
+            "Qualification": {
                 "Id": 1,
                 "Qualification": "XII"
-            }],
-            "YearOfPassing": [{
+            },
+            "YearOfPassing": {
                 "Id": 1,
                 "Year": "2010"
-            }],
+            },
             "Marks": "65",
-            "Grade": [{
+            "Grade": {
                 "Id": 1,
                 "Grade": "A"
-            }]
+            }
         },
             {
-                "CandidateID": 1,
+                "CandidateID": "C001",
                 "QualificationID": 2,
-                "Qualification": [{
+                "Qualification": {
                     "Id": 2,
                     "Qualification": "Graduate"
-                }],
-                "YearOfPassing": [{
+                },
+                "YearOfPassing": {
                     "Id": 1,
                     "Year": "2010"
-                }],
+                },
                 "Marks": "05",
-                "Grade": [{
+                "Grade": {
                     "Id": 1,
                     "Grade": "A"
-                }]
+                }
             }],
         "Skills": ["C#", "ASP.Net", "Javascript"],
         "TotalExperience": "3.5",
@@ -327,7 +329,7 @@ profileBank.candidateProfile = [
         "NoOfTeamMembers": 5,
         "TeamMembersDesignations": "Multi line text",
         "TeamHandlingChallenges": "Multi line text",
-        "AppliedEarlier": true,
+        "AppliedEarlier": "Yes",
         "AppraisalBondContract Details": "Multi line text",
         "Visa": "abc",
         "NoticePeriod": "90 days",
@@ -340,20 +342,21 @@ profileBank.candidateProfile = [
         "IfExstingCompanyOffers": "Multi line text",
         "NoticePeriodNotCompletedCount": "Multi line text",
         "LookingFor": "Multi line text",
-        "OfferInHand": false,
+        "OfferInHand": "No",
         "OfferDetails": "Multi line text",
         "PrimaryReasonToQuitLastJob": "Multi line text",
         "SecondaryReasonToQuitLastJob": "Multi line text",
         "PrimaryReasonToQuitCurrentJob": "Multi line text",
         "SecondaryReasonToQuitCurrentJob": "Multi line text",
-        "Status":[{
+        "Status":{
             "Id":1,
             "CandidateStatus" : "Open"
-            }],
-        "Comments" : "OPen" 
+            },
+        "Comments" : "OPen",
+        "CTCIncludeVariable": "Yes" 
     },
     {
-        "CandidateID": 2,
+        "CandidateID": "C002",
         "Candidate": "xyz xyz",
         "FirstName": "XYZ",
         "MiddleName": "abc",
@@ -368,9 +371,9 @@ profileBank.candidateProfile = [
         "District": 2,
         "State": 3,
         "Country": 2,
-        "IsCurrentSameAsPermanent": true,
-        "OutstationedCandidate": false,
-        "ReadyToRelocate": true,
+        "IsCurrentSameAsPermanent": "Yes",
+        "OutstationedCandidate": "No",
+        "ReadyToRelocate": "Yes",
         "ReasonToRelocate": "abc",
         "FriendsRelatives": "abc",
         "CommunicationScale": "abc",
@@ -378,7 +381,7 @@ profileBank.candidateProfile = [
         "ResumeSource": "abc",
         "Tag": "abc",
         "Qualifications": [{
-            "CandidateID": 1,
+            "CandidateID": "C001",
             "QualificationID": 1,
             "Qualification": [{
                 "Id": 1,
@@ -395,7 +398,7 @@ profileBank.candidateProfile = [
             }]
         },
             {
-                "CandidateID": 1,
+                "CandidateID": "C001",
                 "QualificationID": 2,
                 "Qualification": [{
                     "Id": 1,
@@ -435,12 +438,12 @@ profileBank.candidateProfile = [
         "AnyPerks": "Multi line",
         "VariableSalary": "Yes",
         "VariableSalaryAmount": "1.0",
-        "TeamMgmt": true,
+        "TeamMgmt": "Yes",
         "HandlingTeam": "Multi line text",
         "NoOfTeamMembers": 5,
         "TeamMembersDesignations": "Multi line text",
         "TeamHandlingChallenges": "Multi line text",
-        "AppliedEarlier": false,
+        "AppliedEarlier": "No",
         "AppraisalBondContractDetails": "Multi line text",
         "Visa": "abc",
         "NoticePeriod": "90 days",
@@ -453,16 +456,17 @@ profileBank.candidateProfile = [
         "IfExstingCompanyOffers": "Multi line text",
         "NoticePeriodNotCompletedCount": "Multi line text",
         "LookingFor": "Multi line text",
-        "OfferInHand": true,
+        "OfferInHand": "Yes",
         "OfferDetails": "Multi line text",
         "PrimaryReasonToQuitLastJob": "Multi line text",
         "SecondaryReasonToQuitLastJob": "Multi line text",
         "PrimaryReasonToQuitCurrentJob": "Multi line text",
         "SecondaryReasonToQuitCurrentJob": "Multi line text",
-        "Status":[{
+        "Status":{
             "Id":2,
             "CandidateStatus" : "PendingScreening"
-        }],
-        "Comments" : "PendingScreening" 
+        },
+        "Comments" : "PendingScreening",
+        "CTCIncludeVariable": "No"
     }]
 module.exports = profileBank;
