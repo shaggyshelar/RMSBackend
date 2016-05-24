@@ -383,36 +383,36 @@ profileBank.candidateProfile = [
         "Qualifications": [{
             "CandidateID": "C001",
             "QualificationID": 1,
-            "Qualification": [{
+            "Qualification": {
                 "Id": 1,
                 "Qualification": "XII"
-            }],
-            "YearOfPassing": [{
+            },
+            "YearOfPassing": {
                 "Id": 1,
                 "Year": "2010"
-            }],
+            },
             "Marks": "65",
-            "Grade": [{
+            "Grade": {
                 "Id": 1,
                 "Grade": "A"
-            }]
+            }
         },
             {
                 "CandidateID": "C001",
                 "QualificationID": 2,
-                "Qualification": [{
+                "Qualification": {
                     "Id": 1,
                     "Qualification": "XII"
-                }],
-                "YearOfPassing": [{
+                },
+                "YearOfPassing": {
                     "Id": 1,
                     "Year": "2010"
-                }],
+                },
                 "Marks": "60",
-                "Grade": [{
+                "Grade": {
                     "Id": 1,
                     "Grade": "A"
-                }]
+                }
             }],
         "Skills": ["C#", "ASP.Net", "Javascript"],
         "TotalExperience": "3.2",

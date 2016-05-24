@@ -1,7 +1,7 @@
 // Return current user's permissions array
 var utils = require('./../utils/utils');
 var profileBank = require('./../profileBank/profileBankData');
-var master = require( './../masters/masterData');
+var master = require('./../masters/masterData');
 var _ = require('lodash');
 
 var getOpenProfiles = function (req, res) {
@@ -22,10 +22,10 @@ var addCandidateProfile = function (req, res) {
     profile.Status = { "Id": 2, "CandidateStatus": "PendingScreening" };
     //Adding in both arrays
     profileBank.candidateProfile.push(profile);
-    
+
     profile.CandidateOtherDetails = {};
     profile.CandidateOtherDetails.NoticePeriod = '';
-    
+
     profile.CandidateSalaryDetails = {};
     profile.CandidateSalaryDetails.CurrentSalary = '';
     profile.CandidateSalaryDetails.ExpectedSalary = '';
@@ -63,16 +63,29 @@ var getRecentProfiles = function (req, res) {
 var AddQualificationDetails = function (req, res) {
     var Qualification = req.body.qualification;
     var index = _.findIndex(profileBank.candidateProfile, { CandidateID: Qualification.CandidateID });
-    if(index !== -1)
-    {
-        if(index !== -1 && profileBank.candidateProfile[index].Qualifications!== undefined) {
+    if (index !== -1) {
+        if (index !== -1 && profileBank.candidateProfile[index].Qualifications !== undefined) {
             Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
         }
         else {
-            profileBank.candidateProfile[index].Qualifications=[];
+            profileBank.candidateProfile[index].Qualifications = [];
             Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
         }
     }
+    var QIndex = _.findIndex(master.qualifications, { Id: Qualification.Qualification });
+    Qualification.Qualification = [];
+    Qualification.Qualification = master.qualifications[QIndex];
+
+
+    var YIndex = _.findIndex(master.year, { Id: Qualification.YearOfPassing });
+    Qualification.YearOfPassing = [];
+    Qualification.YearOfPassing = master.year[YIndex];
+
+
+    var GIndex = _.findIndex(master.grades, { Id: Qualification.Grade });
+    Qualification.Grade = [];
+    Qualification.Grade = master.grades[GIndex];
+
     profileBank.candidateProfile[index].Qualifications.push(Qualification);
     res.json(Qualification);
 };
@@ -84,11 +97,27 @@ var getQualificationDetails = function (req, res) {
 };
 
 var updateQualifications = function (req, res) {
-    var qualification = req.body.qualification;
-    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: qualification.CandidateID });
-    var QIndex = _.findIndex(profileBank.candidateProfile[index].Qualifications, { QualificationID: qualification.QualificationID });
-    profileBank.candidateProfile[index].Qualifications[QIndex] = qualification;
-    res.json(qualification);
+    var Qualification = req.body.qualification;
+    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: Qualification.CandidateID });
+    var QIndex = _.findIndex(profileBank.candidateProfile[index].Qualifications, { QualificationID: Qualification.QualificationID });
+   
+    var QQIndex = _.findIndex(master.qualifications, { Id: Qualification.Qualification });
+    Qualification.Qualification = [];
+    Qualification.Qualification = master.qualifications[QQIndex];
+
+
+    var YIndex = _.findIndex(master.year, { Id: Qualification.YearOfPassing });
+    Qualification.YearOfPassing = [];
+    Qualification.YearOfPassing = master.year[YIndex];
+
+
+    var GIndex = _.findIndex(master.grades, { Id: Qualification.Grade });
+    Qualification.Grade = [];
+    Qualification.Grade = master.grades[GIndex];
+   
+   
+    profileBank.candidateProfile[index].Qualifications[QIndex] = Qualification;
+    res.json(Qualification);
 };
 
 var updateCandidateProfileStatus = function (req, res) {
