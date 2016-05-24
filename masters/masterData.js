@@ -103,19 +103,19 @@ var master = {
     //interviewers: ["abc", "xyz", "abc"],
     InterviewRound: [{
         "Id": "1",
-        "InterviewRounds": "Technical 1"
+        "Value": "Technical 1"
     },
         {
             "Id": "2",
-            "InterviewRounds": "Technical 2"
+            "Value": "Technical 2"
         }],
     interviewers: [{
         "Id": "1",
-        "Interviewers": "abc"
+        "Value": "abc"
     },
         {
             "Id": "2",
-            "Interviewers": "xyz"
+            "Value": "xyz"
         }],
         CandidateStatus : [{
             "Id":1,

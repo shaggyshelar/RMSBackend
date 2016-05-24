@@ -84,26 +84,19 @@ RRFList.GetAllRRF = [{
     "RaisedBy": "abc",
     "ApprovedBy": "",
     "Status": "closed",
-    "Panel":
-    [{
-        "RoundNumber": "1",
-        "Interviewers":
-        [
-            "abc", "xyz", "user"
-        ],
-        "Status": "Selected",
-        "Comments": "Multi line text"
-    },
-        {
-            "RoundNumber": "2",
-            "Interviewers":
-            [
-                "abc", "xyz", "user"
-            ],
-
-            "Status": "Selected",
-            "Comments": "Multi line text"
-        }],
+    "Panel":[
+  { "RoundNunber":
+      { "Id":1,
+        "Value":"Technical1"
+     },
+    "Interviewers":[{ 
+      "Id":1,
+      "Value":"ABC"
+    },{ "Id":"2",
+      "Value":"XYZ"
+    }]
+    
+  }],
     "AssignedData":
     [{
         "RRFID": "1",
@@ -142,26 +135,33 @@ RRFList.GetAllRRF = [{
         "Status": "Open",
         // "AssignedData":[], //TODO check when API integration will do
 
-        "Panel":
-        [{
-            "RoundNumber": "1",
-            "Interviewers":
-            [
-                "abc", "xyz", "user"
-            ],
-            "Status": "Selected",
-            "Comments": "Multi line text"
-        },
-            {
-                "RoundNumber": "2",
-                "Interviewers":
-                [
-                    "abc", "xyz", "user"
-                ],
-
-                "Status": "Selected",
-                "Comments": "Multi line text"
-            }],
+       "Panel":[
+  { "RoundNunber":
+      { "Id":1,
+        "Value":"Technical1"
+     },
+    "Interviewers":[{ 
+      "Id":1,
+      "Value":"ABC"
+    },{ "Id":"2",
+      "Value":"XYZ"
+    }]
+    
+  },
+  { "RoundNunber":
+      { "Id":2,
+        "Value":"Technical2"
+      },
+      
+    "Interviewers":[{ 
+      "Id":1,
+      "Value":"ABC"
+    },{ "Id":"2",
+      "Value":"XYZ"
+    }]
+    
+  }
+  ],
         "AssignedData":
         [{
             "RRFID": "1",
