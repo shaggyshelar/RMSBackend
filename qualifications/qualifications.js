@@ -8,7 +8,7 @@ var getQualifications = function (req, res) {
 
 var addQualification = function (req, res) {
     var qualification = req.body.qualification;
-    qualification.id = ++qualifications.ids;
+    qualification.Id = ++qualifications.ids;
     qualifications.qualificationsList.push(qualification);
     res.json(qualification);
 };
@@ -21,14 +21,14 @@ var deleteQualification = function (req, res) {
 };
 
 var getQualificationById = function (req, res) {
-    var qualificationID = parseInt(req.body.qualification.id);
-    var index = _.findIndex(qualifications.qualificationsList, { id: qualificationID });
+    var qualificationID = parseInt(req.body.qualification.Id);
+    var index = _.findIndex(qualifications.qualificationsList, { Id: qualificationID });
     res.json(qualifications.qualificationsList[index]);
 };
 
 var editQualification = function (req, res) {
     var qualification = req.body.qualification;
-    var index = _.findIndex(qualifications.qualificationsList, { id: qualification.id });
+    var index = _.findIndex(qualifications.qualificationsList, { Id: qualification.Id });
     qualifications.qualificationsList[index] = qualification;
     res.json(qualification);
 };

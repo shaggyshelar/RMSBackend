@@ -2,14 +2,14 @@
 var designations = {
     designationsList: [
         {
-            id: 1,
-            Designation: 'Trainee'
+            Id: 1,
+            Value: 'Trainee'
         }, {
-            id: 2,
-            Designation: 'System Executive'
+            Id: 2,
+            Value: 'System Executive'
         }, {
-            id: 3,
-            Designation: 'Senior System Executive'
+            Id: 3,
+            Value: 'Senior System Executive'
         }       
     ],
     ids: 3

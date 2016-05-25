@@ -8,7 +8,7 @@ var getOwnerTypes = function (req, res) {
 
 var addOwnerType = function (req, res) {
     var ownerType = req.body.ownerType;
-    ownerType.id = ++ownerTypes.ids;
+    ownerType.Id = ++ownerTypes.ids;
     ownerTypes.ownerTypesList.push(ownerType);
     res.json(ownerType);
 };
@@ -21,14 +21,14 @@ var deleteOwnerType = function (req, res) {
 };
 
 var getOwnerTypeById = function (req, res) {
-    var ownerTypeID = parseInt(req.body.ownerType.id);
-    var index = _.findIndex(ownerTypes.ownerTypesList, { id: ownerTypeID });
+    var ownerTypeID = parseInt(req.body.ownerType.Id);
+    var index = _.findIndex(ownerTypes.ownerTypesList, { Id: ownerTypeID });
     res.json(ownerTypes.ownerTypesList[index]);
 };
 
 var editOwnerType = function (req, res) {
     var ownerType = req.body.ownerType;
-    var index = _.findIndex(ownerTypes.ownerTypesList, { id: ownerType.id });
+    var index = _.findIndex(ownerTypes.ownerTypesList, { Id: ownerType.Id });
     ownerTypes.ownerTypesList[index] = ownerType;
     res.json(ownerType);
 };

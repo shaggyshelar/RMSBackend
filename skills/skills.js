@@ -8,7 +8,7 @@ var getSkills = function (req, res) {
 
 var addSkill = function (req, res) {
     var skill = req.body.skill;
-    skill.id = ++skills.ids;
+    skill.Id = ++skills.ids;
     skills.skillsList.push(skill);
     res.json(skill);
 };
@@ -21,14 +21,14 @@ var deleteSkill = function (req, res) {
 };
 
 var getSkillById = function (req, res) {
-    var skillID = parseInt(req.body.skill.id);
-    var index = _.findIndex(skills.skillsList, { id: skillID });
+    var skillID = parseInt(req.body.skill.Id);
+    var index = _.findIndex(skills.skillsList, { Id: skillID });
     res.json(skills.skillsList[index]);
 };
 
 var editSkill = function (req, res) {
     var skill = req.body.skill;
-    var index = _.findIndex(skills.skillsList, { id: skill.id });
+    var index = _.findIndex(skills.skillsList, { Id: skill.Id });
     skills.skillsList[index] = skill;
     res.json(skill);
 };

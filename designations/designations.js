@@ -8,7 +8,7 @@ var getDesignations = function (req, res) {
 
 var addDesignation = function (req, res) {
     var designation = req.body.designation;
-    designation.id = ++designations.ids;
+    designation.Id = ++designations.ids;
     designations.designationsList.push(designation);
     res.json(designation);
 };
@@ -21,14 +21,14 @@ var deleteDesignation = function (req, res) {
 };
 
 var getDesignationById = function (req, res) {
-    var designationID = parseInt(req.body.designation.id);
-    var index = _.findIndex(designations.designationsList, { id: designationID });
+    var designationID = parseInt(req.body.designation.Id);
+    var index = _.findIndex(designations.designationsList, { Id: designationID });
     res.json(designations.designationsList[index]);
 };
 
 var editDesignation = function (req, res) {
     var designation = req.body.designation;
-    var index = _.findIndex(designations.designationsList, { id: designation.id });
+    var index = _.findIndex(designations.designationsList, { Id: designation.Id });
     designations.designationsList[index] = designation;
     res.json(designation);
 };

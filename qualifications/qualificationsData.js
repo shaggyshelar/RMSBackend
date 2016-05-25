@@ -2,17 +2,17 @@
 var qualifications = {
     qualificationsList: [
         {
-            id: 1,
-            Qualification: 'XII'
+            Id: 1,
+            Value: 'XII'
         }, {
-            id: 2,
-            Qualification: 'Graduate'
+            Id: 2,
+            Value: 'Graduate'
         }, {
-            id: 3,
-            Qualification: 'Post Graduate'
+            Id: 3,
+            Value: 'Post Graduate'
         }, {
-            id: 4,
-            Qualification: 'Training if Any'
+            Id: 4,
+            Value: 'Training if Any'
         }       
     ],
     ids: 4

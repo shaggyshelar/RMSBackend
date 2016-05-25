@@ -2,17 +2,17 @@
 var skills = {
     skillsList: [
         {
-            id: 1,
-            Skill: 'SharePoint'
+            Id: 1,
+            Value: 'SharePoint'
         }, {
-            id: 2,
-            Skill: 'AngularJs'
+            Id: 2,
+            Value: 'AngularJs'
         }, {
-            id: 3,
-            Skill: 'C#'
+            Id: 3,
+            Value: 'C#'
         }, {
-            id: 4,
-            Skill: 'CRM'
+            Id: 4,
+            Value: 'CRM'
         }       
     ],
     ids: 4

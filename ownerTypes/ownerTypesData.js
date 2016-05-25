@@ -2,14 +2,14 @@
 var ownerTypes = {
     ownerTypesList: [
         {
-            id: 1,
-            OwnerType: 'Recruiter'
+            Id: 1,
+            Value: 'Recruiter'
         }, {
-            id: 2,
-            OwnerType: 'Company'
+            Id: 2,
+            Value: 'Company'
         }, {
-            id: 3,
-            OwnerType: 'Employee'
+            Id: 3,
+            Value: 'Employee'
         }       
     ],
     ids: 3
