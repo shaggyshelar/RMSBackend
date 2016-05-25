@@ -8,7 +8,7 @@ var getInterviewRounds = function(req, res) {
 
 var addInterviewRounds = function(req, res) {
     var interviewRound = req.body.interviewRound;
-    interviewRound.id = ++interviewRounds.ids;
+    interviewRound.Id = ++interviewRounds.ids;
     interviewRound.permissions = [];
     interviewRounds.interviewRoundList.push(interviewRound);
     res.json(interviewRound);
@@ -22,14 +22,14 @@ var deleteInterviewRounds = function(req, res) {
 };
 
 var getInterviewRoundsById = function(req, res) {
-    var roleID = parseInt(req.body.interviewRound.id);
-    var index = _.findIndex(interviewRounds.interviewRoundList, { id: roleID });
+    var roundID = parseInt(req.body.interviewRound.Id);
+    var index = _.findIndex(interviewRounds.interviewRoundList, { Id: roundID });
     res.json(interviewRounds.interviewRoundList[index]);
 };
 
 var editInterviewRounds = function(req, res) {
     var interviewRound = req.body.interviewRound;
-    var index = _.findIndex(interviewRounds.interviewRoundList, { id: interviewRound.id });
+    var index = _.findIndex(interviewRounds.interviewRoundList, { Id: interviewRound.Id });
     interviewRounds.interviewRoundList[index] = interviewRound
     res.json(interviewRound);
 };

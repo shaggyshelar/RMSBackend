@@ -2,17 +2,17 @@
 var practices = {
     practicesList: [
         {
-            id: 1,
-            Practice: 'EBS'
+            Id: 1,
+            Value: 'EBS'
         }, {
-            id: 2,
-            Practice: 'ECS'
+            Id: 2,
+            Value: 'ECS'
         }, {
-            id: 3,
-            Practice: 'Testing'
+            Id: 3,
+            Value: 'Testing'
         }, {
-            id: 4,
-            Practice: 'Bench'
+            Id: 4,
+            Value: 'Bench'
         }
     ],
     ids: 4

@@ -2,14 +2,14 @@
 var interviewRounds = {
     interviewRoundList: [
         {
-            id: 1,
-            InterviewRounds: 'Technical 1'
+            Id: 1,
+            Value: 'Technical 1'
         }, {
-            id: 2,
-            InterviewRounds: 'Technical 4'
+            Id: 2,
+            Value: 'Technical 4'
         }, {
-            id: 3,
-            InterviewRounds: 'Technical 3'
+            Id: 3,
+            Value: 'Technical 3'
         }
     ],
     ids: 3

@@ -2,17 +2,17 @@
 var technologies = {
     technologiesList: [
         {
-            id: 1,
-            Technology: 'Microsoft'
+            Id: 1,
+            Value: 'Microsoft'
         }, {
-            id: 2,
-            Technology: 'Salesforce'
+            Id: 2,
+            Value: 'Salesforce'
         }, {
-            id: 3,
-            Technology: 'Dynamic CRM'
+            Id: 3,
+            Value: 'Dynamic CRM'
         }, {
-            id: 4,
-            Technology: 'Google'
+            Id: 4,
+            Value: 'Google'
         }
     ],
     ids: 4

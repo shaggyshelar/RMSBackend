@@ -8,7 +8,7 @@ var getTechnologies = function(req, res) {
 
 var addTechnology = function(req, res) {
     var technology = req.body.technology;
-    technology.id = ++technologies.ids;
+    technology.Id = ++technologies.ids;
     technology.permissions = [];
     technologies.technologiesList.push(technology);
     res.json(technology);
@@ -22,14 +22,14 @@ var deleteTechnology = function(req, res) {
 };
 
 var getTechnologyById = function(req, res) {
-    var roleID = parseInt(req.body.technology.id);
-    var index = _.findIndex(technologies.technologiesList, { id: roleID });
+    var technologyID = parseInt(req.body.technology.Id);
+    var index = _.findIndex(technologies.technologiesList, { Id: technologyID });
     res.json(technologies.technologiesList[index]);
 };
 
 var editTechnology = function(req, res) {
     var technology = req.body.technology;
-    var index = _.findIndex(technologies.technologiesList, { id: technology.id });
+    var index = _.findIndex(technologies.technologiesList, { Id: technology.Id });
     technologies.technologiesList[index] = technology
     res.json(technology);
 };

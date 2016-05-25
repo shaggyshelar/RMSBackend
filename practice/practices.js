@@ -8,7 +8,7 @@ var getPractices = function (req, res) {
 
 var addPractice = function (req, res) {
     var practice = req.body.practice;
-    practice.id = ++practices.ids;
+    practice.Id = ++practices.ids;
     practices.practicesList.push(practice);
     res.json(practice);
 };
@@ -21,14 +21,14 @@ var deletePractice = function (req, res) {
 };
 
 var getPracticeById = function (req, res) {
-    var practiceID = parseInt(req.body.practice.id);
-    var index = _.findIndex(practices.practicesList, { id: practiceID });
+    var practiceID = parseInt(req.body.practice.Id);
+    var index = _.findIndex(practices.practicesList, { Id: practiceID });
     res.json(practices.practicesList[index]);
 };
 
 var editPractice = function (req, res) {
     var practice = req.body.practice;
-    var index = _.findIndex(practices.practicesList, { id: practice.id });
+    var index = _.findIndex(practices.practicesList, { Id: practice.Id });
     practices.practicesList[index] = practice
     res.json(practice);
 };
