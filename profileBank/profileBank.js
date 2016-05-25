@@ -15,22 +15,42 @@ var viewCandidateInformation = function (req, res) {
 
 
 var addCandidateProfile = function (req, res) {
-    var profile = req.body.profile;
-    profile.CandidateID = "C00" + (profileBank.candidateProfile.length + 1);
-    profile.ResumeID = profileBank.candidateProfile.length + 1;
-    profile.Candidate = profile.FirstName + profile.LastName;
-    profile.Status = { "Id": 2, "CandidateStatus": "PendingScreening" };
-    //Adding in both arrays
-    profileBank.candidateProfile.push(profile);
+    try {
+        var profile = req.body.profile;
+        profile.CandidateID = "C00" + (profileBank.candidateProfile.length + 1);
+        profile.ResumeID = profileBank.candidateProfile.length + 1;
+        profile.Candidate = profile.FirstName + ' ' + profile.LastName;
+        profile.Status = { "Id": 2, "Value": "PendingScreening" };
+        //Adding in both arrays
+        profileBank.candidateProfile.push(profile);
 
-    profile.CandidateOtherDetails = {};
-    profile.CandidateOtherDetails.NoticePeriod = '';
+        profile.CandidateOtherDetails = {};
+        profile.CandidateOtherDetails.NoticePeriod = '';
 
-    profile.CandidateSalaryDetails = {};
-    profile.CandidateSalaryDetails.CurrentSalary = '';
-    profile.CandidateSalaryDetails.ExpectedSalary = '';
-    profileBank.profile.push(profile);
-    res.json(profile);
+        profile.CandidateSalaryDetails = {};
+        profile.CandidateSalaryDetails.CurrentSalary = '';
+        profile.CandidateSalaryDetails.ExpectedSalary = '';
+        profileBank.profile.push(profile);
+        var JsonRes =
+            {
+                "StatusCode": "1",
+                "Message": "Candidate Added Sucessfully",
+                "ReasonCode": "rc00001",
+                "ErrorMsg": ""
+            };
+        res.json(JsonRes);
+    } catch (err) {
+        var JsonRes =
+            {
+                "StatusCode": "2",
+                "Message": "",
+                "ReasonCode": "rc00001",
+                "ErrorMsg": err
+            };
+        res.json(JsonRes);
+    }
+
+
 };
 
 var getCandidateProfile = function (req, res) {
@@ -41,15 +61,35 @@ var getCandidateProfile = function (req, res) {
 
 
 var editCandidateProfile = function (req, res) {
-    var profile = req.body.profile;
-    profile.Candidate = profile.FirstName + profile.LastName;
-    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: profile.CandidateID });
-    profileBank.candidateProfile[index] = profile;
-    var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
-    profileBank.profile[index].CandidateOtherDetails.NoticePeriod = profile.NoticePeriod;
-    profileBank.profile[index].CandidateSalaryDetails.CurrentSalary = profile.CurrentSalary;
-    profileBank.profile[index].CandidateSalaryDetails.ExpectedSalary = profile.ExpectedSalary;
-    res.json(profile);
+    try {
+        var profile = req.body.profile;
+        profile.Candidate = profile.FirstName + profile.LastName;
+        var index = _.findIndex(profileBank.candidateProfile, { CandidateID: profile.CandidateID });
+        profileBank.candidateProfile[index] = profile;
+        var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
+        profileBank.profile[index].CandidateOtherDetails.NoticePeriod = profile.NoticePeriod;
+        profileBank.profile[index].CandidateSalaryDetails.CurrentSalary = profile.CurrentSalary;
+        profileBank.profile[index].CandidateSalaryDetails.ExpectedSalary = profile.ExpectedSalary;
+        res.json(profile);
+        var JsonRes =
+            {
+                "StatusCode": "1",
+                "Message": "Profile Updated Sucessfully",
+                "ReasonCode": "rc00001",
+                "ErrorMsg": ""
+            };
+        res.json(JsonRes);
+    } catch (err) {
+        var JsonRes =
+            {
+                "StatusCode": "2",
+                "Message": "",
+                "ReasonCode": "rc00001",
+                "ErrorMsg": err
+            };
+        res.json(JsonRes);
+    }
+
 };
 
 var getBlacklistedCandidates = function (req, res) {
@@ -61,33 +101,51 @@ var getRecentProfiles = function (req, res) {
 }
 
 var AddQualificationDetails = function (req, res) {
-    var Qualification = req.body.qualification;
-    var index = _.findIndex(profileBank.candidateProfile, { CandidateID: Qualification.CandidateID });
-    if (index !== -1) {
-        if (index !== -1 && profileBank.candidateProfile[index].Qualifications !== undefined) {
-            Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
+    try {
+        var Qualification = req.body.qualification;
+        var index = _.findIndex(profileBank.candidateProfile, { CandidateID: Qualification.CandidateID });
+        if (index !== -1) {
+            if (index !== -1 && profileBank.candidateProfile[index].Qualifications !== undefined) {
+                Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
+            }
+            else {
+                profileBank.candidateProfile[index].Qualifications = [];
+                Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
+            }
         }
-        else {
-            profileBank.candidateProfile[index].Qualifications = [];
-            Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
-        }
+        var QIndex = _.findIndex(master.qualifications, { Id: Qualification.Qualification });
+        Qualification.Qualification = [];
+        Qualification.Qualification = master.qualifications[QIndex];
+
+
+        var YIndex = _.findIndex(master.year, { Id: Qualification.YearOfPassing });
+        Qualification.YearOfPassing = [];
+        Qualification.YearOfPassing = master.year[YIndex];
+
+
+        var GIndex = _.findIndex(master.grades, { Id: Qualification.Grade });
+        Qualification.Grade = [];
+        Qualification.Grade = master.grades[GIndex];
+
+        profileBank.candidateProfile[index].Qualifications.push(Qualification);
+        var JsonRes =
+            {
+                "StatusCode": "1",
+                "Message": "Qualification Added Sucessfully",
+                "ReasonCode": "rc00001",
+                "ErrorMsg": ""
+            };
+        res.json(JsonRes);
+    } catch (err) {
+        var JsonRes =
+            {
+                "StatusCode": "2",
+                "Message": "",
+                "ReasonCode": "rc00001",
+                "ErrorMsg": ""
+            };
+        res.json(JsonRes);
     }
-    var QIndex = _.findIndex(master.qualifications, { Id: Qualification.Qualification });
-    Qualification.Qualification = [];
-    Qualification.Qualification = master.qualifications[QIndex];
-
-
-    var YIndex = _.findIndex(master.year, { Id: Qualification.YearOfPassing });
-    Qualification.YearOfPassing = [];
-    Qualification.YearOfPassing = master.year[YIndex];
-
-
-    var GIndex = _.findIndex(master.grades, { Id: Qualification.Grade });
-    Qualification.Grade = [];
-    Qualification.Grade = master.grades[GIndex];
-
-    profileBank.candidateProfile[index].Qualifications.push(Qualification);
-    res.json(Qualification);
 };
 
 var getQualificationDetails = function (req, res) {
@@ -100,7 +158,7 @@ var updateQualifications = function (req, res) {
     var Qualification = req.body.qualification;
     var index = _.findIndex(profileBank.candidateProfile, { CandidateID: Qualification.CandidateID });
     var QIndex = _.findIndex(profileBank.candidateProfile[index].Qualifications, { QualificationID: Qualification.QualificationID });
-   
+
     var QQIndex = _.findIndex(master.qualifications, { Id: Qualification.Qualification });
     Qualification.Qualification = [];
     Qualification.Qualification = master.qualifications[QQIndex];
@@ -114,10 +172,18 @@ var updateQualifications = function (req, res) {
     var GIndex = _.findIndex(master.grades, { Id: Qualification.Grade });
     Qualification.Grade = [];
     Qualification.Grade = master.grades[GIndex];
-   
-   
+
+
     profileBank.candidateProfile[index].Qualifications[QIndex] = Qualification;
-    res.json(Qualification);
+
+    var JsonRes =
+        {
+            "StatusCode": "1",
+            "Message": "Qualification Updated Sucessfully",
+            "ReasonCode": "rc00001",
+            "ErrorMsg": ""
+        };
+    res.json(JsonRes);
 };
 
 var updateCandidateProfileStatus = function (req, res) {
@@ -132,7 +198,14 @@ var updateCandidateProfileStatus = function (req, res) {
     var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
     profileBank.profile[index].Status = master.CandidateStatus[statusIndex];
     profileBank.profile[index].Comments = profile.Comments;
-    res.json(profile);
+    var JsonRes =
+        {
+            "StatusCode": "1",
+            "Message": "Status Updated Sucessfully",
+            "ReasonCode": "rc00001",
+            "ErrorMsg": ""
+        };
+    res.json(JsonRes);
 };
 
 module.exports = function (app) {
