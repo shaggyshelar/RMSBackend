@@ -1,81 +1,81 @@
-var utils = require( './../utils/utils' );
-var master = require( './../masters/masterData' );
-var _ = require( 'lodash' );
+var utils = require('./../utils/utils');
+var master = require('./../masters/masterData');
+var _ = require('lodash');
 
-var getPractices = function ( req, res ) {
-    res.json( master.practices );
-};
-
-var getTechnologies = function( req, res ) {
-    res.json( master.technology );
+var getPractices = function (req, res) {
+    res.json(master.practices);
 };
 
-var getSkills = function( req, res ) {
-    res.json( master.skills );
+var getTechnologies = function (req, res) {
+    res.json(master.technology);
 };
 
-var getQualifications = function( req, res ) {
-    res.json( master.qualifications );
+var getSkills = function (req, res) {
+    res.json(master.skills);
 };
 
-var getYears = function( req, res ) {
-    res.json( master.year );
+var getQualifications = function (req, res) {
+    res.json(master.qualifications);
 };
-var getDesignations = function( req, res ) {
-    res.json( master.designation );
+
+var getYears = function (req, res) {
+    res.json(master.year);
 };
-var getCountries = function( req, res) {
-    res.json( master.country );
+var getDesignations = function (req, res) {
+    res.json(master.designation);
 };
-var getStates = function( req, res ) {
+var getCountries = function (req, res) {
+    res.json(master.country);
+};
+var getStates = function (req, res) {
     res.json(master.States);
 };
-var getDistricts = function(req, res) {
+var getDistricts = function (req, res) {
     res.json(master.district);
 };
-var getRounds = function(req, res) {
+var getRounds = function (req, res) {
     res.json(master.interviewRounds);
 };
-var getInterviewStatus = function(req, res) {
+var getInterviewStatus = function (req, res) {
     res.json(master.interviewStatus);
 };
-var getRatings = function(req, res) {
+var getRatings = function (req, res) {
     res.json(master.ratings);
 };
-var getOwnerTypes = function(req, res) {
+var getOwnerTypes = function (req, res) {
     res.json(master.ownerType);
 };
-var getInterviewMode = function(req, res) {
+var getInterviewMode = function (req, res) {
     res.json(master.interviewMode);
 };
-var getVisaTypes = function(req, res) {
+var getVisaTypes = function (req, res) {
     res.json(master.visa);
 };
-var getCandidateStatus = function(req, res) {
+var getCandidateStatus = function (req, res) {
     res.json(master.candidateStatus);
 };
-var getRRFStatus = function(req, res) {
+var getRRFStatus = function (req, res) {
     res.json(master.RRFStatus);
 };
-var getInterviewers = function(req, res) {
+var getInterviewers = function (req, res) {
     res.json(master.interviewers);
 };
 
-var getGrades = function(req, res) {
+var getGrades = function (req, res) {
     res.json(master.grades);
 };
 
-var getRounds = function(req, res) {
+var getRounds = function (req, res) {
     res.json(master.InterviewRound);
 };
 
-var getCandidateStatuses = function(req, res) {
+var getCandidateStatuses = function (req, res) {
     res.json(master.CandidateStatus);
 };
-var getRecruiter = function(req, res) {
+var getRecruiter = function (req, res) {
     res.json(master.recruiter);
 };
- 
+
 module.exports = function (app) {
     //app.get('/api/Masters/GetPractices', utils.EnsureAuthenticated, getPractices);
     //app.get('/api/Masters/GetTechnologies', utils.EnsureAuthenticated, getTechnologies);
@@ -99,5 +99,5 @@ module.exports = function (app) {
     app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getRounds);
     app.get('/api/Masters/GetCandidateStatuses', utils.EnsureAuthenticated, getCandidateStatuses);
     app.get('/api/Masters/GetRecruiter', utils.EnsureAuthenticated, getRecruiter);
-    
+
 };

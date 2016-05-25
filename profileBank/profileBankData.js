@@ -11,7 +11,7 @@ profileBank.profile = [{
         "ResumeID": "",
         "Status":{
             "Id":1,
-            "CandidateStatus" : "Open"
+            "Value" : "Open"
             },
         "Comments" : "Open",
     },
@@ -25,7 +25,7 @@ profileBank.profile = [{
         "ResumeID": "",
         "Status":{
             "Id":2,
-            "CandidateStatus" : "PendingScreening"
+            "Value" : "PendingScreening"
             },
         "Comments" : "Pending Screening",
     }]
@@ -243,10 +243,10 @@ profileBank.candidateAnalytics = {
 profileBank.candidateProfile = [
     {
         "CandidateID": "C001",
-        "Candidate": "abc abc",
-        "FirstName": "abc",
+        "Candidate": "Shrikant Mane",
+        "FirstName": "Shrikant",
         "MiddleName": "abc",
-        "LastName": "abc",
+        "LastName": "Mane",
         "PrimaryContact": 9898989898,
         "SecondaryContact": 9898989898,
         "Email": "abc@gmail.com",
@@ -271,16 +271,16 @@ profileBank.candidateProfile = [
             "QualificationID": 1,
             "Qualification": {
                 "Id": 1,
-                "Qualification": "XII"
+                "Value": "XII"
             },
             "YearOfPassing": {
                 "Id": 1,
-                "Year": "2010"
+                "Value": "2010"
             },
             "Marks": "65",
             "Grade": {
                 "Id": 1,
-                "Grade": "A"
+                "Value": "A"
             }
         },
             {
@@ -288,16 +288,16 @@ profileBank.candidateProfile = [
                 "QualificationID": 2,
                 "Qualification": {
                     "Id": 2,
-                    "Qualification": "Graduate"
+                    "Value": "Graduate"
                 },
                 "YearOfPassing": {
                     "Id": 1,
-                    "Year": "2010"
+                    "Value": "2010"
                 },
                 "Marks": "05",
                 "Grade": {
                     "Id": 1,
-                    "Grade": "A"
+                    "Value": "A"
                 }
             }],
         "Skills": ["C#", "ASP.Net", "Javascript"],
@@ -350,17 +350,17 @@ profileBank.candidateProfile = [
         "SecondaryReasonToQuitCurrentJob": "Multi line text",
         "Status":{
             "Id":1,
-            "CandidateStatus" : "Open"
+            "Value" : "Open"
             },
         "Comments" : "OPen",
         "CTCIncludeVariable": "Yes" 
     },
     {
         "CandidateID": "C002",
-        "Candidate": "xyz xyz",
-        "FirstName": "XYZ",
+        "Candidate": "Rohit Sevramanai",
+        "FirstName": "Rohit",
         "MiddleName": "abc",
-        "LastName": "XYZ",
+        "LastName": "Sevramanai",
         "PrimaryContact": 8787487120,
         "SecondaryContact": 8787487120,
         "Email": "xyz@gmail.com",
@@ -385,16 +385,16 @@ profileBank.candidateProfile = [
             "QualificationID": 1,
             "Qualification": {
                 "Id": 1,
-                "Qualification": "XII"
+                "Value": "XII"
             },
             "YearOfPassing": {
                 "Id": 1,
-                "Year": "2010"
+                "Value": "2010"
             },
             "Marks": "65",
             "Grade": {
                 "Id": 1,
-                "Grade": "A"
+                "Value": "A"
             }
         },
             {
@@ -402,16 +402,16 @@ profileBank.candidateProfile = [
                 "QualificationID": 2,
                 "Qualification": {
                     "Id": 1,
-                    "Qualification": "XII"
+                    "Value": "XII"
                 },
                 "YearOfPassing": {
                     "Id": 1,
-                    "Year": "2010"
+                    "Value": "2010"
                 },
                 "Marks": "60",
                 "Grade": {
                     "Id": 1,
-                    "Grade": "A"
+                    "Value": "A"
                 }
             }],
         "Skills": ["C#", "ASP.Net", "Javascript"],
@@ -464,7 +464,7 @@ profileBank.candidateProfile = [
         "SecondaryReasonToQuitCurrentJob": "Multi line text",
         "Status":{
             "Id":2,
-            "CandidateStatus" : "PendingScreening"
+            "Value" : "PendingScreening"
         },
         "Comments" : "PendingScreening",
         "CTCIncludeVariable": "No"

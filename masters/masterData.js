@@ -5,91 +5,92 @@ var master = {
     // skills: ["C#", "CRM", "SharePoint", "Angular JS"],
     qualifications: [{
         "Id": 1,
-        "Qualification": "XII"
+        "Value": "XII"
     },
         {
             "Id": 2,
-            "Qualification": "Graduate"
+            "Value": "Graduate"
         },
         {
             "Id": 3,
-            "Qualification": "Post Graduate"
+            "Value": "Post Graduate"
         },
         {
             "Id": 4,
-            "Qualification": "Training if Any"
+            "Value": "Training if Any"
         }],
     year: [{
         "Id": 1,
-        "Year": "2010"
+        "Value": "2010"
     },
         {
             "Id": 2,
-            "Year": "2011"
+            "Value": "2011"
         },
         {
             "Id": 3,
-            "Year": "2012"
+            "Value": "2012"
         },
         {
             "Id": 4,
-            "Year": "2013"
+            "Value": "2013"
         }],
     //designation: ["Trainee", "System Executive", "Senior System Executive"],
 
     country: [{
         "Id": 1,
-        "Country": "India"
+        "Value": "India"
     },
         {
             "Id": 2,
-            "Country": "US"
+            "Value": "US"
         }, {
             "Id": 3,
-            "Country": "UK"
+            "Value": "UK"
         },
         {
             "Id": 4,
-            "Country": "Australia"
+            "Value": "Australia"
         }],
 
     States: [{
         "Id": 1,
-        "State": "Maharashtra"
+        "Value": "Maharashtra"
     },
         {
             "Id": 2,
-            "State": "Goa"
+            "Value": "Goa"
         }, {
             "Id": 3,
-            "State": "Delhi"
+            "Value": "Delhi"
         }
     ],
 
     district: [{
         "Id": 1,
-        "District": "Pune"
+        "Value": "Pune"
     },
         {
             "Id": 2,
-            "District": "Mumbai"
+            "Value": "Mumbai"
         }, {
             "Id": 3,
-            "District": "Nagpur"
+            "Value": "Nagpur"
         }
     ],
     grades: [{
         "Id": 1,
-        "Grade": "A"
+        "Value": "A"
     },
         {
             "Id": 2,
-            "Grade": "B"
+            "Value": "B"
         },
         {
             "Id": 3,
-            "Grade": "C"
+            "Value": "C"
         }],
+
     //state: ["Maharashtra", "Goa", "Delhi"],
     //district: ["Pune", "Mumbai", "Nagpur"],
     //interviewRounds: ["Technical 1", "Technical 2"],
@@ -98,7 +99,7 @@ var master = {
     interviewMode: ["telephonic", "Face to Face", "Skype"],
     //ownerType: ["Recruiter", "Company", "Employee"],
     visa: ["B1", "H1", "Other"],
-   // candidateStatus: ["Open", "Selected", "In Process"],
+    // candidateStatus: ["Open", "Selected", "In Process"],
     RRFStatus: ["Pending Approval", "Open", "Assigned"],
     //interviewers: ["abc", "xyz", "abc"],
     InterviewRound: [{
@@ -117,43 +118,43 @@ var master = {
             "Id": "2",
             "Value": "xyz"
         }],
-        CandidateStatus : [{
-            "Id":1,
-            "CandidateStatus" : "Open"
-            },
-            {
-            "Id":2,
-            "CandidateStatus" : "PendingScreening"
-            },
-            {
-            "Id":3,
-            "CandidateStatus" : "Offered"
-            },
-            {
-            "Id":4,
-            "CandidateStatus" : "Selected"
-            },
-            {
-            "Id":5,
-            "CandidateStatus" : "Blacklisted"
-            }],
+    CandidateStatus: [{
+        "Id": 1,
+        "Value": "Open"
+    },
+        {
+            "Id": 2,
+            "Value": "PendingScreening"
+        },
+        {
+            "Id": 3,
+            "Value": "Offered"
+        },
+        {
+            "Id": 4,
+            "Value": "Selected"
+        },
+        {
+            "Id": 5,
+            "Value": "Blacklisted"
+        }],
 
- recruiter : [{
-            "Id":1,
-            "Recruiter" : "ABC"
-            },
-            {
-            "Id":2,
-            "Recruiter" : "XYZ"
-            },
-            {
-            "Id":3,
-            "Recruiter" : "PQR"
-            },
-            {
-            "Id":4,
-            "Recruiter" : "MNK"
-            }]
+    recruiter: [{
+        "Id": 1,
+        "Recruiter": "ABC"
+    },
+        {
+            "Id": 2,
+            "Recruiter": "XYZ"
+        },
+        {
+            "Id": 3,
+            "Recruiter": "PQR"
+        },
+        {
+            "Id": 4,
+            "Recruiter": "MNK"
+        }]
 };
 
 module.exports = master;
