@@ -77,6 +77,12 @@ var unassignRRF = function(req, res) {
     res.json(RRFList.SaveResult);
 };
 
+var getAssignedRRFDeatils = function(req, res) {
+    var RRFID = parseInt(req.body.RRFID);
+    var index = _.findIndex(RRFList.AssignedData, { RRFID: RRFID });
+    res.json(RRFList.AssignedData[index]);
+};
+
 module.exports = function(app) {
     app.post("/api/RRF/GetRaisedRRF", utils.EnsureAuthenticated, getRaisedRRF);
     app.post("/api/RRF/ViewRRF", utils.EnsureAuthenticated, viewRRF);
@@ -87,6 +93,7 @@ module.exports = function(app) {
     app.get("/api/RRF/GetStatuswiseRRFCount", utils.EnsureAuthenticated, getStatuswiseRRFCount);
     app.post("/api/RRF/SaveRRFAssignmentDeatils", utils.EnsureAuthenticated, saveRRFAssignmentDeatils);
     app.post("/api/RRF/UnassignRRF", utils.EnsureAuthenticated, unassignRRF);
+     app.post("/api/RRF/GetAssignedRRFDeatils", utils.EnsureAuthenticated, getAssignedRRFDeatils);
 };
 
 

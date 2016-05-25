@@ -1,82 +1,16 @@
 var RRFList = {};
 
-RRFList.RRFDetails = {
-    "Practice": "EBS",
-    "Technology": "Microsoft",
-    "PositionTitle": "Developer",
-    "Description": "Multi line text",
-    "NoOfOpenings": 3,
-    "SkillsRequired": "Multi line text",
-    "Designation": "SSE",
-    "MinExp": "3",
-    "MaxExp": "5",
-    "Priority": 1,
-    "ExpDateOfJoining": "30 May 2016",
-    "RaisedBy": "abc",
-    "Panel":
-    [{
-        "RoundNumber": "1",
-        "Interviewers":
-        [
-            "abc", "xyz", "user"
-        ],
-        "Status": "Selected",
-        "Comments": "Multi line text"
-    },
-        {
-            "RoundNumber": "2",
-            "Interviewers":
-            [
-                "abc", "xyz", "user"
-            ],
 
-            "Status": "Selected",
-            "Comments": "Multi line text"
-        }]
-
-}
-
-
-RRFList.getAllRaisedRRF = [
-    {
-        "RRFID": "1",
-        "Practice": "EBS",
-        "Technology": "Microsoft",
-        "PositionTitle": "Developer",
-        "Description": "Multi line text",
-        "NoOfOpenings": 3,
-        "SkillsRequired": "Multi line text",
-        "Designation": "SSE",
-        "MinExp": "3",
-        "Priority": 1,
-        "RaisedBy": 'abc xyz',
-        "ExpDateOfJoining": "30 May 2016",
-    },
-    {
-        "RRFID": "2",
-        "Practice": "EBS",
-        "Technology": "Microsoft",
-        "PositionTitle": "Developer",
-        "Description": "Multi line text",
-        "NoOfOpenings": 3,
-        "SkillsRequired": "Multi line text",
-        "Designation": "SSE",
-        "MinExp": "3",
-        "Priority": 1,
-        "RaisedBy": 'abc xyz',
-        "ExpDateOfJoining": "30 May 2016",
-    },
-]
 
 RRFList.GetAllRRF = [{
     "RRFID": 1,
-    "Practice": "EBS",
-    "Technology": "Microsoft",
+    "Practice": { Id: 1,Value:"EBS"},
+    "Technology": { "Id": 1,"Value":"Microsoft"},
     "PositionTitle": "Developer",
     "Description": "Multi line text",
     "NoOfOpenings": 3,
-    "SkillsRequired": "Multi line text",
-    "Designation": "SSE",
+    "SkillsRequired": { "Id": 1,"Value":"AJ"},
+    "Designation": { "Id": 1,"Value":"SSE"},
     "MinExp": "3",
     "MaxExp": "5",
     "Priority": 1,
@@ -105,7 +39,8 @@ RRFList.GetAllRRF = [{
         "AssignedComments": "Multiline Text",
         "AssignedDate": "11/05/2016",
         "UnassigningComment": "Multiline Text",
-        "AssigneeLastDate": "11/05/2016"
+        "AssigneeLastDate": "11/05/2016",
+        "Status":{ Id: 2, Value: "UnAssigned" },
     },
         {
             "RRFID": "1",
@@ -114,18 +49,19 @@ RRFList.GetAllRRF = [{
             "AssignedComments": "Multiline Text",
             "AssignedDate": "11/05/2016",
             "UnassigningComment": "Multiline Text",
-            "AssigneeLastDate": ""
+            "AssigneeLastDate": "",
+            "Status":{ Id: 1, Value: "Assigned" },
         }]
 },
     {
         "RRFID": 2,
-        "Practice": "ECS",
-        "Technology": "SAlesForce",
+        "Practice": { Id: 1,Value:"EBS"},
+        "Technology": { "Id": 2,"Value":"SAlesForce"},
         "PositionTitle": "Developer",
         "Description": "Multi line text",
         "NoOfOpenings": 1,
-        "SkillsRequired": "Multi line text",
-        "Designation": "SSE",
+        "SkillsRequired": { "Id": 2,"Value":"Microsoft"},
+        "Designation": { "Id": 2,"Value":"SSE"},
         "MinExp": "3",
         "MaxExp": "5",
         "Priority": 1,
@@ -197,6 +133,40 @@ RRFList.Approved = {
     "StatusCode": 1,
     "Message": "Added successfully"
 };
+
+
+RRFList.AssignedData = [{
+
+  
+        "RRFID": 1,
+        "AssignedTo": { Id: 1, Value: "ABC" },
+        "ExpClosureDate": "11/05/2016",
+        "AssignedComments": "Multiline Text",
+        "AssignedDate": "11/05/2016",
+        "UnassigningComment": "Multiline Text",
+        "Status":{ Id: 2, Value: "UnAssigned" },
+         "AssigneeLastDate": "11/05/2016",
+    },
+        {
+            "RRFID": 2,
+            "AssignedTo": { Id: 2, Value: "XYZ" },
+            "ExpClosureDate": "11/05/2016",
+            "AssignedComments": "Multiline Text",
+            "AssignedDate": "11/05/2016",
+            "UnassigningComment": "Multiline Text",
+            "Status":{ Id: 1, Value: "Assigned" },
+            "AssigneeLastDate": "",
+        },
+        {
+            "RRFID": 3,
+            "AssignedTo": { Id: 2, Value: "XYZ" },
+            "ExpClosureDate": "11/05/2016",
+            "AssignedComments": "Multiline Text",
+            "AssignedDate": "11/05/2016",
+            "UnassigningComment": "Multiline Text",
+            "Status":{ Id: 1, Value: "Assigned" },
+            "AssigneeLastDate": "",
+        }];
 
 
 module.exports = RRFList;

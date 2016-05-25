@@ -141,19 +141,19 @@ var master = {
 
     recruiter: [{
         "Id": 1,
-        "Recruiter": "ABC"
+        "Value": "ABC"
     },
         {
             "Id": 2,
-            "Recruiter": "XYZ"
+            "Value": "XYZ"
         },
         {
             "Id": 3,
-            "Recruiter": "PQR"
+            "Value": "PQR"
         },
         {
             "Id": 4,
-            "Recruiter": "MNK"
+            "Value": "MNK"
         }]
 };
 

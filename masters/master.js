@@ -98,6 +98,6 @@ module.exports = function (app) {
     app.get('/api/Masters/GetGrades', utils.EnsureAuthenticated, getGrades);
     app.get('/api/Masters/GetRounds', utils.EnsureAuthenticated, getRounds);
     app.get('/api/Masters/GetCandidateStatuses', utils.EnsureAuthenticated, getCandidateStatuses);
-    app.get('/api/Masters/GetRecruiter', utils.EnsureAuthenticated, getRecruiter);
+    app.get('/api/Masters/GetRecruiters', utils.EnsureAuthenticated, getRecruiter);
 
 };
