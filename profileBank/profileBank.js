@@ -2,6 +2,7 @@
 var utils = require('./../utils/utils');
 var profileBank = require('./../profileBank/profileBankData');
 var master = require('./../masters/masterData');
+var qualificationMaster = require('./../qualifications/qualificationsData');
 var _ = require('lodash');
 
 var getOpenProfiles = function (req, res) {
@@ -113,9 +114,9 @@ var AddQualificationDetails = function (req, res) {
                 Qualification.QualificationID = profileBank.candidateProfile[index].Qualifications.length + 1;
             }
         }
-        var QIndex = _.findIndex(master.qualifications, { Id: Qualification.Qualification });
+        var QIndex = _.findIndex(qualificationMaster.qualificationsList, { Id: Qualification.Qualification });
         Qualification.Qualification = [];
-        Qualification.Qualification = master.qualifications[QIndex];
+        Qualification.Qualification = qualificationMaster.qualificationsList[QIndex];
 
 
         var YIndex = _.findIndex(master.year, { Id: Qualification.YearOfPassing });
@@ -159,9 +160,9 @@ var updateQualifications = function (req, res) {
     var index = _.findIndex(profileBank.candidateProfile, { CandidateID: Qualification.CandidateID });
     var QIndex = _.findIndex(profileBank.candidateProfile[index].Qualifications, { QualificationID: Qualification.QualificationID });
 
-    var QQIndex = _.findIndex(master.qualifications, { Id: Qualification.Qualification });
+    var QQIndex = _.findIndex(qualificationMaster.qualificationsList, { Id: Qualification.Qualification });
     Qualification.Qualification = [];
-    Qualification.Qualification = master.qualifications[QQIndex];
+    Qualification.Qualification = qualificationMaster.qualificationsList[QQIndex];
 
 
     var YIndex = _.findIndex(master.year, { Id: Qualification.YearOfPassing });
