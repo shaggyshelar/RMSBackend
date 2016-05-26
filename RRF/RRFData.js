@@ -9,7 +9,7 @@ RRFList.GetAllRRF = [{
     "PositionTitle": "Developer",
     "Description": "Multi line text",
     "NoOfOpenings": 3,
-    "SkillsRequired": { "Id": 1,"Value":"AJ"},
+    "SkillsRequired": [{ "Id": 1,"Value":"AngularJs"}],
     "Designation": { "Id": 1,"Value":"SSE"},
     "MinExp": "3",
     "MaxExp": "5",
@@ -19,7 +19,7 @@ RRFList.GetAllRRF = [{
     "ApprovedBy": "",
     "Status": "closed",
     "Panel":[
-  { "RoundNunber":
+  { "RoundNumber":
       { "Id":1,
         "Value":"Technical1"
      },
@@ -60,7 +60,7 @@ RRFList.GetAllRRF = [{
         "PositionTitle": "Developer",
         "Description": "Multi line text",
         "NoOfOpenings": 1,
-        "SkillsRequired": { "Id": 2,"Value":"Microsoft"},
+        "SkillsRequired": [{ "Id": 1,"Value":"SharePoint"}],
         "Designation": { "Id": 2,"Value":"SSE"},
         "MinExp": "3",
         "MaxExp": "5",
@@ -72,7 +72,7 @@ RRFList.GetAllRRF = [{
         // "AssignedData":[], //TODO check when API integration will do
 
        "Panel":[
-  { "RoundNunber":
+  { "RoundNumber":
       { "Id":1,
         "Value":"Technical1"
      },
@@ -84,7 +84,7 @@ RRFList.GetAllRRF = [{
     }]
     
   },
-  { "RoundNunber":
+  { "RoundNumber":
       { "Id":2,
         "Value":"Technical2"
       },
@@ -122,6 +122,16 @@ RRFList.StatuswiseRRFCount = {
     "InProgress": 13,
     "ClosureApproval": 2,
     "Closed": 50
+};
+
+RRFList.MyRRFStatuswiseRRFCount = {
+    "PendingApproval":1,
+    "Rejected": 0,
+    "Open": 2,
+    "Assigned": 1,
+    "InProgress": 1,
+    "ClosureApproval": 2,
+    "Closed": 10
 };
 
 RRFList.SaveResult = {

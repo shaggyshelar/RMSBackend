@@ -38,7 +38,7 @@ var actionOnRaisedRRF = function(req, res) {
     res.json(RRFList.Approved);
 };
 
-var getStatuswiseRRFCount = function(req, res) {
+var getStatuswiseAllRRFCount = function(req, res) {
     res.json(RRFList.StatuswiseRRFCount);
 };
 
@@ -61,26 +61,40 @@ var saveRRFAssignmentDeatils = function(req, res) {
 };
 
 var unassignRRF = function(req, res) {
-    
+
     var RRFID = parseInt(req.body.RRFID);
     var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
     var unAssignedComments = (req.body.UnassigningComment);
-    var recID = parseInt( req.body.AssignedTo);
-    for (i = 0; i <  RRFList.GetAllRRF[index].AssignedData.length; i++) {
-        if(RRFList.GetAllRRF[index].AssignedData[i].AssignedTo.Id == recID)
-        {
+    var recID = parseInt(req.body.AssignedTo);
+    for (i = 0; i < RRFList.GetAllRRF[index].AssignedData.length; i++) {
+        if (RRFList.GetAllRRF[index].AssignedData[i].AssignedTo.Id == recID) {
             RRFList.GetAllRRF[index].AssignedData[i].UnassigningComment = unAssignedComments;
-             RRFList.GetAllRRF[index].AssignedData[i].AssigneeLastDate = new Date();
+            RRFList.GetAllRRF[index].AssignedData[i].AssigneeLastDate = new Date();
         }
     }
-    
+
     res.json(RRFList.SaveResult);
 };
 
 var getAssignedRRFDeatils = function(req, res) {
     var RRFID = parseInt(req.body.RRFID);
-    var index = _.findIndex(RRFList.AssignedData, { RRFID: RRFID });
-    res.json(RRFList.AssignedData[index]);
+    // var index = _.findIndex(RRFList.AssignedData, { RRFID: RRFID });
+    // res.json(RRFList.AssignedData[index]);
+    res.json(RRFList.AssignedData);
+};
+
+var getMyRRF = function(req, res) {
+    res.json(RRFList.GetAllRRF);
+};
+
+var getStatuswiseMyRRFCount = function(req, res) {
+    res.json(RRFList.MyRRFStatuswiseRRFCount);
+};
+
+var getRRFByID = function(req, res) {
+    var RRFID = parseInt(req.body.RRFID);
+    var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
+    res.json(RRFList.GetAllRRF[index]);
 };
 
 module.exports = function(app) {
@@ -90,10 +104,14 @@ module.exports = function(app) {
     app.get("/api/RRF/GetAllRRF", utils.EnsureAuthenticated, getAllRRF);
     app.post("/api/RRF/RaiseRRF", utils.EnsureAuthenticated, raiseRRF);
     app.post("/api/RRF/ActionOnRaisedRRF", utils.EnsureAuthenticated, actionOnRaisedRRF);
-    app.get("/api/RRF/GetStatuswiseRRFCount", utils.EnsureAuthenticated, getStatuswiseRRFCount);
+    app.get("/api/RRF/GetStatuswiseAllRRFCount", utils.EnsureAuthenticated, getStatuswiseAllRRFCount);
     app.post("/api/RRF/SaveRRFAssignmentDeatils", utils.EnsureAuthenticated, saveRRFAssignmentDeatils);
     app.post("/api/RRF/UnassignRRF", utils.EnsureAuthenticated, unassignRRF);
-     app.post("/api/RRF/GetAssignedRRFDeatils", utils.EnsureAuthenticated, getAssignedRRFDeatils);
+    app.post("/api/RRF/GetAssignedRRFDeatils", utils.EnsureAuthenticated, getAssignedRRFDeatils);
+    app.get("/api/RRF/GetMyRRF", utils.EnsureAuthenticated, getMyRRF);
+    app.get("/api/RRF/GetStatuswiseMyRRFCount", utils.EnsureAuthenticated, getStatuswiseMyRRFCount);
+    app.get("/api/RRF/GetStatuswiseMyRRFCount", utils.EnsureAuthenticated, getStatuswiseMyRRFCount);
+    app.post("/api/RRF/GetRRFByID", utils.EnsureAuthenticated, getRRFByID);
 };
 
 
