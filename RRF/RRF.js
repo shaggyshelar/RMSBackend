@@ -52,7 +52,8 @@ var saveRRFAssignmentDeatils = function(req, res) {
             AssignedComments: AssignedComments,
             AssignedDate: new Date(),
             UnassigningComment: "",
-            AssigneeLastDate: ""
+            AssigneeLastDate: "",
+            Status : 'Assigned'
         };
         RRFList.GetAllRRF[index].AssignedData.push(assignDt);
     }
@@ -70,6 +71,7 @@ var unassignRRF = function(req, res) {
         if (RRFList.GetAllRRF[index].AssignedData[i].AssignedTo.Id == recID) {
             RRFList.GetAllRRF[index].AssignedData[i].UnassigningComment = unAssignedComments;
             RRFList.GetAllRRF[index].AssignedData[i].AssigneeLastDate = new Date();
+            RRFList.GetAllRRF[index].AssignedData[i].Status = "UnAssigned";
         }
     }
 

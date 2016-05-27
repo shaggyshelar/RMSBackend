@@ -40,7 +40,7 @@ RRFList.GetAllRRF = [{
         "AssignedDate": "11/05/2016",
         "UnassigningComment": "Multiline Text",
         "AssigneeLastDate": "11/05/2016",
-        "Status":{ Id: 2, Value: "UnAssigned" },
+        "Status":"UnAssigned"
     },
         {
             "RRFID": "1",
@@ -50,7 +50,7 @@ RRFList.GetAllRRF = [{
             "AssignedDate": "11/05/2016",
             "UnassigningComment": "Multiline Text",
             "AssigneeLastDate": "",
-            "Status":{ Id: 1, Value: "Assigned" },
+            "Status":"Assigned",
         }]
 },
     {
@@ -106,7 +106,8 @@ RRFList.GetAllRRF = [{
             "AssignedComments": "Multiline Text",
             "AssignedDate": "11/05/2016",
             "UnassigningComment": "Multiline Text",
-            "AssigneeLastDate": "11/05/2016"
+            "AssigneeLastDate": "11/05/2016",
+            "Status":"UnAssigned"
         }],
 
     },
@@ -155,7 +156,7 @@ RRFList.AssignedData =
         "AssignedComments": "Multiline Text",
         "AssignedDate": "11/05/2016",
         "UnassigningComment": "Multiline Text",
-        "Status":{ Id: 2, Value: "UnAssigned" },
+        "Status":"UnAssigned",
          "AssigneeLastDate": "11/05/2016",
     },
         {
@@ -165,7 +166,7 @@ RRFList.AssignedData =
             "AssignedComments": "Multiline Text",
             "AssignedDate": "11/05/2016",
             "UnassigningComment": "Multiline Text",
-            "Status":{ Id: 1, Value: "Assigned" },
+            "Status":"Assigned",
             "AssigneeLastDate": "",
         }];
 
