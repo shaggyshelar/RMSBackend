@@ -17,7 +17,8 @@ RRFList.GetAllRRF = [{
     "ExpDateOfJoining": "30 May 2016",
     "RaisedBy": "abc",
     "ApprovedBy": "",
-    "Status": "closed",
+    "Status":  { Id: 1, Value: "PendingApproval" },
+    "ClosedComment":"",
     "Panel":[
   { "RoundNumber":
       { "Id":1,
@@ -68,7 +69,8 @@ RRFList.GetAllRRF = [{
         "ExpDateOfJoining": "30 May 2016",
         "RaisedBy": "abc",
         "ApprovedBy": "",
-        "Status": "Open",
+        "Status":  { Id: 3, Value: "Open" },
+        "ClosedComment":"",
         // "AssignedData":[], //TODO check when API integration will do
 
        "Panel":[

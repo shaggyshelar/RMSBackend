@@ -53,7 +53,7 @@ var saveRRFAssignmentDeatils = function(req, res) {
             AssignedDate: new Date(),
             UnassigningComment: "",
             AssigneeLastDate: "",
-            Status : 'Assigned'
+            Status: 'Assigned'
         };
         RRFList.GetAllRRF[index].AssignedData.push(assignDt);
     }
@@ -109,6 +109,15 @@ var updateRRF = function(req, res) {
     res.json(RRFList.SaveResult);
 };
 
+var closeRRF = function(req, res) {
+    var RRFID = parseInt(req.body.RRFID);
+    var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
+    var closeComment = (req.body.CloseComment);
+    RRFList.GetAllRRF[index].Status = { Id: 7, Value: "closed" };
+    RRFList.GetAllRRF[index].closeComment = closeComment;
+    res.json(RRFList.SaveResult);
+};
+
 module.exports = function(app) {
     app.post("/api/RRF/GetRaisedRRF", utils.EnsureAuthenticated, getRaisedRRF);
     app.post("/api/RRF/ViewRRF", utils.EnsureAuthenticated, viewRRF);
@@ -125,6 +134,8 @@ module.exports = function(app) {
     app.get("/api/RRF/GetStatuswiseMyRRFCount", utils.EnsureAuthenticated, getStatuswiseMyRRFCount);
     app.post("/api/RRF/GetRRFByID", utils.EnsureAuthenticated, getRRFByID);
     app.post("/api/RRF/UpdateRRF", utils.EnsureAuthenticated, updateRRF);
+    app.post("/api/RRF/CloseRRF", utils.EnsureAuthenticated, closeRRF);
+
 };
 
 
