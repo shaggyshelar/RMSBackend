@@ -9,7 +9,7 @@ RRFList.GetAllRRF = [{
     "PositionTitle": "Developer",
     "Description": "Multi line text",
     "NoOfOpenings": 3,
-    "SkillsRequired": [{ "Id": 1,"Value":"AngularJs"}],
+    "SkillsRequired": [{ "Id": 2,"Value":"AngularJs"},{ "Id": 1,"Value":"SharePoint"}],
     "Designation": { "Id": 1,"Value":"SSE"},
     "MinExp": "3",
     "MaxExp": "5",
@@ -145,7 +145,8 @@ RRFList.Approved = {
 };
 
 
-RRFList.AssignedData = [{
+RRFList.AssignedData =
+[{
 
   
         "RRFID": 1,
@@ -158,17 +159,7 @@ RRFList.AssignedData = [{
          "AssigneeLastDate": "11/05/2016",
     },
         {
-            "RRFID": 2,
-            "AssignedTo": { Id: 2, Value: "XYZ" },
-            "ExpClosureDate": "11/05/2016",
-            "AssignedComments": "Multiline Text",
-            "AssignedDate": "11/05/2016",
-            "UnassigningComment": "Multiline Text",
-            "Status":{ Id: 1, Value: "Assigned" },
-            "AssigneeLastDate": "",
-        },
-        {
-            "RRFID": 3,
+            "RRFID": 1,
             "AssignedTo": { Id: 2, Value: "XYZ" },
             "ExpClosureDate": "11/05/2016",
             "AssignedComments": "Multiline Text",

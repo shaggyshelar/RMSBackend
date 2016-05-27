@@ -97,6 +97,16 @@ var getRRFByID = function(req, res) {
     res.json(RRFList.GetAllRRF[index]);
 };
 
+var updateRRF = function(req, res) {
+    var rrfDetails = req.body.rrfDetails;
+    var index = _.findIndex(RRFList.GetAllRRF, { RRFID: rrfDetails.RRFID });
+    RRFList.GetAllRRF[index].NoOfOpenings = rrfDetails.NoOfOpenings;
+    RRFList.GetAllRRF[index].Priority = rrfDetails.Priority;
+    RRFList.GetAllRRF[index].ExpDateOfJoining = rrfDetails.ExpDateOfJoining;
+    RRFList.GetAllRRF[index].Panel = rrfDetails.Panel;
+    res.json(RRFList.SaveResult);
+};
+
 module.exports = function(app) {
     app.post("/api/RRF/GetRaisedRRF", utils.EnsureAuthenticated, getRaisedRRF);
     app.post("/api/RRF/ViewRRF", utils.EnsureAuthenticated, viewRRF);
@@ -112,6 +122,7 @@ module.exports = function(app) {
     app.get("/api/RRF/GetStatuswiseMyRRFCount", utils.EnsureAuthenticated, getStatuswiseMyRRFCount);
     app.get("/api/RRF/GetStatuswiseMyRRFCount", utils.EnsureAuthenticated, getStatuswiseMyRRFCount);
     app.post("/api/RRF/GetRRFByID", utils.EnsureAuthenticated, getRRFByID);
+    app.post("/api/RRF/UpdateRRF", utils.EnsureAuthenticated, updateRRF);
 };
 
 
