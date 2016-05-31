@@ -53,15 +53,15 @@ RRFList.GetAllRRF = [{
             "AssigneeLastDate": "",
             "Status":"Assigned",
         }],
-        "ApproverList" :[{
-            "ApproverDetails" : { Id: 1, Value: "ABC" },
-            "Status" : { Id: 1, Value: "Approved" },
-            "Comment" : "Approved!"
+        "RRFApproval" :[{
+            "Approver" : { Id: 1, Value: "ABC" },
+            "Status" : "Approved" ,
+            "Comments" : "Approved!"
         },
         {
-            "ApproverDetails" : { Id: 2, Value: "XYZ" },
-            "Status" : { Id: 2, Value: "Rejected" },
-            "Comment" : "Rejected!"
+            "Approver" : { Id: 2, Value: "XYZ" },
+            "Status" : "Rejected" ,
+            "Comments" : "Rejected!"
         }],
 },
     {
@@ -122,15 +122,15 @@ RRFList.GetAllRRF = [{
             "Status":"UnAssigned"
         }],
         
-        "ApproverList" :[{
-            "ApproverDetails" : { Id: 1, Value: "ABC" },
-            "Status" : { Id: 1, Value: "Approved" },
-            "Comment" : "Approved!"
+        "RRFApproval" :[{
+            "Approver" : { Id: 1, Value: "ABC" },
+            "Status" : "Approved",
+            "Comments" : "Approved!"
         },
         {
-            "ApproverDetails" : { Id: 2, Value: "XYZ" },
-            "Status" : { Id: 1, Value: "Approved" },
-            "Comment" : "Approved!"
+            "Approver" : { Id: 2, Value: "XYZ" },
+            "Status" : "Approved",
+            "Comments" : "Approved!"
         }],
 
     },

@@ -121,7 +121,7 @@ var closeRRF = function(req, res) {
 module.exports = function(app) {
     app.post("/api/RRF/GetRaisedRRF", utils.EnsureAuthenticated, getRaisedRRF);
     app.post("/api/RRF/ViewRRF", utils.EnsureAuthenticated, viewRRF);
-    app.post("/api/RRF/GetAllRaisedRRF", utils.EnsureAuthenticated, getAllRaisedRRF);
+    app.get("/api/RRF/GetAllRaisedRRF", utils.EnsureAuthenticated, getAllRaisedRRF);
     app.get("/api/RRF/GetAllRRF", utils.EnsureAuthenticated, getAllRRF);
     app.post("/api/RRF/RaiseRRF", utils.EnsureAuthenticated, raiseRRF);
     app.post("/api/RRF/ActionOnRaisedRRF", utils.EnsureAuthenticated, actionOnRaisedRRF);
