@@ -54,13 +54,15 @@ var getCandidateProfile = function (req, res) {
 var editCandidateProfile = function (req, res) {
     try {
         var profile = req.body.profile;
-        profile.Candidate = profile.FirstName + profile.LastName;
+        profile.Candidate = profile.FirstName + ' ' + profile.LastName;
         var index = _.findIndex(profileBank.candidateProfile, { CandidateID: profile.CandidateID });
         profileBank.candidateProfile[index] = profile;
+        
         var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
         profileBank.profile[index].CandidateOtherDetails.NoticePeriod = profile.NoticePeriod;
         profileBank.profile[index].CandidateSalaryDetails.CurrentSalary = profile.CurrentSalary;
         profileBank.profile[index].CandidateSalaryDetails.ExpectedSalary = profile.ExpectedSalary;
+        profileBank.profile[index].Candidate =  profile.Candidate;
         res.json(profileBank.SuccessResult);
     } catch (err) {
         res.json(profileBank.ErrorResult);
@@ -69,11 +71,11 @@ var editCandidateProfile = function (req, res) {
 };
 
 var getBlacklistedCandidates = function (req, res) {
-    res.json(profileBank.candidateProfile);
+    res.json(profileBank.profile);
 }
 
 var getRecentProfiles = function (req, res) {
-    res.json(profileBank.candidateProfile);
+    res.json(profileBank.profile);
 }
 
 var AddQualificationDetails = function (req, res) {
