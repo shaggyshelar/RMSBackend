@@ -7,6 +7,8 @@ var _ = require('lodash');
 
 var getOpenProfiles = function (req, res) {
     //profileBank.profile is profile array with Primary details only
+    var result = { list: {}}
+    result = { list: profileBank.profile};
     res.json(profileBank.profile);
 };
 var viewCandidateInformation = function (req, res) {
@@ -32,23 +34,11 @@ var addCandidateProfile = function (req, res) {
         profile.CandidateSalaryDetails.CurrentSalary = '';
         profile.CandidateSalaryDetails.ExpectedSalary = '';
         profileBank.profile.push(profile);
-        var JsonRes =
-            {
-                "StatusCode": "1",
-                "Message": "Candidate Added Sucessfully",
-                "ReasonCode": "rc00001",
-                "ErrorMsg": ""
-            };
-        res.json(JsonRes);
+       
+        res.json(profileBank.SuccessResult);
     } catch (err) {
         var JsonRes =
-            {
-                "StatusCode": "2",
-                "Message": "",
-                "ReasonCode": "rc00001",
-                "ErrorMsg": err
-            };
-        res.json(JsonRes);
+        res.json(profileBank.ErrorResult);
     }
 
 
@@ -71,24 +61,9 @@ var editCandidateProfile = function (req, res) {
         profileBank.profile[index].CandidateOtherDetails.NoticePeriod = profile.NoticePeriod;
         profileBank.profile[index].CandidateSalaryDetails.CurrentSalary = profile.CurrentSalary;
         profileBank.profile[index].CandidateSalaryDetails.ExpectedSalary = profile.ExpectedSalary;
-        res.json(profile);
-        var JsonRes =
-            {
-                "StatusCode": "1",
-                "Message": "Profile Updated Sucessfully",
-                "ReasonCode": "rc00001",
-                "ErrorMsg": ""
-            };
-        res.json(JsonRes);
+        res.json(profileBank.SuccessResult);
     } catch (err) {
-        var JsonRes =
-            {
-                "StatusCode": "2",
-                "Message": "",
-                "ReasonCode": "rc00001",
-                "ErrorMsg": err
-            };
-        res.json(JsonRes);
+        res.json(profileBank.ErrorResult);
     }
 
 };
@@ -129,23 +104,10 @@ var AddQualificationDetails = function (req, res) {
         Qualification.Grade = master.grades[GIndex];
 
         profileBank.candidateProfile[index].Qualifications.push(Qualification);
-        var JsonRes =
-            {
-                "StatusCode": "1",
-                "Message": "Qualification Added Sucessfully",
-                "ReasonCode": "rc00001",
-                "ErrorMsg": ""
-            };
-        res.json(JsonRes);
+       
+        res.json(profileBank.SuccessResult);
     } catch (err) {
-        var JsonRes =
-            {
-                "StatusCode": "2",
-                "Message": "",
-                "ReasonCode": "rc00001",
-                "ErrorMsg": ""
-            };
-        res.json(JsonRes);
+        res.json(profileBank.ErrorResult);
     }
 };
 
@@ -177,14 +139,7 @@ var updateQualifications = function (req, res) {
 
     profileBank.candidateProfile[index].Qualifications[QIndex] = Qualification;
 
-    var JsonRes =
-        {
-            "StatusCode": "1",
-            "Message": "Qualification Updated Sucessfully",
-            "ReasonCode": "rc00001",
-            "ErrorMsg": ""
-        };
-    res.json(JsonRes);
+    res.json(profileBank.SuccessResult);
 };
 
 var updateCandidateProfileStatus = function (req, res) {
@@ -199,14 +154,7 @@ var updateCandidateProfileStatus = function (req, res) {
     var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
     profileBank.profile[index].Status = master.CandidateStatus[statusIndex];
     profileBank.profile[index].Comments = profile.Comments;
-    var JsonRes =
-        {
-            "StatusCode": "1",
-            "Message": "Status Updated Sucessfully",
-            "ReasonCode": "rc00001",
-            "ErrorMsg": ""
-        };
-    res.json(JsonRes);
+    res.json(profileBank.SuccessResult);
 };
 
 module.exports = function (app) {

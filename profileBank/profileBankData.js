@@ -14,6 +14,7 @@ profileBank.profile = [{
             "Value" : "Open"
             },
         "Comments" : "Open",
+        "PrimaryContact":8574145263
     },
     {
         "CandidateOtherDetails": { "NoticePeriod": "12" },
@@ -28,6 +29,7 @@ profileBank.profile = [{
             "Value" : "PendingScreening"
             },
         "Comments" : "Pending Screening",
+        "PrimaryContact":8574145263
     }]
 
 
@@ -80,6 +82,8 @@ profileBank.candidatesPersonalDetail = [{
     "ResumeSource": "abc",
     "Tag": "abc",
 }]
+
+
 
 
 profileBank.qualification = [{
@@ -469,4 +473,14 @@ profileBank.candidateProfile = [
         "Comments" : "PendingScreening",
         "CTCIncludeVariable": "No"
     }]
+    
+    profileBank.SuccessResult = {
+    "StatusCode": 1,
+    "Message": "Details Saved Successfully"
+}
+
+profileBank.ErrorResult = {
+     "ReasonCode": "rc00001",
+     "ErrorMsg": "Something went wrong"
+}
 module.exports = profileBank;
