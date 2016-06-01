@@ -8,7 +8,7 @@ var getRaisedRRF = function(req, res) {
 };
 
 var viewRRF = function(req, res) {
-    var RRFID = parseInt(req.body.RRFID);
+    var RRFID = req.body.RRFID;
     var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
     res.json(RRFList.GetAllRRF[index]);
 };
@@ -23,7 +23,9 @@ var getAllRRF = function(req, res) {
 
 var raiseRRF = function(req, res) {
     var rrfDetails = req.body.rrfDetails;
-    rrfDetails.RRFID = ++RRFList.id;
+    var rrfID ="RRFID";
+    rrfID += ++RRFList.id
+    rrfDetails.RRFID = rrfID;
     RRFList.GetAllRRF.push(rrfDetails);
     res.json(RRFList.SaveResult);
 };
@@ -43,7 +45,7 @@ var getStatuswiseAllRRFCount = function(req, res) {
 };
 
 var saveRRFAssignmentDeatils = function(req, res) {
-    var RRFID = parseInt(req.body.RRFID);
+    var RRFID = req.body.RRFID;
     var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
     var AssignedComments = (req.body.AssignedComments);
     for (i = 0; i < req.body.AssignedTo.length; i++) {
@@ -63,7 +65,7 @@ var saveRRFAssignmentDeatils = function(req, res) {
 
 var unassignRRF = function(req, res) {
 
-    var RRFID = parseInt(req.body.RRFID);
+    var RRFID = req.body.RRFID;
     var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
     var unAssignedComments = (req.body.UnassigningComment);
     var recID = parseInt(req.body.AssignedTo);
@@ -79,7 +81,7 @@ var unassignRRF = function(req, res) {
 };
 
 var getAssignedRRFDeatils = function(req, res) {
-    var RRFID = parseInt(req.body.RRFID);
+    var RRFID = req.body.RRFID;
     // var index = _.findIndex(RRFList.AssignedData, { RRFID: RRFID });
     // res.json(RRFList.AssignedData[index]);
     res.json(RRFList.AssignedData);
@@ -94,7 +96,7 @@ var getStatuswiseMyRRFCount = function(req, res) {
 };
 
 var getRRFByID = function(req, res) {
-    var RRFID = parseInt(req.body.RRFID);
+    var RRFID = req.body.RRFID;
     var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
     res.json(RRFList.GetAllRRF[index]);
 };
@@ -110,7 +112,7 @@ var updateRRF = function(req, res) {
 };
 
 var closeRRF = function(req, res) {
-    var RRFID = parseInt(req.body.RRFID);
+    var RRFID = req.body.RRFID;
     var index = _.findIndex(RRFList.GetAllRRF, { RRFID: RRFID });
     var closeComment = (req.body.CloseComment);
     RRFList.GetAllRRF[index].Status = { Id: 7, Value: "closed" };

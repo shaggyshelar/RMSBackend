@@ -3,7 +3,7 @@ var RRFList = {};
 
 
 RRFList.GetAllRRF = [{
-    "RRFID": 1,
+    "RRFID": "RRFID1",
     "Practice": { Id: 1,Value:"EBS"},
     "Technology": { "Id": 1,"Value":"Microsoft"},
     "PositionTitle": "Developer",
@@ -14,7 +14,7 @@ RRFList.GetAllRRF = [{
     "MinExp": "3",
     "MaxExp": "5",
     "Priority": 1,
-    "ExpDateOfJoining": "30 May 2016",
+    "ExpDateOfJoining": "2016-06-30",
     "RaisedBy": "abc",
     "ApprovedBy": "",
     "Status": { Id: 2, Value: "Rejected" },
@@ -34,7 +34,7 @@ RRFList.GetAllRRF = [{
   }],
     "AssignedData":
     [{
-        "RRFID": "1",
+        "RRFID": "RRFID1",
         "AssignedTo": { Id: 1, Value: "ABC" },
 
         "AssignedComments": "Multiline Text",
@@ -44,7 +44,7 @@ RRFList.GetAllRRF = [{
         "Status":"UnAssigned"
     },
         {
-            "RRFID": "1",
+            "RRFID": "RRFID1",
             "AssignedTo": { Id: 2, Value: "XYZ" },
             "ExpClosureDate": "11/05/2016",
             "AssignedComments": "Multiline Text",
@@ -65,7 +65,7 @@ RRFList.GetAllRRF = [{
         }],
 },
     {
-        "RRFID": 2,
+        "RRFID": "RRFID2",
         "Practice": { Id: 1,Value:"EBS"},
         "Technology": { "Id": 2,"Value":"SAlesForce"},
         "PositionTitle": "Developer",
@@ -76,7 +76,7 @@ RRFList.GetAllRRF = [{
         "MinExp": "3",
         "MaxExp": "5",
         "Priority": 1,
-        "ExpDateOfJoining": "30 May 2016",
+        "ExpDateOfJoining": "2016-06-30",
         "RaisedBy": "abc",
         "ApprovedBy": "",
         "Status":   { Id: 1, Value: "PendingApproval" },
@@ -112,7 +112,7 @@ RRFList.GetAllRRF = [{
   ],
         "AssignedData":
         [{
-            "RRFID": "1",
+            "RRFID": "RRFID2",
             "AssignedTo": { Id: 1, Value: "ABC" },
 
             "AssignedComments": "Multiline Text",
