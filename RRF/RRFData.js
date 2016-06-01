@@ -13,12 +13,13 @@ RRFList.GetAllRRF = [{
     "Designation": { "Id": 1,"Value":"SSE"},
     "MinExp": "3",
     "MaxExp": "5",
-    "Priority": 1,
+    "Priority": { Id: 1,Value:"1"},
     "ExpDateOfJoining": "2016-06-30",
     "RaisedBy": "abc",
     "ApprovedBy": "",
     "Status": { Id: 2, Value: "Rejected" },
     "ClosedComment":"",
+    "OpenForNumberOfDays" : 10,
     "Panel":[
   { "RoundNumber":
       { "Id":1,
@@ -75,12 +76,13 @@ RRFList.GetAllRRF = [{
         "Designation": { "Id": 2,"Value":"SSE"},
         "MinExp": "3",
         "MaxExp": "5",
-        "Priority": 1,
+        "Priority":  { Id: 1,Value:"2"},
         "ExpDateOfJoining": "2016-06-30",
         "RaisedBy": "abc",
         "ApprovedBy": "",
         "Status":   { Id: 1, Value: "PendingApproval" },
         "ClosedComment":"",
+         "OpenForNumberOfDays" : 10,
         // "AssignedData":[], //TODO check when API integration will do
 
        "Panel":[
