@@ -76,7 +76,7 @@ RRFList.GetAllRRF = [{
         "Designation": { "Id": 2,"Value":"SSE"},
         "MinExp": "3",
         "MaxExp": "5",
-        "Priority":  { Id: 1,Value:"2"},
+        "Priority":  { Id: 2,Value:"2"},
         "ExpDateOfJoining": "2016-06-30",
         "RaisedBy": "abc",
         "ApprovedBy": "",
