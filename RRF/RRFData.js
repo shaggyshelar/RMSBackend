@@ -20,6 +20,7 @@ RRFList.GetAllRRF = [{
     "Status": { Id: 2, Value: "Rejected" },
     "ClosedComment":"",
     "OpenForNumberOfDays" : 10,
+    "CreatedDate"  : "19-05-2016",
     "Panel":[
   { "RoundNumber":
       { "Id":1,
@@ -42,7 +43,7 @@ RRFList.GetAllRRF = [{
         "AssignedDate": "11/05/2016",
         "UnassigningComment": "Multiline Text",
         "AssigneeLastDate": "11/05/2016",
-        "Status":"UnAssigned"
+        "Status":{ Id: 2, Value: "UnAssigned" },
     },
         {
             "RRFID": "RRFID1",
@@ -52,7 +53,7 @@ RRFList.GetAllRRF = [{
             "AssignedDate": "11/05/2016",
             "UnassigningComment": "Multiline Text",
             "AssigneeLastDate": "",
-            "Status":"Assigned",
+            "Status":{ Id: 1, Value: "Assigned" },
         }],
         "RRFApproval" :[{
             "Approver" : { Id: 1, Value: "ABC" },
@@ -83,6 +84,7 @@ RRFList.GetAllRRF = [{
         "Status":   { Id: 1, Value: "PendingApproval" },
         "ClosedComment":"",
          "OpenForNumberOfDays" : 10,
+          "CreatedDate"  : "19-05-2016",
         // "AssignedData":[], //TODO check when API integration will do
 
        "Panel":[
@@ -121,7 +123,7 @@ RRFList.GetAllRRF = [{
             "AssignedDate": "11/05/2016",
             "UnassigningComment": "Multiline Text",
             "AssigneeLastDate": "11/05/2016",
-            "Status":"UnAssigned"
+            "Status":{ Id: 2, Value: "UnAssigned" }
         }],
         
         "RRFApproval" :[{
