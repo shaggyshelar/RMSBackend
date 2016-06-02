@@ -2,20 +2,21 @@ var profileBank = {};
 
 
 profileBank.profile = [{
-        "CandidateOtherDetails": { "NoticePeriod": "30" },
-        "CandidateSalaryDetails": { "CurrentSalary": "5.3", "ExpectedSalary": "6.3" },
-        "CandidateID": "C001",
-        "Candidate": "Shrikant Mane",
-        "Email": "mane.shrik@123.com",
-        "Tag": "SharePoint",
-        "ResumeID": "",
-        "Status":{
-            "Id":1,
-            "Value" : "Open"
-            },
-        "Comments" : "Open",
-        "PrimaryContact":8574145263
+    "CandidateOtherDetails": { "NoticePeriod": "30" },
+    "CandidateSalaryDetails": { "CurrentSalary": "5.3", "ExpectedSalary": "6.3" },
+    "CandidateID": "C001",
+    "Candidate": "Shrikant Mane",
+    "Email": "mane.shrik@123.com",
+    "Tag": "SharePoint",
+    "ResumeID": "",
+    "Status": {
+        "Id": 1,
+        "Value": "Open"
     },
+    "Comments": "Open",
+    "PrimaryContact": 8574145263,
+    "CandidateSkills": {}
+},
     {
         "CandidateOtherDetails": { "NoticePeriod": "12" },
         "CandidateSalaryDetails": { "CurrentSalary": "23", "ExpectedSalary": "120" },
@@ -24,12 +25,31 @@ profileBank.profile = [{
         "Email": "rohit@123.com",
         "Tag": "SalseForce",
         "ResumeID": "",
-        "Status":{
-            "Id":2,
-            "Value" : "PendingScreening"
-            },
-        "Comments" : "Pending Screening",
-        "PrimaryContact":8574145263
+        "Status": {
+            "Id": 2,
+            "Value": "PendingScreening"
+        },
+        "Comments": "Pending Screening",
+        "PrimaryContact": 8574145263,
+        "CandidateSkills": {
+        }
+    },
+    {
+        "CandidateOtherDetails": { "NoticePeriod": "50Days" },
+        "CandidateSalaryDetails": { "CurrentSalary": "3", "ExpectedSalary": "12" },
+        "CandidateID": "C003",
+        "Candidate": "Pranali Tupe",
+        "Email": "Pranali@123.com",
+        "Tag": "Java",
+        "ResumeID": "",
+        "Status": {
+            "Id": 5,
+            "Value": "Blacklisted"
+        },
+        "Comments": "Blacklisted",
+        "PrimaryContact": 8574145263,
+        "CandidateSkills": {
+        }
     }]
 
 
@@ -170,7 +190,7 @@ profileBank.candidateSalaryStructure = [{
 
 
 profileBank.teamManagement = [{
-   "CandidateID": "C001",
+    "CandidateID": "C001",
     "TeamMgmt": "Yes",
     "Handlingteam": "Multi line text",
     "NoofTeammembers": 5,
@@ -193,7 +213,7 @@ profileBank.OtherDetails = [{
     "Visa": "abc",
     "NoticePeriod": "90 days",
     "RoleExpected ": "SSE",
-    "ResignedStatusofOfferedCandidate ": "Multiline Text",
+    "ResignedStatusofOfferedCandidate": "Multiline Text",
     "JobSerachPeriod": "Multi line text",
     "FamilyBackground": "Multi line text",
     "Strengths": "Multi line text",
@@ -214,7 +234,7 @@ profileBank.OtherDetails = [{
         "Visa": "abc",
         "NoticePeriod": "90 days",
         "RoleExpected ": "SSE",
-        "ResignedStatusofOfferedCandidate ": "Multiline Text",
+        "ResignedStatusofOfferedCandidate": "Multiline Text",
         "JobSerachPeriod": "Multi line text",
         "FamilyBackground": "Multi line text",
         "Strengths": "Multi line text",
@@ -244,6 +264,8 @@ profileBank.candidateAnalytics = {
     "Blacklisted": 10,
     "Rejected": 10
 }
+
+
 profileBank.candidateProfile = [
     {
         "CandidateID": "C001",
@@ -310,54 +332,59 @@ profileBank.candidateProfile = [
         "CurrentCompany": "Eternus",
         "CurrentDesignationRole": "SSE",
         "TimeSpentInCurrentCompany": "3.2",
-        "ExpInSkill": "3.2",
-        "AnyFunctionalExp": "Multi line of text",
-        "PrimarySkills": "Multi line of text",
-        "SecondarySkills": "Multi line of text",
-        "OtherSkills": "Multi line of text",
-        "RoleAndResponsibility": "Multi line of text",
-        "ProjectsDone": "Multi line of text",
-        "UnitIntegressionRegressionTesting": "Multi line of text",
-        "Database": "Multi line of text",
-        "AnyOtherTechnology": "Multi line of text",
-        "AwareAboutTesting": "Multi line of text",
-        "StrongTechnicalSkills": "Multi line of text",
-        "CurrentSalary": "4.0",
-        "ExpectedSalary": "6.0",
-        "CurrentTakeHome": "4.0",
-        "AnyPerks": "Multi line",
-        "VariableSalary": "Yes",
-        "VariableSalaryAmount": "1.0",
+        "CandidateSkills": {
+            "ExpInSkill": "3.2",
+            "AnyFunctionalExp": "Multi line of text",
+            "PrimarySkills": "Multi line of text",
+            "SecondarySkills": "Multi line of text",
+            "OtherSkills": "Multi line of text",
+            "RoleAndResponsibility": "Multi line of text",
+            "ProjectsDone": "Multi line of text",
+            "UnitIntegressionRegressionTesting": "Multi line of text",
+            "Database": "Multi line of text",
+            "AnyOtherTechnology": "Multi line of text",
+            "AwareAboutTesting": "Multi line of text",
+            "StrongTechnicalSkills": "Multi line of text"
+        },
+        "CandidateSalaryDetails": {
+            "CurrentSalary": "4.0",
+            "ExpectedSalary": "6.0",
+            "CurrentTakeHome": "4.0",
+            "AnyPerks": "Multi line",
+            "CTCIncludeVariable": "Yes",
+            "Howmuchvariable": "1.0"
+        },
         "TeamMgmt": "Yes",
         "HandlingTeam": "Multi line text",
         "NoOfTeamMembers": 5,
         "TeamMembersDesignations": "Multi line text",
         "TeamHandlingChallenges": "Multi line text",
-        "AppliedEarlier": "Yes",
-        "AppraisalBondContract Details": "Multi line text",
-        "Visa": "abc",
-        "NoticePeriod": "90 days",
-        "RoleExpected": "SSE",
-        "ResignedStatusOfOfferedCandidate ": "Multiline Text",
-        "JobSerachPeriod": "Multi line text",
-        "FamilyBackground": "Multi line text",
-        "Strengths": "Multi line text",
-        "Weekness": "Multi line text",
-        "IfExstingCompanyOffers": "Multi line text",
-        "NoticePeriodNotCompletedCount": "Multi line text",
-        "LookingFor": "Multi line text",
-        "OfferInHand": "No",
-        "OfferDetails": "Multi line text",
-        "PrimaryReasonToQuitLastJob": "Multi line text",
-        "SecondaryReasonToQuitLastJob": "Multi line text",
-        "PrimaryReasonToQuitCurrentJob": "Multi line text",
-        "SecondaryReasonToQuitCurrentJob": "Multi line text",
-        "Status":{
-            "Id":1,
-            "Value" : "Open"
-            },
-        "Comments" : "OPen",
-        "CTCIncludeVariable": "Yes" 
+        "CandidateOtherDetail": {
+            "AppliedEarlier": "Yes",
+            "AppraisalBondContractDetails": "Multi line text",
+            "Visa": "abc",
+            "NoticePeriod": "90 days",
+            "RoleExpected": "SSE",
+            "ResignedStatusOfOfferedCandidate": "Multiline Text",
+            "JobSerachPeriod": "Multi line text",
+            "FamilyBackground": "Multi line text",
+            "Strengths": "Multi line text",
+            "Weekness": "Multi line text",
+            "IfExstingCompanyOffers": "Multi line text",
+            "NoticePeriodNotCompletedCount": "Multi line text",
+            "LookingFor": "Multi line text",
+            "OfferInHand": "No",
+            "OfferDetails": "Multi line text",
+            "PrimaryReasonToQuitLastJob": "Multi line text",
+            "SecondaryReasonToQuitLastJob": "Multi line text",
+            "PrimaryReasonToQuitCurrentJob": "Multi line text",
+            "SecondaryReasonToQuitCurrentJob": "Multi line text"
+        },
+        "Status": {
+            "Id": 1,
+            "Value": "Open"
+        },
+        "Comments": "OPen",
     },
     {
         "CandidateID": "C002",
@@ -385,7 +412,7 @@ profileBank.candidateProfile = [
         "ResumeSource": "abc",
         "Tag": "abc",
         "Qualifications": [{
-            "CandidateID": "C001",
+            "CandidateID": "C002",
             "QualificationID": 1,
             "Qualification": {
                 "Id": 1,
@@ -402,15 +429,15 @@ profileBank.candidateProfile = [
             }
         },
             {
-                "CandidateID": "C001",
+                "CandidateID": "C002",
                 "QualificationID": 2,
                 "Qualification": {
-                    "Id": 1,
-                    "Value": "XII"
+                    "Id": 2,
+                    "Value": "Graduate"
                 },
                 "YearOfPassing": {
-                    "Id": 1,
-                    "Value": "2010"
+                    "Id": 2,
+                    "Value": "2011"
                 },
                 "Marks": "60",
                 "Grade": {
@@ -424,63 +451,207 @@ profileBank.candidateProfile = [
         "CurrentCompany": "Eternus",
         "CurrentDesignationRole": "SSE",
         "TimeSpentInCurrentCompany": "3.2",
-        "ExpInSkill": "3.2",
-        "AnyFunctionalExp": "Multi line of text",
-        "PrimarySkills": "Multi line of text",
-        "SecondarySkills": "Multi line of text",
-        "OtherSkills": "Multi line of text",
-        "RoleAndResponsibility": "Multi line of text",
-        "ProjectsDone": "Multi line of text",
-        "UnitIntegressionRegressionTesting": "Multi line of text",
-        "Database": "Multi line of text",
-        "AnyOtherTechnology": "Multi line of text",
-        "AwareAboutTesting": "Multi line of text",
-        "StrongTechnicalSkills": "Multi line of text",
-        "CurrentSalary": "5.0",
-        "ExpectedSalary": "7.0",
-        "CurrentTakeHome": "5.0",
-        "AnyPerks": "Multi line",
-        "VariableSalary": "Yes",
-        "VariableSalaryAmount": "1.0",
+        "CandidateSkills": {
+            "ExpInSkill": "3.2",
+            "AnyFunctionalExp": "Multi line of text",
+            "PrimarySkills": "Multi line of text",
+            "SecondarySkills": "Multi line of text",
+            "OtherSkills": "Multi line of text",
+            "RoleAndResponsibility": "Multi line of text",
+            "ProjectsDone": "Multi line of text",
+            "UnitIntegressionRegressionTesting": "Multi line of text",
+            "Database": "Multi line of text",
+            "AnyOtherTechnology": "Multi line of text",
+            "AwareAboutTesting": "Multi line of text",
+            "StrongTechnicalSkills": "Multi line of text"
+        }
+        ,
+        "CandidateSalaryDetails": {
+            "CurrentSalary": "5.0",
+            "ExpectedSalary": "7.0",
+            "CurrentTakeHome": "5.0",
+            "AnyPerks": "Multi line",
+            "CTCIncludeVariable": "No",
+            "HowMuchVariable": "1.0"
+        },
+
         "TeamMgmt": "Yes",
         "HandlingTeam": "Multi line text",
         "NoOfTeamMembers": 5,
         "TeamMembersDesignations": "Multi line text",
         "TeamHandlingChallenges": "Multi line text",
-        "AppliedEarlier": "No",
-        "AppraisalBondContractDetails": "Multi line text",
-        "Visa": "abc",
-        "NoticePeriod": "90 days",
-        "RoleExpected": "TL",
-        "ResignedStatusOfOfferedCandidate ": "Multiline Text",
-        "JobSerachPeriod": "Multi line text",
-        "FamilyBackground": "Multi line text",
-        "Strengths": "Multi line text",
-        "Weekness": "Multi line text",
-        "IfExstingCompanyOffers": "Multi line text",
-        "NoticePeriodNotCompletedCount": "Multi line text",
-        "LookingFor": "Multi line text",
-        "OfferInHand": "Yes",
-        "OfferDetails": "Multi line text",
-        "PrimaryReasonToQuitLastJob": "Multi line text",
-        "SecondaryReasonToQuitLastJob": "Multi line text",
-        "PrimaryReasonToQuitCurrentJob": "Multi line text",
-        "SecondaryReasonToQuitCurrentJob": "Multi line text",
-        "Status":{
-            "Id":2,
-            "Value" : "PendingScreening"
+        "CandidateOtherDetail": {
+            "AppliedEarlier": "No",
+            "AppraisalBondContractDetails": "Multi line text",
+            "Visa": "abc",
+            "NoticePeriod": "90 days",
+            "RoleExpected": "TL",
+            "ResignedStatusOfOfferedCandidate": "Multiline Text",
+            "JobSerachPeriod": "Multi line text",
+            "FamilyBackground": "Multi line text",
+            "Strengths": "Multi line text",
+            "Weekness": "Multi line text",
+            "IfExstingCompanyOffers": "Multi line text",
+            "NoticePeriodNotCompletedCount": "Multi line text",
+            "LookingFor": "Multi line text",
+            "OfferInHand": "Yes",
+            "OfferDetails": "Multi line text",
+            "PrimaryReasonToQuitLastJob": "Multi line text",
+            "SecondaryReasonToQuitLastJob": "Multi line text",
+            "PrimaryReasonToQuitCurrentJob": "Multi line text",
+            "SecondaryReasonToQuitCurrentJob": "Multi line text"
         },
-        "Comments" : "PendingScreening",
-        "CTCIncludeVariable": "No"
+
+        "Status": {
+            "Id": 2,
+            "Value": "PendingScreening"
+        },
+        "Comments": "PendingScreening",
+
+        // "CandidateSkills": {
+        //     "Primary": "C#",
+        //     "Secondary": "Java",
+        //     "OtherSpecial": "SQL",
+        //     "Testing": "​Automated",
+        //     "StrongTechnical": ""
+        // }
+    },
+    {
+        "CandidateID": "C003",
+        "Candidate": "Pranali Tupe",
+        "FirstName": "Pranali",
+        "MiddleName": " ",
+        "LastName": "Tupe",
+        "PrimaryContact": 8787487120,
+        "SecondaryContact": 8787487120,
+        "Email": "xyz@gmail.com",
+        "PANNumber": "abc",
+        "PassportNumber": "abc",
+        "PermanentAddress": "abc",
+        "CurrentAddress": "abc",
+        "District": 3,
+        "State": 2,
+        "Country": 1,
+        "IsCurrentSameAsPermanent": "Yes",
+        "OutstationedCandidate": "No",
+        "ReadyToRelocate": "Yes",
+        "ReasonToRelocate": "abc",
+        "FriendsRelatives": "abc",
+        "CommunicationScale": "abc",
+        "CommentsAdditionalInformation": "abc",
+        "ResumeSource": "abc",
+        "Tag": "abc",
+        "Qualifications": [{
+            "CandidateID": "C003",
+            "QualificationID": 1,
+            "Qualification": {
+                "Id": 1,
+                "Value": "XII"
+            },
+            "YearOfPassing": {
+                "Id": 1,
+                "Value": "2010"
+            },
+            "Marks": "65",
+            "Grade": {
+                "Id": 1,
+                "Value": "A"
+            }
+        },
+            {
+                "CandidateID": "C003",
+                "QualificationID": 2,
+                "Qualification": {
+                    "Id": 2,
+                    "Value": "Graduate"
+                },
+                "YearOfPassing": {
+                    "Id": 2,
+                    "Value": "2011"
+                },
+                "Marks": "60",
+                "Grade": {
+                    "Id": 1,
+                    "Value": "A"
+                }
+            }],
+        "Skills": ["C#", "ASP.Net", "Javascript"],
+        "TotalExperience": "3.2",
+        "RelevantExperience": "3.2",
+        "CurrentCompany": "Eternus",
+        "CurrentDesignationRole": "SSE",
+        "TimeSpentInCurrentCompany": "3.2",
+        "CandidateSkills": {
+            "ExpInSkill": "3.2",
+            "AnyFunctionalExp": "Multi line of text",
+            "PrimarySkills": "Multi line of text",
+            "SecondarySkills": "Multi line of text",
+            "OtherSkills": "Multi line of text",
+            "RoleAndResponsibility": "Multi line of text",
+            "ProjectsDone": "Multi line of text",
+            "UnitIntegressionRegressionTesting": "Multi line of text",
+            "Database": "Multi line of text",
+            "AnyOtherTechnology": "Multi line of text",
+            "AwareAboutTesting": "Multi line of text",
+            "StrongTechnicalSkills": "Multi line of text"
+        },
+        "CandidateSalaryDetails": {
+            "CurrentSalary": "5.0",
+            "ExpectedSalary": "7.0",
+            "CurrentTakeHome": "5.0",
+            "AnyPerks": "Multi line",
+            "CTCIncludeVariable": "No",
+            "HowMuchVariable": "1.0"
+        },
+        "TeamMgmt": "Yes",
+        "HandlingTeam": "Multi line text",
+        "NoOfTeamMembers": 5,
+        "TeamMembersDesignations": "Multi line text",
+        "TeamHandlingChallenges": "Multi line text",
+        "CandidateOtherDetails": {
+            "AppliedEarlier": "No",
+            "AppraisalBondContractDetails": "Multi line text",
+            "Visa": "abc",
+            "NoticePeriod": "90 days",
+            "RoleExpected": "TL",
+            "ResignedStatusOfOfferedCandidate": "Multiline Text",
+            "JobSerachPeriod": "Multi line text",
+            "FamilyBackground": "Multi line text",
+            "Strengths": "Multi line text",
+            "Weekness": "Multi line text",
+            "IfExstingCompanyOffers": "Multi line text",
+            "NoticePeriodNotCompletedCount": "Multi line text",
+            "LookingFor": "Multi line text",
+            "OfferInHand": "Yes",
+            "OfferDetails": "Multi line text",
+            "PrimaryReasonToQuitLastJob": "Multi line text",
+            "SecondaryReasonToQuitLastJob": "Multi line text",
+            "PrimaryReasonToQuitCurrentJob": "Multi line text",
+            "SecondaryReasonToQuitCurrentJob": "Multi line text"
+        },
+        "Status": {
+            "Id": 5,
+            "Value": "Blacklisted"
+        },
+        "Comments": "Blacklisted for 3 months",
+
+        // "CandidateSkills": {
+        //     "Primary": "C#",
+        //     "Secondary": "Java",
+        //     "OtherSpecial": "SQL",
+        //     "Testing": "​Automated",
+        //     "StrongTechnical": ""
+        // }
     }]
-    
-    profileBank.SuccessResult = {
+
+profileBank.SuccessResult = {
     "StatusCode": 1,
     "Message": "Details Saved Successfully"
 }
 
 profileBank.ErrorResult = {
-     "ReasonCode": "rc00001",
-     "ErrorMsg": "Something went wrong"
+    "ReasonCode": "rc00001",
+    "ErrorMsg": "Something went wrong"
 }
 module.exports = profileBank;
+

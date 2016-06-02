@@ -6,9 +6,6 @@ var qualificationMaster = require('./../qualifications/qualificationsData');
 var _ = require('lodash');
 
 var getOpenProfiles = function (req, res) {
-    //profileBank.profile is profile array with Primary details only
-    var result = { list: {}}
-    result = { list: profileBank.profile};
     res.json(profileBank.profile);
 };
 var viewCandidateInformation = function (req, res) {
@@ -20,29 +17,56 @@ var viewCandidateInformation = function (req, res) {
 var addCandidateProfile = function (req, res) {
     try {
         var profile = req.body.profile;
-        profile.CandidateID = "C00" + (profileBank.candidateProfile.length + 1);
-        profile.ResumeID = profileBank.candidateProfile.length + 1;
-        profile.Candidate = profile.FirstName + ' ' + profile.LastName;
-        profile.Status = { "Id": 2, "Value": "PendingScreening" };
-        //Adding in both arrays
-        profileBank.candidateProfile.push(profile);
+        if(profile.CandidateID === undefined)
+        {
+            profile.CandidateID = "C00" + (profileBank.candidateProfile.length + 1);
+            profile.ResumeID = profileBank.candidateProfile.length + 1;
+            profile.Candidate = profile.FirstName + ' ' + profile.LastName;
+            profile.Status = { "Id": 2, "Value": "PendingScreening" };
+            //Adding in both arrays
+            profileBank.candidateProfile.push(profile);
 
-        profile.CandidateOtherDetails = {};
-        profile.CandidateOtherDetails.NoticePeriod = '';
+            profile.CandidateOtherDetails = {};
+            profile.CandidateOtherDetails.NoticePeriod = '';
 
-        profile.CandidateSalaryDetails = {};
-        profile.CandidateSalaryDetails.CurrentSalary = '';
-        profile.CandidateSalaryDetails.ExpectedSalary = '';
-        profileBank.profile.push(profile);
-       
-        res.json(profileBank.SuccessResult);
+            profile.CandidateSalaryDetails = {};
+            profile.CandidateSalaryDetails.CurrentSalary = '';
+            profile.CandidateSalaryDetails.ExpectedSalary = '';
+            profileBank.profile.push(profile);
+
+            profileBank.SuccessResult.candidateLookupId = {};
+            profileBank.SuccessResult.candidateLookupId = profile.CandidateID;
+            res.json(profileBank.SuccessResult);
+        }
+        else {
+            var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
+            profileBank.profile[index].CandidateOtherDetails.NoticePeriod = profile.NoticePeriod;
+            profileBank.profile[index].CandidateSalaryDetails.CurrentSalary = profile.CurrentSalary;
+            profileBank.profile[index].CandidateSalaryDetails.ExpectedSalary = profile.ExpectedSalary;
+            profileBank.profile[index].CandidateSkills.Primary = profile.PrimarySkills;
+            profileBank.profile[index].Candidate = profile.Candidate;
+            profile.Candidate = profile.FirstName + ' ' + profile.LastName;
+
+            index = _.findIndex(profileBank.candidateProfile, { CandidateID: profile.CandidateID });
+            profileBank.candidateProfile[index] = profile;
+            
+            res.json(profileBank.SuccessResult);
+        }
     } catch (err) {
         var JsonRes =
-        res.json(profileBank.ErrorResult);
+            res.json(profileBank.ErrorResult);
     }
-
-
 };
+
+var uploadResume = function (req, res) {
+    try {
+        res.json(profileBank.SuccessResult);
+        
+    } catch (err) {
+        var JsonRes =
+            res.json(profileBank.ErrorResult);
+    }
+}
 
 var getCandidateProfile = function (req, res) {
     var profileID = req.body.profile.ProfileId;
@@ -57,12 +81,12 @@ var editCandidateProfile = function (req, res) {
         profile.Candidate = profile.FirstName + ' ' + profile.LastName;
         var index = _.findIndex(profileBank.candidateProfile, { CandidateID: profile.CandidateID });
         profileBank.candidateProfile[index] = profile;
-        
+
         var index = _.findIndex(profileBank.profile, { CandidateID: profile.CandidateID });
         profileBank.profile[index].CandidateOtherDetails.NoticePeriod = profile.NoticePeriod;
         profileBank.profile[index].CandidateSalaryDetails.CurrentSalary = profile.CurrentSalary;
         profileBank.profile[index].CandidateSalaryDetails.ExpectedSalary = profile.ExpectedSalary;
-        profileBank.profile[index].Candidate =  profile.Candidate;
+        profileBank.profile[index].Candidate = profile.Candidate;
         res.json(profileBank.SuccessResult);
     } catch (err) {
         res.json(profileBank.ErrorResult);
@@ -106,7 +130,7 @@ var AddQualificationDetails = function (req, res) {
         Qualification.Grade = master.grades[GIndex];
 
         profileBank.candidateProfile[index].Qualifications.push(Qualification);
-       
+
         res.json(profileBank.SuccessResult);
     } catch (err) {
         res.json(profileBank.ErrorResult);
@@ -169,7 +193,7 @@ module.exports = function (app) {
     app.get('/api/ProfileBank/getRecentProfiles', utils.EnsureAuthenticated, getRecentProfiles);
     app.post('/api/ProfileBank/AddPersonalDetails', utils.EnsureAuthenticated, editCandidateProfile);
     app.post('/api/ProfileBank/AddCandidateOtherDetails', utils.EnsureAuthenticated, editCandidateProfile);
-    //app.post('/api/ProfileBank/AddPersonalDetails', utils.EnsureAuthenticated, editCandidateProfile);
+    app.post('/api/ProfileBank/UploadCandidateProfile', utils.EnsureAuthenticated, uploadResume);
     app.post('/api/ProfileBank/AddCandidateOtherDetails', utils.EnsureAuthenticated, editCandidateProfile);
     app.post('/api/ProfileBank/AddCareerProfileDetails', utils.EnsureAuthenticated, editCandidateProfile);
     app.post('/api/ProfileBank/AddCandidateSkillsDetails', utils.EnsureAuthenticated, editCandidateProfile);
