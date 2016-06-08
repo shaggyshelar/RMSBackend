@@ -359,7 +359,7 @@ profileBank.candidateProfile = [
         "NoOfTeamMembers": 5,
         "TeamMembersDesignations": "Multi line text",
         "TeamHandlingChallenges": "Multi line text",
-        "CandidateOtherDetail": {
+        "CandidateOtherDetails": {
             "AppliedEarlier": "Yes",
             "AppraisalBondContractDetails": "Multi line text",
             "Visa": "abc",
@@ -467,8 +467,8 @@ profileBank.candidateProfile = [
         }
         ,
         "CandidateSalaryDetails": {
-            "CurrentSalary": "5.0",
-            "ExpectedSalary": "7.0",
+            "CurrentSalary": "23",
+            "ExpectedSalary": "120",
             "CurrentTakeHome": "5.0",
             "AnyPerks": "Multi line",
             "CTCIncludeVariable": "No",
@@ -480,11 +480,11 @@ profileBank.candidateProfile = [
         "NoOfTeamMembers": 5,
         "TeamMembersDesignations": "Multi line text",
         "TeamHandlingChallenges": "Multi line text",
-        "CandidateOtherDetail": {
+        "CandidateOtherDetails": {
             "AppliedEarlier": "No",
             "AppraisalBondContractDetails": "Multi line text",
             "Visa": "abc",
-            "NoticePeriod": "90 days",
+            "NoticePeriod": "12",
             "RoleExpected": "TL",
             "ResignedStatusOfOfferedCandidate": "Multiline Text",
             "JobSerachPeriod": "Multi line text",
@@ -596,8 +596,8 @@ profileBank.candidateProfile = [
             "StrongTechnicalSkills": "Multi line of text"
         },
         "CandidateSalaryDetails": {
-            "CurrentSalary": "5.0",
-            "ExpectedSalary": "7.0",
+            "CurrentSalary": "3",
+            "ExpectedSalary": "12",
             "CurrentTakeHome": "5.0",
             "AnyPerks": "Multi line",
             "CTCIncludeVariable": "No",
@@ -612,7 +612,7 @@ profileBank.candidateProfile = [
             "AppliedEarlier": "No",
             "AppraisalBondContractDetails": "Multi line text",
             "Visa": "abc",
-            "NoticePeriod": "90 days",
+            "NoticePeriod": "50Days",
             "RoleExpected": "TL",
             "ResignedStatusOfOfferedCandidate": "Multiline Text",
             "JobSerachPeriod": "Multi line text",
