@@ -5,18 +5,18 @@ var express = require('express'),
 var path = require('path');
 var bodyParser = require('body-parser');
 
-var allowCrossDomain = function(req, res, next) {
+var allowCrossDomain = function (req, res, next) {
     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.header('Access-Control-Allow-Credentials',true);
+    res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
 
     // intercept OPTIONS method
     if ('OPTIONS' == req.method) {
-      res.send(200);
+        res.send(200);
     }
     else {
-      next();
+        next();
     }
 };
 
@@ -43,7 +43,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/ping', function (req, res) {
-    res.json({name:'Ping'});
+    // res.json({name:'Ping'});
+    res.status(500).end('Invalid credentials.');
 });
 server.listen(process.env.PORT || 3000, function () {
     console.log('RMS APP listening on port 3000!');
