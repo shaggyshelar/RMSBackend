@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/ping', function (req, res) {
-    res.json({name:'Ping'});
+    res.send('Ping');
 });
 erver.listen(process.env.PORT || 3000, function () {
     console.log('RMS APP listening on port 3000!');
