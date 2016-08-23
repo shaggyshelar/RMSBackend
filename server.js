@@ -27,6 +27,9 @@ app.get('/', function (req, res) {
     res.send('App Loaded...');
 });
 
+app.get('/ping', function (req, res) {
+    res.send('Ping');
+});
 server.listen(process.env.PORT || 3000, function () {
     console.log('RMS APP listening on port 3000!');
 });
