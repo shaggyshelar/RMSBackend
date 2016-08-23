@@ -43,8 +43,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/ping', function (req, res) {
-    // res.json({name:'Ping'});
-    res.status(500).end('Invalid credentials.');
+     res.json({name:'Ping'});
+   // res.status(500).end('Invalid credentials.');
 });
 server.listen(process.env.PORT || 3000, function () {
     console.log('RMS APP listening on port 3000!');
